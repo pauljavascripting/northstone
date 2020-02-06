@@ -11375,3 +11375,54 @@ h5 {
   top: 0.7vw;
 
 }
+
+/* neighbourly line ---------------------------------- */
+.neighbourly-line-holder{
+   width: 100%;
+  height: 30px;
+  margin-top: -2vh;
+  display: flex;
+  justify-content: center;
+}
+.neighbourly-line{
+  width: 30%;
+  height: auto;
+  margin-left: 15vw;
+  opacity: 0;
+}
+@media (min-width: 800px) {
+  .neighbourly-line {
+    width: 30%;
+  }
+}
+@media (max-width: 700px) {
+  .neighbourly-line {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  .neighbourly-line {
+    width: 40%;
+    margin-left: 42vw;
+    margin-top: -4vh;
+  }
+}
+@media (max-width: 400px) {
+  .neighbourly-line {
+    width: 60%;
+    /*margin-left: 42vw;*/
+    margin-top: 0vh;
+    margin-left: -12vw;
+  }
+}
+@media (max-width: 300px) {
+  .neighbourly-line {
+    width: 80%;
+    /*margin-left: 42vw;*/
+    margin-top: -5vh;
+    margin-left: -5vw;
+  }
+}
+
+
+
