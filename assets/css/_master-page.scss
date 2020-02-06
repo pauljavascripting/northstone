@@ -1,0 +1,420 @@
+
+/* Headroom - http:/ /wicky.nillia.ms/headroom.js/*/
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+    z-index: 1;
+    // height:$nav-height;
+}
+
+.header--fixed {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.headroom--pinned {
+    display: block;
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    display: none;
+    transform: translateY(-100%);
+}
+
+.header--fixed.top {
+    transition: none;
+    transform: translateY(0);
+}
+
+.header--fixed.not-top {
+    position: fixed;
+    transform: translateY(-100%);
+}
+
+.header--fixed.slideDown.not-top {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.header--fixed.slideDown.top {
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+}
+
+.header--fixed.slideUp.not-top {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.header--fixed.slideUp.top {
+    transform: translateY(-100%);
+    position: absolute;
+}
+
+/* MOBILE Fixed Header - END */
+
+body {
+    color: $color-primary-dimmity;
+}
+
+address,
+p,
+span,
+label {
+    @include Bodycopy;
+}
+
+a {
+    @include Hyperlinks;
+
+    color: $color-primary-burra;
+
+    &:hover {
+        color: $color-primary-dimmity;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+h5 {
+    @include Header;
+}
+
+.btn {
+    @include Hyperlinks;
+    border-radius: 0;
+    border: 0.0625rem solid $color-primary-dimmity;
+    color: $color-primary-dimmity;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &.btn-burra {
+        background-color: $color-primary-burra;
+
+        &:hover {
+            background-color: $color-silkash;
+        }
+    }
+
+    &.btn-pudge {
+        background-color: $color-primary-pudge;
+
+        &:hover {
+            background-color: $color-silkash;
+        }
+    }
+
+    &.btn-white {
+        background-color: $color-primary-mill-tail;
+
+        &:hover {
+            background-color: $color-primary-burra;
+        }
+    }
+
+    &.btn-dimmity {
+        background-color: $color-primary-dimmity;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-primary-pudge;
+        }
+    }
+
+}
+
+.form-control {
+    border-radius: 0;
+    border: 0.0625rem solid $color-primary-dimmity;
+    color: $color-primary-dimmity;
+
+    &:focus {
+        border-color: $color-keld;
+        box-shadow: 0 0 0 0.2rem $color-keld;
+    }
+}
+
+.form-check {
+    margin-bottom: 1rem;
+}
+
+.custom-select {
+    background: url('/assets/images/home/dropdownarrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.625rem top 0.9375rem;
+    background-size: 1rem;
+}
+
+/* Navbar  - START */
+.navbar-light.navbar {
+    background-color: $color-primary-mill-tail;
+
+    @include media-breakpoint-down(lg) {
+        justify-content: start;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    // @include media-breakpoint-down(xs) {
+    //     justify-content: space-around;
+    // }
+
+    // @include media-breakpoint-up(md) {
+    //     justify-content: start;
+    //     padding-left: 0.5rem;
+    //     padding-right: 0.5rem;
+    // }
+
+    .navbar-toggler {
+        padding-left: 0;
+        border: 0;
+        border-radius: 0;
+
+        &:focus {
+            outline: 0;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('/assets/images/header/menugold.svg');
+            background-size: auto;
+            background-position: left;
+            width: 5rem;
+            height: 3rem;
+        }
+
+        &[aria-expanded="true"] {
+            .navbar-toggler-icon {
+                background-image: url('/assets/images/header/menuoffwhite.svg');
+            }
+        }
+    }
+
+    .nav-item.dropdown.show {
+        background-color: $color-primary-pudge;
+
+        .nav-link {
+
+            &:hover {
+                color: $color-primary-dimmity;
+            }
+        }
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    .nav-link {
+        @include Navigation;
+        color: $color-primary-dimmity;
+
+        &:hover {
+            color: $color-primary-burra;
+        }
+    }
+
+    .dropdown-menu {
+        border: 0;
+        margin-top: 0;
+        padding-top: 0;
+        background-color: transparent;
+
+        &.show {
+            display: flex;
+        }
+
+        a {
+            // padding-top: 0.1rem;
+
+            &:first-child {
+                margin-left: -1.25rem;
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    margin-right: 0;
+    font-size: 1rem;
+    line-height: 0;
+
+    @include media-breakpoint-up(lg) {
+        margin-right: 2rem;
+    }
+
+    img {
+        width: 15rem;
+
+        @include media-breakpoint-up(xl) {
+            width: 17rem;
+        }
+    }
+}
+
+// .navbar {
+//   padding-bottom: 0;
+// }
+
+.dropdown-bar {
+    height: 2rem;
+    background-color: $color-primary-pudge;
+    display: none;
+}
+
+.social-block {
+    ul {
+        margin-bottom: 0;
+
+        li {
+            display: inline;
+
+            a {
+                height: 1.5rem;
+                width: 1.5rem;
+                margin-right: 1.5rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: inline-block;
+
+                @include media-breakpoint-up(lg) {
+                    margin-right: 0;
+                    margin-left: 1.5rem;
+                }
+            }
+
+            #facebook {
+                background-image: url('/assets/images/header/facebookicon.svg');
+
+                &:hover {
+                    background-image: url('/assets/images/header/facebookicon_hover.svg');
+                }
+            }
+
+            #instagram {
+                background-image: url('/assets/images/header/instagramicon.svg');
+
+                &:hover {
+
+                    background-image: url('/assets/images/header/instagramicon_hover.svg');
+                }
+            }
+
+            #twitter {
+                background-image: url('/assets/images/header/twittericon.svg');
+
+                &:hover {
+                    background-image: url('/assets/images/header/twittericon_hover.svg');
+                }
+            }
+
+            #linkedin {
+                background-image: url('/assets/images/header/linkedinicon.svg');
+
+                &:hover {
+                    background-image: url('/assets/images/header/linkedinicon_hover.svg');
+                }
+            }
+        }
+    }
+}
+
+/* Navbar  - END */
+
+/* Multi Items Carousel - START */
+.multi-item-carousel {
+    overflow: hidden;
+}
+
+.multi-item-carousel .carousel-control-prev,
+.multi-item-carousel .carousel-control-next {
+    background: rgba(255, 255, 255, 0.5);
+    width: 5%;
+}
+
+.multi-item-carousel .carousel-inner {
+    width: 310%;
+    // left: -80%;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+    transform: translateX(75%);
+}
+
+.carousel-inner .carousel-item-left.active,
+.carousel-inner .carousel-item-prev {
+    transform: translateX(-75%)
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}
+
+.footer {
+    background-color: $color-primary-mill-tail;
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+    padding-left: $spacing;
+
+    @include media-breakpoint-up(sm) {
+        padding-left: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: $spacing * 2;
+    }
+
+    li {
+        margin-bottom: 0.25rem;
+    }
+
+    .small-logo {
+        width: 12rem;
+        margin-bottom: 1rem;
+    }
+
+    .row {
+        @include media-breakpoint-up(sm) {
+            justify-content: space-between;
+            margin-bottom: $spacing;
+        }
+    }
+
+    .contact {
+        padding-bottom: $spacing;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(sm) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .icon {
+            width: 1.25rem;
+        }
+    }
+
+    .company {}
+
+    .info {
+
+        span {
+            font-size: 0.75rem;
+            line-height: 1;
+        }
+    }
+}
+/* Multi Items Carousel - END */

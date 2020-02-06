@@ -1,0 +1,379 @@
+.design-hero {
+    @include nav-height();
+    padding-top: $spacing;
+    padding-bottom: $spacing * 2;
+
+    h1 {
+        @include Title;
+    }
+
+    .strapline {
+        @include make-col-ready();
+        padding-top: $spacing;
+        padding-bottom: $spacing;
+
+        br {
+            @include media-breakpoint-down(xs) {
+                display: none;
+            }
+        }
+    }
+
+    .image {
+        padding-bottom: $spacing;
+
+        p {
+            padding-left: $spacing * 0.75;
+            margin-bottom: 0;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: 0% 0%;
+            height: 15rem;
+            width: 100%;
+
+            @include media-breakpoint-up(sm) {
+                height: 18rem;
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 13rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                object-fit: contain;
+            }
+
+            @include media-breakpoint-up(xl) {
+                height: 18rem;
+            }
+        }
+    }
+
+    .text {
+        @include make-col-ready();
+    }
+}
+
+.plan-detail {
+    background: linear-gradient(to bottom, $color-white 10%, $color-primary-burra 10%);
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: $spacing * 2;
+    }
+
+    @include media-breakpoint-up(xl) {
+        background: linear-gradient(to bottom, $color-white 15%, $color-primary-burra 15%);
+    }
+
+    .filler {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready();
+            @include make-col(6);
+            @include order(2);
+
+            display: initial;
+        }
+    }
+
+    .image {
+        @include make-col-ready(false);
+        padding-bottom: $spacing;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+            @include order(1);
+            padding-bottom: 0;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 0;
+
+            @include media-breakpoint-up(xl) {
+                padding: $spacing;
+                padding-top: 0;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            object-position: 0% 0%;
+            height: 16rem;
+            width: 100%;
+
+            @include media-breakpoint-up(sm) {
+                object-position: 50% 0%;
+                object-fit: contain;
+                height: 13rem;
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 16rem;
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 18rem;
+            }
+        }
+    }
+
+    .text-1 {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+            @include order(0);
+            padding-top: $spacing * 4;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-top: $spacing * 5;
+        }
+
+        p {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-top: $spacing * 2;
+                padding-bottom: $spacing;
+                padding-left: $spacing * 2;
+                padding-right: $spacing * 2;
+            }
+        }
+    }
+
+    .text-2 {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+            @include order(3);
+        }
+
+        p {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-bottom: $spacing * 2;
+                padding-left: $spacing * 2;
+                padding-right: $spacing * 2;
+            }
+        }
+    }
+}
+
+.homes {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+
+    .inside,
+    .outside {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+        }
+    }
+
+    .inside {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            height: 55rem;
+
+            .outer {
+                @include media-breakpoint-up(lg) {
+                    position: absolute;
+                    top: -15rem;
+                }
+            }
+        }
+    }
+
+    .outside {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+
+            .outer {
+                @include media-breakpoint-up(lg) {
+                    position: absolute;
+                    top: -4rem;
+                }
+            }
+        }
+    }
+
+    .image {
+        padding-bottom: $spacing;
+
+        img {
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                padding-bottom: $spacing;
+                padding-left: $spacing * 2;
+                padding-right: $spacing * 2;
+            }
+        }
+    }
+
+    .text {
+        @include media-breakpoint-up(lg) {
+            padding-bottom: $spacing * 2;
+            padding-left: $spacing * 2;
+            padding-right: $spacing * 2;
+        }
+    }
+}
+
+.available-homes {
+    @include make-col-ready();
+
+    .btn {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            width: 50%;
+            @include center;
+        }
+    }
+}
+
+.innovation {
+    background-color: $color-primary-pudge;
+    padding-top: $spacing;
+    // padding-bottom: $spacing;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: $spacing * 2;
+        // padding-bottom: $spacing * 2;
+    }
+
+    .image {
+        @include make-col-ready();
+        padding-bottom: $spacing;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(5);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(6);
+            padding-left: $spacing * 2;
+            padding-right: $spacing * 2;
+        }
+
+        img {
+            // height: 15rem;
+            width: 100%;
+        }
+    }
+
+    .text {
+        @include make-col-ready();
+        padding-bottom: $spacing;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(7);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include make-col(6);
+            padding-left: $spacing * 2;
+            padding-right: $spacing * 2;
+        }
+    }
+}
+
+.commitment {
+    background: linear-gradient(to bottom, $color-primary-pudge 3%, transparent 3%);
+
+    @include media-breakpoint-up(md) {
+        background: linear-gradient(to bottom, $color-primary-pudge 5%, transparent 5%);
+    }
+
+    .row {
+        @include media-breakpoint-up(lg) {
+            justify-content: center;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .part-1 {
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready();
+            @include make-col(6);
+        }
+
+        .image-1 {
+            @include media-breakpoint-up(lg) {
+                padding-top: $spacing * 4;
+                padding-right: $spacing * 2;
+            }
+        }
+
+        .image-2 {
+            @include media-breakpoint-up(lg) {
+                padding-top: $spacing * 1;
+                padding-left: $spacing * 2;
+            }
+        }
+    }
+
+    .part-2 {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+        }
+
+        .community-stories {
+            padding-top: $spacing;
+            padding-bottom: $spacing;
+
+            b {
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-left: 0;
+            }
+
+            .btn {
+                width: 100%
+            }
+        }
+
+    }
+
+    .text {
+        @include make-col-ready();
+        padding-bottom: $spacing;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(8);
+
+            padding-top: $spacing * 2;
+        }
+    }
+}
+
+.footer {
+    padding-left: 0;
+}

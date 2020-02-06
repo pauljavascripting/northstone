@@ -1,0 +1,11 @@
+.news-hero {
+    @include nav-height();
+    padding-top: $spacing;
+    padding-bottom: $spacing * 2;
+
+    h1 {
+        @include Title;
+        text-align: center;
+    }
+
+}
