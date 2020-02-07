@@ -11357,7 +11357,9 @@ h5 {
   position: absolute;
   /*bottom: 27vh;*/
   /*left: 100vw;*/
-  bottom: 30vh;
+  bottom: 50vh;
+  left: 10vw;
+  opacity: 0;
 }
 
 .birdTree-bird1 {
