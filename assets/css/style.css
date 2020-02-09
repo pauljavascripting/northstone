@@ -11452,4 +11452,14 @@ h5 {
   
 }
 
+/* map ------------------------------- */
+.house_text{
+  position: absolute;
+  z-index: 100;
+}
+#house_info_svg{
+  position: absolute;
+  transform: scale(0.25); 
+}
+
 
