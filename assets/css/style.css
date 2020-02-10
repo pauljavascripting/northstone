@@ -11400,8 +11400,9 @@ h5 {
   position: absolute;
   /*bottom: 27vh;*/
   /*left: 100vw;*/
-  bottom: 50vh;
-  /*left: 10vw;*/ss
+  /*bottom: 50vh;*/
+  top:-20px;
+  left: 10vw;
   opacity: 0;
 }
 
@@ -11494,5 +11495,3 @@ h5 {
   margin-left: -40vw;
   
 }
-
-

@@ -45,7 +45,7 @@
             // TweenMax.fromTo(birdHolder[0], 5, {left:'70vw'}, {left:'20vw'});
 
             // frames
-            var tl = new TimelineMax({repeat:4, repeatDelay:0.5, ease:Linear.easeNone})
+            var tl = new TimelineMax({repeat:8, repeatDelay:0.5, ease:Linear.easeNone})
             tl.to(bird2[0], 0.01, {autoAlpha:1, delay:0})
             tl.to(bird1[0], 0.01, {autoAlpha:1, delay:0.5})
             tl.to(bird2[0], 0.01, {autoAlpha:0, delay:0})
@@ -56,10 +56,10 @@
             // https://greensock.com/docs/v3/Plugins/MotionPathPlugin
             gsap.registerPlugin(MotionPathPlugin);
 
-            gsap.set(birdHolder[0], {css:{opacity:1}})
+            gsap.set(birdHolder[0], {css:{opacity:1}, delay:2})
             gsap.to(birdHolder[0], {
 
-              duration: 3, 
+              duration: 5, 
               repeat: 0,
               repeatDelay: 0,
               delay:2,
