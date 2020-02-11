@@ -136,18 +136,18 @@
 
 	function init(){
 
-		// set map
-		// mymap = L.map('mapid', {maxBoundsViscosity: 0.1}).setView([53.551452, -2.514501], 18);
-
-
-
-		// set map bounds
-		// var bounds = [[53.553397, -2.519014], [53.54950, -2.506793]];
+		// set bounds
 		var bounds = [[53.553097, -2.519014], [53.55000, -2.510500]];
+
+		// set image
 		var imageUrl = './MAP2A.png',imageBounds = bounds;
 
 		mymap = L.map('mapid', {minZoom:18, maxBounds: bounds, maxBoundsViscosity: 0.1}).setView([53.551452, -2.514501], 18);
 		L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
+
+		// listeners
+		mymap.on('drag', hideInfo);
+		mymap.on('zoom', hideInfo);
 
 		// set svg bounds
 		var svgElementBounds = bounds;
@@ -162,17 +162,6 @@
 			
 			// add buttons	
 			addButtonToHouses(svgElement)
-		//If i have the lat,lng of every house, i can add popup
-		// var popup = L.popup();
-
-		// function onMapClick(e) {
-		// 	popup
-		// 		.setLatLng(e.latlng)
-		// 		.setContent("You clicked the map at " + e.latlng.toString());
-		// 		.openOn(mymap);
-		// }
-
-		// mymap.on('click', onMapClick);
 
 
 }
