@@ -137,12 +137,16 @@
 	function init(){
 
 		// set map
-		mymap = L.map('mapid').setView([53.551452, -2.514501], 18);
+		// mymap = L.map('mapid', {maxBoundsViscosity: 0.1}).setView([53.551452, -2.514501], 18);
+
+
 
 		// set map bounds
 		// var bounds = [[53.553397, -2.519014], [53.54950, -2.506793]];
 		var bounds = [[53.553097, -2.519014], [53.55000, -2.510500]];
 		var imageUrl = './MAP2A.png',imageBounds = bounds;
+
+		mymap = L.map('mapid', {minZoom:18, maxBounds: bounds, maxBoundsViscosity: 0.1}).setView([53.551452, -2.514501], 18);
 		L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
 
 		// set svg bounds
