@@ -35,9 +35,9 @@
         
         function init(){
 
-            // gsap.registerPlugin(DrawSVGPlugin);
-            // gsap.to('#vase', 1, {drawSVG:0, delay:1});
-            // gsap.to('#vaseTop', 1, {drawSVG:0})
+            gsap.registerPlugin(DrawSVGPlugin);
+            gsap.to('#vase', 1, {drawSVG:0, delay:1});
+            gsap.to('#vaseTop', 1, {drawSVG:0})
 
         }
 
@@ -48,7 +48,8 @@
 
 <body onload="init()">
    
-            <div style="">
+            <div >
+                 <!-- change style to style="fill:none;stroke:#fff; & stroke-width:132px -->
                 <div style="position: absolute; z-index:100; width: 100%;  background: none; transform: scale(0.25);">
                     <svg id="vaseoverlay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.32 823.37"><title>vase1 overlay</title><path id="vase" d="M292,103.89s13,100,22,117,126,136,130,192,6,82-1,126-49,201-53,208-7,19-28,26-175,49-269,19c0,0-34-64-48-143s-38-203-18-239,54-76,95-116,65-57,68-108-3-84-3-84-45-25-41-58,145-28,165-16,33,28,32,39S317,96.89,292,103.89Z" style="fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:132px"/><path id="vaseTop" d="M197,55.89s9,27,72,17c0,0,25,1,28-15S222,38.89,197,55.89Z" style="fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:132px"/></svg>
                 </div>
@@ -63,7 +64,7 @@
     <script src="/assets/vendors/bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
     <script src="/assets/vendors/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-    <script src="assets/vendors/easings/easings.min.js"></script>
+    <!-- <script src="assets/vendors/easings/easings.min.js"></script>
 
     <script src="/assets/vendors/bootstrap-toolkit/bootstrap-toolkit.js"></script>
 
@@ -73,7 +74,7 @@
 
     <script type="text/javascript" src="assets/scripts/script.js"></script>
 
-    <script type="text/javascript" src="/assets/vendors/picturefill/picturefill.min.js"></script>
+    <script type="text/javascript" src="/assets/vendors/picturefill/picturefill.min.js"></script> -->
 
 </body>
 
