@@ -20,13 +20,13 @@
 
 	
 </head>
-<body onload="loadData('/assets/json/housesbynumbers.json')">
+<body onload="loadData(0)">
 
-<button onClick="loadData('/assets/json/housesbynumbers.json')">Plot number and house type</button>
-<button onClick="loadData('/assets/json/housesbynotyetreleased.json')">Not yet released</button>
-<button onClick="loadData('/assets/json/housesbysale.json')">For sale</button>
-<button onClick="loadData('/assets/json/housesbyreserved.json')">Reserved</button>
-<button onClick="loadData('/assets/json/housesbysold.json')">Sold</button>
+<button onClick="loadData(0)">Plot number and house type</button>
+<button onClick="loadData(1)">Not yet released</button>
+<button onClick="loadData(2)">For sale</button>
+<button onClick="loadData(3)">Reserved</button>
+<button onClick="loadData(4)">Sold</button>
 
 
 <!-- new york map is 691 × 541 pixels-->
@@ -51,10 +51,87 @@
 
 	let json;
 	let mymap;
-	let houseColourArray = ['red,', 'yellow', 'blue', 'green', 'black'];
+	let roofColour;
+	let wallColour;
+	// let houseColourArray = ['red,', 'yellow', 'blue', 'green', 'black'];
+	
 
-	async function loadData(url){
+	async function loadData(id){
 
+		let url;
+
+		switch(id){
+
+			case 0:
+
+				roofColour = '#d9a831';
+				wallColour = '#9a7922';
+				url = '/assets/json/housesbynumbers.json';
+
+			break;
+
+			case 1:
+
+				roofColour = '#728393';
+				wallColour = '#4e5a65';
+				url = '/assets/json/housesbynotyetreleased.json';
+
+			break;
+
+			case 2:
+
+				roofColour = '#d9a831';
+				wallColour = '#9a7922';
+				url = '/assets/json/housesbysale.json';
+
+			break;
+
+			case 3:
+
+				roofColour = '#ef784a';
+				wallColour = '#a7614a';
+				url = '/assets/json/housesbyreserved.json';
+
+			break;
+
+			case 4:
+
+				roofColour = '#d21e3d';
+				wallColour = '#941929';
+				url = '/assets/json/housesbysold.json';
+				console.log(roofColour)
+			break;
+
+			default:
+
+				roofColour = '#d9a831';
+				wallColour = '#9a7922';
+				url = '/assets/json/housesbynumbers.json';
+
+			break;
+
+		}
+		
+		// ---------------------------------
+		let svgElement = document.getElementById("houses");
+		if(svgElement){
+			let svgHouses = svgElement.children[0].children;
+			for(let i=0;i<svgHouses.length;i++){
+
+				let element = svgHouses[i];
+				if(element.children[0]){
+					element.children[0].style.fill = wallColour;
+					element.children[1].style.fill = wallColour;
+					element.children[2].style.fill = roofColour;
+					element.children[3].style.fill = wallColour;
+					element.children[4].style.fill = wallColour;
+					
+				}
+			}
+		}
+
+
+		// ---------------------------------
 		let response = await fetch(url);
 
 		if (response.ok) { // if HTTP-status is 200-299
@@ -79,7 +156,7 @@
 	}
 
 	function addButtonToHouses(svgEl){
-
+		
 		let svgHouses = svgEl.children[0].children;
 
 		for(let i=0;i<svgHouses.length;i++){
@@ -87,12 +164,7 @@
 			let element = svgHouses[i];
 			element.style = "pointer-events: auto";
 			element.addEventListener("click",  showInfo);
-			
-			// change colour of house
-			for(let j=0;j<element.children.length;j++){
-				element.children[j].style.fill = houseColourArray[i];
-			}
-
+		
 		}
 		
 	}
@@ -252,6 +324,7 @@
 		var svgElementBounds = bounds;
 
 		var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		svgElement.setAttribute('id', 'houses');
 		svgElement.setAttribute('xmlns', "http://www.w3.org/2000/svg");
 		svgElement.setAttribute('viewBox', "0 0 1469 894");
 
