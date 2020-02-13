@@ -11323,12 +11323,13 @@ h5 {
   
 }
 
-.submit2{
+.submit-arrow{
 
   position: absolute;
   width:1rem;
   height: auto;
   border: 1px  transparent solid;
+  margin-top: :5px;
   
 }
 
@@ -11353,7 +11354,7 @@ h5 {
   text-align: center;
   vertical-align: middle;
   display: inline-block;
-  padding: 0.375rem 0.75rem;
+  padding: 0.7rem 0.75rem;
   font-size: 1rem;
   
 }
