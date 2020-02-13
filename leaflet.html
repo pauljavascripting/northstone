@@ -152,11 +152,17 @@
 		var bounds = [[53.553097, -2.519014], [53.55000, -2.510500]];
 
 		// set image
-		var imageUrl = './MAP2B.png',imageBounds = bounds;
+		
 
 		// mymap = L.map('mapid', {minZoom:18, maxBounds: bounds, maxBoundsViscosity: 0.1}).setView([53.551452, -2.514501], 18);
-		mymap = L.map('mapid', {minZoom:18, maxZoom:20}).setView([53.551452, -2.514501], 19);
-		L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
+		mymap = L.map('mapid', {minZoom:18, maxZoom:20}).setView([53.551452, -2.514501], 18);
+
+		// add image
+		// var imageUrl = './MAP2B.png',imageBounds = bounds;
+		// L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
+
+		// add tiles
+		L.tileLayer('https://github.com/pauljavascripting/northstone/blob/master/map{z}.png?').addTo(mymap);
 
 		L.WhenReady = yes()
 
