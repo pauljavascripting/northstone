@@ -117,6 +117,44 @@
 		document.getElementById('houseInfo').style.visibility = 'hidden';
 	}
 
+	function zoom(e){
+
+		// hide pop-up
+		document.getElementById('houseInfo').style.visibility = 'hidden';
+		
+		// hide all layers 
+		mymap.getPane('image18').style.visibility = 'hidden';
+		mymap.getPane('image19').style.visibility = 'hidden';
+		mymap.getPane('image20').style.visibility = 'hidden';
+
+		// display relevant layer
+		switch(e.target._zoom){
+
+			case 18:
+				
+				mymap.getPane('image18').style.visibility = 'visible';
+
+			break;
+			case 19:
+			
+				mymap.getPane('image19').style.visibility = 'visible';
+
+			break;
+			case 20:
+				
+				mymap.getPane('image20').style.visibility = 'visible';
+
+			break;
+
+			case 21:
+				
+				mymap.getPane('image20').style.visibility = 'visible';
+
+			break;
+		}
+
+	}
+
 	function animateHouses(){
 
 		hideInfo();
@@ -145,37 +183,70 @@
 		}
 	}
 
+	function mapReady(){
+
+		//alert(document.getElementById('#houseInfo'))
+		console.log('mapReady')
+	}
 
 	function init(){
 
 		// set bounds
 		var bounds = [[53.553097, -2.519014], [53.55000, -2.510500]];
 
-		// set image
-		
-
 		// mymap = L.map('mapid', {minZoom:18, maxBounds: bounds, maxBoundsViscosity: 0.1}).setView([53.551452, -2.514501], 18);
-		mymap = L.map('mapid', {minZoom:18, maxZoom:20}).setView([53.551452, -2.514501], 18);
+		mymap = L.map('mapid', {minZoom:18, maxZoom:21}).setView([53.551452, -2.514501], 18);
 
 		// add image
-		// var imageUrl = './MAP2B.png',imageBounds = bounds;
+		// var imageUrl = './MAP18.png',imageBounds = bounds;
 		// L.imageOverlay(imageUrl, imageBounds).addTo(mymap);
 
-		// add tiles
-		L.tileLayer('https://github.com/pauljavascripting/northstone/blob/master/map{z}.png?').addTo(mymap);
+		// add map 18 ----------------------------
+		mymap.createPane('image18');
+		mymap.getPane('image18').style.zIndex = 3;
 
-		L.WhenReady = yes()
+		var overlay = new L.ImageOverlay("./map18.png" ,
+		  bounds, {  
+		  attribution: "E.U Copernicus Marine Environment Monitoring Service",
+		  pane: 'image18'
+		});
 
-		// mymap.WhenReady', yes);
+		overlay.addTo(mymap);
 
-		function yes(){
+		// add map 19 ----------------------------
+		mymap.createPane('image19');
+		mymap.getPane('image19').style.zIndex = 2;
 
-			//alert(document.getElementById('#houseInfo'))
-		}
+		var overlay = new L.ImageOverlay("./map19.png" ,
+		  bounds, {  
+		  attribution: "E.U Copernicus Marine Environment Monitoring Service",
+		  pane: 'image19'
+		});
+
+		overlay.addTo(mymap);
+
+		// add map 20 ----------------------------
+		mymap.createPane('image20');
+		mymap.getPane('image20').style.zIndex = 1;
+
+		var overlay = new L.ImageOverlay("./map20.png" ,
+		  bounds, {  
+		  attribution: "E.U Copernicus Marine Environment Monitoring Service",
+		  pane: 'image20'
+		});
+
+		overlay.addTo(mymap);
+
+		// hide maps 19 & 20
+		mymap.getPane('image19').style.visibility = 'hidden';
+		mymap.getPane('image20').style.visibility = 'hidden';
+
+		// listen for when map ready
+		L.WhenReady = mapReady();
 
 		// listeners
 		mymap.on('drag', hideInfo);
-		mymap.on('zoom', hideInfo);
+		mymap.on('zoom', zoom);
 
 		// set svg bounds
 		var svgElementBounds = bounds;
