@@ -36,8 +36,8 @@
         function init(){
 
 
-            // gsap.set('#dial', {transformOrigin: "100% 100%"});
-            // gsap.to('#dial', 3, {rotation:90, y:-25, repeat:-1, ease:Linear.easeNone});
+            gsap.set('#dial', {transformOrigin: "100% 100%", x:15});
+            gsap.to('#dial', 3, {rotation:140, y:-25, repeat:-1, repeatDelay:2, yoyo:true, ease:Linear.easeNone});
             // needs to rotate around the a semi-circle
 
         }
