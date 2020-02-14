@@ -2,6 +2,7 @@
 
 <head>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+	 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
 	
 	<script type="text/javascript">
 
@@ -129,6 +130,11 @@
 			}
 
 
+		}
+
+		function hideInfo(){
+
+			document.getElementById('houseInfo').style.visibility = 'hidden';
 		}
 
 		function showInfo(e){
