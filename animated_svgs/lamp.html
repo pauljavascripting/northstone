@@ -36,13 +36,13 @@
         function init(){
 
             gsap.registerPlugin(DrawSVGPlugin);
-            gsap.to('#Layer_1', 1, {drawSVG:0});
-            gsap.to('#Layer_2', 0.1, {drawSVG:0});
-            gsap.to('#Layer_3', 0.1, {drawSVG:0});
-            gsap.to('#Layer_4', 0.1, {drawSVG:0});
-            gsap.to('#Layer_5', 0.1, {drawSVG:0});
-            gsap.to('#Layer_6', 0.1, {drawSVG:0});
-            gsap.to('#Layer_7', 0.1, {autoAlpha:0});
+            gsap.to('#Layer_1', 2, {drawSVG:0});
+            gsap.to('#Layer_2', 0.1, {drawSVG:0, delay:1});
+            gsap.to('#Layer_3', 0.1, {drawSVG:0, delay:1});
+            gsap.to('#Layer_4', 0.1, {drawSVG:0, delay:1});
+            gsap.to('#Layer_5', 0.1, {drawSVG:0, delay:1});
+            gsap.to('#Layer_6', 0.1, {drawSVG:0, delay:1});
+            gsap.to('#Layer_7', 0.1, {autoAlpha:0, delay:1});
             
 
         }
