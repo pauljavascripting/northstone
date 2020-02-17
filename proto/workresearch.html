@@ -37,9 +37,9 @@
 
            
             // draw svg line
-            // gsap.set('#notepad_line2', {transformOrigin: "0% 100%"});
-            // gsap.fromTo('#notepad_line2', 1, {scaleX:0}, {scaleX:1})
-            //gsap.fromTo('#notepad_line2', 1, {scaleX:0}, {scaleX:1})
+            gsap.set(['#notepad_line2','#notepad_line1'], {transformOrigin: "0% 100%"});
+            gsap.fromTo('#notepad_line2', 1, {scale:0}, {scale:1})
+            gsap.fromTo('#notepad_line1', 1, {scale:0}, {scale:1})
 
             // pass
             gsap.fromTo('#pass_line1', 1, {scaleX:0}, {scaleX:1})
@@ -66,7 +66,7 @@
     <script src="/assets/vendors/bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
     <script src="/assets/vendors/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
-    <script src="assets/vendors/easings/easings.min.js"></script>
+   <!--  <script src="assets/vendors/easings/easings.min.js"></script>
 
     <script src="/assets/vendors/bootstrap-toolkit/bootstrap-toolkit.js"></script>
 
@@ -76,7 +76,7 @@
 
     <script type="text/javascript" src="assets/scripts/script.js"></script>
 
-    <script type="text/javascript" src="/assets/vendors/picturefill/picturefill.min.js"></script>
+    <script type="text/javascript" src="/assets/vendors/picturefill/picturefill.min.js"></script> -->
 
 </body>
 
