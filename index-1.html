@@ -75,10 +75,12 @@
         }
 
         function underlineWord() {
-            let imgHolder = document.getElementsByClassName('neighbourly-line');
-            gsap.set(imgHolder[0], {opacity:1})
-            gsap.set(imgHolder[0], {scaleX:0, transformOrigin: "0% 0%"}); //percents
-            gsap.to(imgHolder[0], 0.25, {scaleX:1, transformOrigin: "0% 0%", ease:Linear}); 
+            
+            gsap.registerPlugin(DrawSVGPlugin);
+            let tl = new TimelineMax()
+            tl.set('.neighbourly-line-holder',{css:{opacity:1}})
+            tl.set('#underline', {transformOrigin:"0% 0%"})
+            tl.fromTo("#underline", 3, {drawSVG:"0% 0%"}, {drawSVG:true});
         }
 
         function animateTree(){
@@ -237,7 +239,7 @@
                 </div>
                 <div class="neighbourly-line-holder">
                     <div class="neighbourly-line">
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 885.85 23.26"><title>underline</title><path d="M97.07,596.14q221.4-8.1,442.83-15l110.71-3.44L761.36,575l110.77-1.37c36.93-.18,73.87-.79,110.8,1.08l0,.49c-73.79,0-147.62,2.57-221.42,4.72L540,585.09,97.09,596.63Z" transform="translate(-97.07 -573.37)" style="fill:#1d1d1b"/></svg>     
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 893.86 30.75"><title>underline</title><path id="underline" d="M0,22.77q221.4-8.1,442.83-15L553.54,4.33l110.75-2.7L775.06.26C812,.08,848.93-.53,885.86,1.34" transform="translate(4 3.98)" style="fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-miterlimit:10;stroke-width:8px"/></svg> 
                     </div>
                 </div>
                 <select class="form-control custom-select" id="selectHear">
