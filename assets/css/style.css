@@ -11402,7 +11402,7 @@ h5 {
   /*bottom: 27vh;*/
   /*left: 100vw;*/
   /*bottom: 50vh;*/
-  top:-20px;
+  top:-130px;
   left: 10vw;
   opacity: 0;
 }
@@ -11410,14 +11410,14 @@ h5 {
 .birdTree-bird1 {
 
   position: absolute;
-  width: 7vw;
+  width: 3vw;
   height: auto;
 }
 
 .birdTree-bird2 {
 
   position: absolute;
-  width: 7vw;
+  width: 3vw;
   height: auto;
   top: 1vw;
 
