@@ -40,93 +40,96 @@
 			var res = id.split("_");
 			let house_id = Number(res[1]);
 			
-			switch(true){
+			// switch(true){
 
-				case house_id == 1: // plot number 1
+			// 	case house_id == 1: // plot number 1
 				
-					wallColour = '#9a7922';
-					roofColour = '#d9a831';
+			// 		wallColour = '#9a7922';
+			// 		roofColour = '#d9a831';
 
-				break;
+			// 	break;
 
-				case house_id == 2: // plot number 2
+			// 	case house_id == 2: // plot number 2
 				
-					wallColour = '#4e5a65';
-					roofColour = '#728393';
+			// 		wallColour = '#4e5a65';
+			// 		roofColour = '#728393';
 
-				break;
+			// 	break;
 
-				case house_id >= 3 &&  house_id < 6: // plot number 3 - 5
+			// 	case house_id >= 3 &&  house_id < 6: // plot number 3 - 5
 				
-					wallColour = '#003036';
-					roofColour = '#014a53';
+			// 		wallColour = '#003036';
+			// 		roofColour = '#014a53';
 
-				break;
+			// 	break;
 
-				case house_id == 6 ||  house_id == 7: // plot number 6 / 7
+			// 	case house_id == 6 ||  house_id == 7: // plot number 6 / 7
 				
-					wallColour = '#a7614a';
-					roofColour = '#ef784a';
+			// 		wallColour = '#a7614a';
+			// 		roofColour = '#ef784a';
 
-				break;
+			// 	break;
 
-				case house_id >= 8 &&  house_id < 11: // plot number 8 - 10
+			// 	case house_id >= 8 &&  house_id < 11: // plot number 8 - 10
 				
-					wallColour = '#003036';
-					roofColour = '#014a53';
+			// 		wallColour = '#003036';
+			// 		roofColour = '#014a53';
 
-				break;
+			// 	break;
 
-				case house_id >= 11 &&  house_id < 13: // plot number 11 - 12
+			// 	case house_id >= 11 &&  house_id < 13: // plot number 11 - 12
 				
-					wallColour = '#4e5a65';
-					roofColour = '#728393';
+			// 		wallColour = '#4e5a65';
+			// 		roofColour = '#728393';
 
-				break;
+			// 	break;
 
-				case house_id >= 13 &&  house_id < 15: // plot number 13 - 14
+			// 	case house_id >= 13 &&  house_id < 15: // plot number 13 - 14
 				
-					wallColour = '#003036';
-					roofColour = '#014a53';
+			// 		wallColour = '#003036';
+			// 		roofColour = '#014a53';
 
-				break;
+			// 	break;
 
-				case house_id == 15: // plot number 15
+			// 	case house_id == 15: // plot number 15
 				
-					wallColour = '#9a7922';
-					roofColour = '#d9a831';
+			// 		wallColour = '#9a7922';
+			// 		roofColour = '#d9a831';
 
-				break;
+			// 	break;
 
-				case house_id >= 20 && house_id < 25: // not yet released - houses with id >= 20 & < 25
+			// 	case house_id >= 20 && house_id < 25: // not yet released - houses with id >= 20 & < 25
 				
-					wallColour = '#4e5a65';
-					roofColour = '#728393';
+			// 		wallColour = '#4e5a65';
+			// 		roofColour = '#728393';
 
-				break;
+			// 	break;
 
-				case house_id >= 31 && house_id < 36: // for sale - houses with id >= 31 & < 35
+			// 	case house_id >= 31 && house_id < 36: // for sale - houses with id >= 31 & < 35
 				
-					wallColour = '#9a7922';
-					roofColour = '#d9a831';
+			// 		wallColour = '#9a7922';
+			// 		roofColour = '#d9a831';
 
-				break;
+			// 	break;
 
-				case house_id >= 111 && house_id < 116: // reserved - houses with id >= 111 & < 115
+			// 	case house_id >= 111 && house_id < 116: // reserved - houses with id >= 111 & < 115
 				
-					wallColour = '#a7614a';
-					roofColour = '#ef784a';
+			// 		wallColour = '#a7614a';
+			// 		roofColour = '#ef784a';
 
-				break;
+			// 	break;
 
-				case house_id >= 51 && house_id < 55: // sold - houses with id >= 51 & < 55
+			// 	case house_id >= 51 && house_id < 55: // sold - houses with id >= 51 & < 55
 				
-					wallColour = '#941929';
-					roofColour = '#d21e3d';
+			// 		wallColour = '#941929';
+			// 		roofColour = '#d21e3d';
 
-				break;
+			// 	break;
 
-			}
+			// }
+
+			wallColour = '#4e5a65';
+			roofColour = '#728393';
 
 			array.push(wallColour, roofColour);
 
@@ -242,7 +245,7 @@
 			// show pop up
 			document.getElementById('houseInfo').style.visibility = 'visible';
 			document.getElementById('houseInfo').style.left = e.clientX-500+'px';
-			document.getElementById('houseInfo').style.top = e.clientY-400+'px';
+			document.getElementById('houseInfo').style.top = e.clientY-240+'px';
 			document.getElementById('houseInfo').addEventListener('click', hideInfo);
 			document.getElementById('house_text').innerHTML = "<b>Plot"+house.house_id+"</b>"+" - Prices from "+"£xyz"+"<br/>"+"<i>House Type: </i>"+house.house_name+", "+house.num_of_bedrooms+" bedrooms"+"<br />Discover more";
 
@@ -311,7 +314,7 @@
 
 			// hide all houses
 			let numHouses = 151;
-			for(let i=1;i<numHouses;i++){
+			for(let i=0;i<numHouses;i++){
 
 				let house = document.getElementById("_"+i);
 
@@ -321,7 +324,7 @@
 			}
 
 			// animate selected houses
-			for(let i=1;i<json.length;i++){
+			for(let i=0;i<json.length;i++){
 
 				let house = document.getElementById(json[i].house_id);
 
@@ -2289,7 +2292,7 @@
 <g id="_43">
 	<polygon id="_x3C_wall2_x3E__143_" class="st0" points="231.9,626.7 231.4,620.4 194.2,653.1 194.6,659.7 	"/>
 	<polygon id="_x3C_wall1_x3E__144_" class="st0" points="174.1,637 174.1,632.2 184.3,640.1 194.1,652.8 194.6,659.6 	"/>
-	<polygon class="st1" points="231.5,620.5 194.3,652.9 184.8,640.6 174.1,632.2 209.8,600.1 220,608.2 	"/>
+	<polygon id="_x3C_roof_x3E__144_" class="st1" points="231.5,620.5 194.3,652.9 184.8,640.6 174.1,632.2 209.8,600.1 220,608.2 	"/>
 	<path d="M231.5,620.5l-37.2,32.6h-0.1l-0.1-0.1l-9.4-12.5l0,0l-10.8-8.2l-0.1-0.1l0.1-0.1c11.9-10.7,23.8-21.5,35.7-32.1h0.1h0.1
 		l10.2,8.2l0,0L231.5,620.5z M231.5,620.5L220,608.3l0,0l-10.2-8.1h0.1c-11.9,10.8-23.8,21.4-35.7,32.1v-0.2l10.7,8.3l0,0l9.4,12.5
 		h-0.1L231.5,620.5z"/>
@@ -2350,7 +2353,7 @@
 <g id="_49">
 	<polyline id="_x3C_wall2_x3E__147_" class="st0" points="461,559.3 461.8,548.2 479.2,536.9 495.1,535.1 496.3,544.7 	"/>
 	<polygon id="_x3C_wall1_x3E__149_" class="st0" points="441.2,498 462.3,547.2 461,559.3 439,506.1 	"/>
-	<polygon class="st1" points="462,548.1 479,536.8 495.1,535.1 475.7,488.2 458,488.5 441.2,498 	"/>
+	<polygon id="_x3C_roof_x3E__149_" class="st1" points="462,548.1 479,536.8 495.1,535.1 475.7,488.2 458,488.5 441.2,498 	"/>
 	<polyline class="st2" points="462,548.2 479.2,536.9 495.1,535.1 496.3,544.7 	"/>
 	<polygon class="st2" points="441.2,498 461.9,548.1 460.8,559.3 439,506.1 	"/>
 	<polygon class="st2" points="462.1,548.3 479,536.8 495.1,535.1 475.5,487.9 458,488.5 441.2,498 	"/>
