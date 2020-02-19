@@ -8,6 +8,8 @@
 
 		let json;
 		let houseType_id;
+		let popupPosX = 500;
+		let popupPosY;
 
 		function init(){
 
@@ -17,6 +19,45 @@
 
 			defineHouses();
 
+			window.addEventListener('resize', setPopupPosition);
+
+			setPopupPosition(null);
+
+		}
+
+		function setPopupPosition(e){
+
+			// console.log(window.innerHeight)
+
+			switch(true){
+
+				case window.innerHeight > 300  && window.innerHeight < 700:
+
+					popupPosY = 150;
+
+				break;
+
+				case window.innerHeight > 700  && window.innerHeight < 1000:
+
+					popupPosY = 400;
+
+				break;
+
+				case window.innerHeight > 1000  && window.innerHeight < 3000:
+
+					popupPosY = 400;
+
+				break;
+
+				case window.innerHeight > 3000:
+
+					popupPosY = 400;
+
+				break;
+
+
+
+			}
 		}
 
 		function getHouseType(){
@@ -31,109 +72,404 @@
 
 		// this function defines all the colours for the houses ------------------------------------------------------
 		// these house ids must match the house ids in the json files
-		function getHouseColours(id){
+		
+		function getHouseColours(house_type, id){
 
-			let array = [];
-			let wallColour;
-			let roofColour;
+			let colours;
 
 			var res = id.split("_");
 			let house_id = Number(res[1]);
 			
-			// switch(true){
+			switch(true){
 
-			// 	case house_id == 1: // plot number 1
+				case house_id == 1: // plot number 1
 				
-			// 		wallColour = '#9a7922';
-			// 		roofColour = '#d9a831';
+					colours = ['#9a7922', '#d9a831'];
 
-			// 	break;
+				break;
 
-			// 	case house_id == 2: // plot number 2
+				case house_id == 2:
 				
-			// 		wallColour = '#4e5a65';
-			// 		roofColour = '#728393';
+					colours = ['#728393', '#4e5a65'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 3 &&  house_id < 6: // plot number 3 - 5
+				case house_id >=3 && house_id < 6:
 				
-			// 		wallColour = '#003036';
-			// 		roofColour = '#014a53';
+					colours = ['#014a53', '#003036'];
 
-			// 	break;
+				break;
 
-			// 	case house_id == 6 ||  house_id == 7: // plot number 6 / 7
+				case house_id >=6 && house_id < 7:
 				
-			// 		wallColour = '#a7614a';
-			// 		roofColour = '#ef784a';
+					colours = ['#ef784a', '#a7614a'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 8 &&  house_id < 11: // plot number 8 - 10
+				case house_id == 7:
 				
-			// 		wallColour = '#003036';
-			// 		roofColour = '#014a53';
+					colours = ['#ef784a', '#a7614a'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 11 &&  house_id < 13: // plot number 11 - 12
+				case house_id >=7 && house_id < 10:
 				
-			// 		wallColour = '#4e5a65';
-			// 		roofColour = '#728393';
+					colours = ['#014a53', '#003036'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 13 &&  house_id < 15: // plot number 13 - 14
+				case house_id >=10 && house_id < 13:
 				
-			// 		wallColour = '#003036';
-			// 		roofColour = '#014a53';
+					colours = ['#728393', '#4e5a65'];
 
-			// 	break;
+				break;
 
-			// 	case house_id == 15: // plot number 15
+				case house_id >=13 && house_id < 15:
 				
-			// 		wallColour = '#9a7922';
-			// 		roofColour = '#d9a831';
+					colours = ['#014a53', '#003036'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 20 && house_id < 25: // not yet released - houses with id >= 20 & < 25
+				case house_id == 15:
 				
-			// 		wallColour = '#4e5a65';
-			// 		roofColour = '#728393';
+					colours = ['#d9a831', '#9a7922'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 31 && house_id < 36: // for sale - houses with id >= 31 & < 35
+				case house_id >=16 && house_id < 18:
 				
-			// 		wallColour = '#9a7922';
-			// 		roofColour = '#d9a831';
+					colours = ['#dcb18e', '#bf8c6f'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 111 && house_id < 116: // reserved - houses with id >= 111 & < 115
+				case house_id >=18 && house_id < 20:
 				
-			// 		wallColour = '#a7614a';
-			// 		roofColour = '#ef784a';
+					colours = ['#f784a', '#a7614'];
 
-			// 	break;
+				break;
 
-			// 	case house_id >= 51 && house_id < 55: // sold - houses with id >= 51 & < 55
+				case house_id >=20 && house_id < 22:
 				
-			// 		wallColour = '#941929';
-			// 		roofColour = '#d21e3d';
+					colours = ['#4282a1', '#2c566a'];
 
-			// 	break;
+				break;
 
-			// }
+				case house_id >=22 && house_id < 28:
+				
+					colours = ['#ef784a', '#a7614a'];
 
-			wallColour = '#4e5a65';
-			roofColour = '#728393';
+				break;
 
-			array.push(wallColour, roofColour);
+				case house_id >=28 && house_id < 32:
+				
+					colours = ['#d9a831', '#9a7922'];
 
-			return array;
+				break;
+
+				case house_id >=32 && house_id < 35:
+				
+					colours = ['#dcb18e', '#bf8c6f'];
+
+				break;
+				
+				case house_id == 35:
+				
+					colours = ['#7d9874', '#677f60'];
+
+				break;
+
+				case house_id >=35 && house_id < 39:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id >=39 && house_id < 41:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+
+				case house_id == 41:
+				
+					colours = ['#c2b4cd', '#887f90'];
+
+				break;
+
+				case house_id >=41 && house_id < 46:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id == 46:
+				
+					colours = ['#c2b4cd', '#887f90'];
+
+				break;
+
+				case house_id >=47 && house_id < 50:
+				
+					colours = ['#4282a1', '#2c566a'];
+
+				break;
+				
+				case house_id >=50 && house_id < 53:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+				
+				case house_id == 53:
+				
+					colours = ['#7d9874', '#677f60'];
+
+				break;
+
+				case house_id >=54 && house_id < 58:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+
+				case house_id == 58:
+				
+					colours = ['#ef784a', '#a7614a'];
+
+				break;
+
+				case house_id >=59 && house_id < 64:
+				
+					colours = ['#d21e3d', '#941929'];
+
+				break;
+
+				case house_id == 64:
+				
+					colours = ['#c2b4cd', ' #887f90'];
+
+				break;
+
+				case house_id >=65 && house_id < 66:
+				
+					colours = ['#b2d3e3', '#7c949f'];
+
+				break;
+
+				case house_id >=66 && house_id < 69:
+				
+					colours = ['#b2d3e3', '#7c949f'];
+
+				break;
+
+				case house_id >=69 && house_id < 72:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id == 72:
+				
+					colours = ['#728393', '#4e5a65'];
+
+				break;
+
+				case house_id == 73:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+
+				case house_id == 74:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id >=75 && house_id < 77:
+				
+					colours = ['#ef784a', '#a7614a'];
+
+				break;
+
+				case house_id >=77 && house_id < 79:
+				
+					colours = ['#dcb18e', '#bf8c6f'];
+
+				break;
+
+				case house_id == 79:
+				
+					colours = ['#7d9874', '#677f60'];
+
+				break;
+
+				case house_id >=80 && house_id < 82:
+				
+					colours = ['#dcb18e', '#bf8c6f'];
+
+				break;
+
+				case house_id >=82 && house_id < 85:
+				
+					colours = ['#4282a1', '#2c566a'];
+
+				break;
+
+				case house_id >=85 && house_id < 88:
+				
+					colours = ['#c2b4cd', '#887f90'];
+
+				break;
+
+				case house_id >=88 && house_id < 91:
+				
+					colours = ['#b2d3e3', '#7c949f'];
+
+				break;
+
+				case house_id == 91:
+				
+					colours = ['#728393', '#4e5a65'];
+
+				break;
+				
+				case house_id >=91 && house_id < 94:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id >=94 && house_id < 96:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+
+				case house_id == 96:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id >=96 && house_id < 101:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+
+				case house_id == 101:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id >=101 && house_id < 105:
+				
+					colours = ['#b2d3e3', '#7c949f'];
+
+				break;
+
+				case house_id >=105 && house_id < 107:
+				
+					colours = ['#728393', '#4e5a65'];
+
+				break;
+
+				case house_id >=107 && house_id < 112:
+				
+					colours = ['#014a53', '#003036'];
+
+				break;
+
+				case house_id >=112 && house_id < 114:
+				
+					colours = ['#c2b4cd', '#887f90'];
+
+				break;
+
+				case house_id >=114 && house_id < 116:
+				
+					colours = ['#728393', '#4e5a65'];
+
+				break;
+
+				case house_id >=116 && house_id < 118:
+				
+					colours = ['#c2b4cd', '#887f90'];
+
+				break;
+
+				case house_id >=118 && house_id < 120:
+				
+					colours = ['#4282a1', '#2c566a'];
+
+				break;
+
+				case house_id >=120 && house_id < 123:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+
+				case house_id >=123 && house_id < 124:
+				
+					colours = ['#ef784a', '#a7614a'];
+
+				break;
+
+				case house_id >=124 && house_id < 128:
+				
+					colours = ['#b2d3e3', '#7c949f'];
+
+				break;
+
+				case house_id >=128 && house_id < 133:
+				
+					colours = ['#ef784a', '#a7614a'];
+
+				break;
+
+				case house_id >=133 && house_id < 140:
+				
+					colours = ['#dcb18e', '#bf8c6f'];
+
+				break;
+
+				case house_id >=140 && house_id < 142:
+				
+					colours = ['#d9a831', '#9a7922'];
+
+				break;
+
+				case house_id == 142:
+				
+					colours = ['#728393', '#4e5a65'];
+
+				break;
+
+				case house_id >=142 && house_id < 147:
+				
+					colours = ['#ef784a', '#a7614a'];
+
+				break;
+
+				case house_id >=147 && house_id < 149:
+				
+					colours = ['#4282a1', '#2c566a'];
+
+				break;
+
+				case house_id >=149 && house_id < 151:
+				
+					colours = ['#ef784a', '#a7614a'];
+
+				break;
+
+
+			}
+
+			return colours
 
 		}
 
@@ -223,6 +559,7 @@
 			  // get the response body (the method explained below)
 			  json = await response.json();
 			  
+			  colourHouses(id);
 			  animateHouses();
 
 			} else {
@@ -244,8 +581,8 @@
 			
 			// show pop up
 			document.getElementById('houseInfo').style.visibility = 'visible';
-			document.getElementById('houseInfo').style.left = e.clientX-500+'px';
-			document.getElementById('houseInfo').style.top = e.clientY-240+'px';
+			document.getElementById('houseInfo').style.left = e.clientX - popupPosX +'px';
+			document.getElementById('houseInfo').style.top = e.clientY - popupPosY +'px';
 			document.getElementById('houseInfo').addEventListener('click', hideInfo);
 			document.getElementById('house_text').innerHTML = "<b>Plot"+house.house_id+"</b>"+" - Prices from "+"£xyz"+"<br/>"+"<i>House Type: </i>"+house.house_name+", "+house.num_of_bedrooms+" bedrooms"+"<br />Discover more";
 
@@ -264,8 +601,10 @@
 			    
 			}
 
+		}
 
-			// colour houses ----------------------------------
+		function colourHouses(house_type){
+
 			let svgElement = document.getElementById("houses");
 			
 			if(svgElement){
@@ -276,11 +615,27 @@
 				for(let i=0;i<svgHouses.length;i++){
 
 					let element = svgHouses[i];
-			
-					let colourArray = getHouseColours(element.id);
 
-					let wallColour = colourArray[0];
-					let roofColour = colourArray[1];
+					let wallColour;
+					let roofColour;
+					
+					// if plot number & house type filter
+					if(house_type==0){ 
+						
+						let colourArray = getHouseColours(house_type, element.id);
+
+						if(colourArray){
+							wallColour = colourArray[0];
+							roofColour = colourArray[1];	
+						}
+					}
+					else{
+
+						wallColour = '#c2b4cd';
+						roofColour = '#887f90';
+
+					}
+					
 					
 					for(let j=0;j<element.children.length;j++){
 
@@ -304,7 +659,6 @@
 				
 
 			}
-
 
 		}
 
