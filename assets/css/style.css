@@ -11425,6 +11425,7 @@ h5 {
   height: 100%;
   position: relative;
   overflow: hidden;
+  /*border:1px red solid;*/
 
 }
 
@@ -11446,21 +11447,55 @@ h5 {
   top:-130px;
   left: 10vw;
   opacity: 0;
+
 }
 
 .birdTree-bird1 {
 
   position: absolute;
-  width: 3vw;
+  width: 5vw;
   height: auto;
+  /*border:1px red solid;*/
 }
 
 .birdTree-bird2 {
 
   position: absolute;
-  width: 3vw;
+  width: 5vw;
   height: auto;
   top: 1vw;
+
+}
+
+@media screen 
+ and (max-width: 500px) 
+ and (min-width: 300px) 
+{ 
+   .birdTree-bird1, .birdTree-bird2 {
+
+    width: 15vw;
+    margin-top: -30px;
+
+   }
+
+   .birdTree-tree {
+
+    width: 18vw;
+
+   }
+
+}
+
+@media screen 
+ and (max-width: 900px) 
+ and (min-width: 500px) 
+{ 
+
+  .birdTree-tree {
+
+    visibility: hidden;
+   }
+
 
 }
 
@@ -11563,17 +11598,29 @@ h5 {
 }
 
 /* houses map --------------------- */
+/* houses map --------------------- */
 #selector {
+ 
   font-family: "Montserrat Regular";
   font-size: 0.75rem; 
+  position:absolute;margin:90px 350px;background:#fff;padding:20px;display:flex;flex-direction:row;align-content: space-between;justify-content: space-between;min-width:700px;
+  
+
+}
+
+@media screen 
+ and (max-width: 600px) 
+ and (min-width: 300px) 
+{ 
+   /*#selector {
+    margin:800px 50px;
+    background: red;
+    width: 2000px;
+   }*/
 
 }
 
 #houseInfo {
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center;*/
 }
 
 #house_text {
