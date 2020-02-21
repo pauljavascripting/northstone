@@ -11507,6 +11507,19 @@ h5 {
 }
 
 /* neighbourly line ---------------------------------- */
+/*.neighbourly {
+  display: flex;
+  justify-content: space-between;
+  width:100vw;
+}*/
+
+.neighbourly {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+
 .neighbourly-line-holder{
    width: 100%;
   height: 30px;
@@ -11516,46 +11529,56 @@ h5 {
   opacity: 0;
 }
 .neighbourly-line{
-  width: 23%;
+  width: 23vw;
   height: auto;
   margin-left: 18vw;
-  /*opacity: 0;*/
+
 }
-/*@media (min-width: 800px) {
+
+/*
+@media (min-width: 900px) and (max-width: 1100px) {
   .neighbourly-line {
-    width: 30%;
+    width: 30vw;
+    margin-left: 25vw;
+  }
+
+@media (min-width: 800px) and (max-width: 900px) {
+  .neighbourly-line {
+    width: 23vw;
   }
 }
+
 @media (max-width: 700px) {
   .neighbourly-line {
-    width: 40%;
+    width: 29vw;
+    margin-left: 20vw;
   }
 }
-@media (max-width: 500px) {
+
+@media (max-width: 600px) {
   .neighbourly-line {
-    width: 40%;
-    margin-left: 42vw;
-    margin-top: -4vh;
+    width: 35vw;
+    margin-left: 43vw;
+    margin-top: -13vh;
   }
 }
 @media (max-width: 400px) {
   .neighbourly-line {
-    width: 60%;
-    margin-left: 42vw;
+    width: 50vw;
     margin-top: 0vh;
-    margin-left: -12vw;
+    margin-left: -30vw;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 325px) {
   .neighbourly-line {
-    width: 80%;
+    width: 60vw;
     margin-left: 42vw;
-    margin-top: -5vh;
+    margin-top: -7vh;
     margin-left: -5vw;
   }
 }*/
 
-/* background objects -------------------------- */
+/* background objects -------------------------- 
 .chair {
 
   width: 10vw;
@@ -11591,35 +11614,70 @@ h5 {
 
 
 /* map -------------------------- */
-.circle {
+/*.circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: #000;
-}
+}*/
 
 /* houses map --------------------- */
-/* houses map --------------------- */
-#selector {
+#selectorMap {
  
   font-family: "Montserrat Regular";
   font-size: 0.75rem; 
-  position:absolute;margin:90px 350px;background:#fff;padding:20px;display:flex;flex-direction:row;align-content: space-between;justify-content: space-between;min-width:700px;
-  
-
+  display:flex;flex-direction:row;align-content: space-between;justify-content: space-between;
+  margin:90px 350px;
+  background:#fff;padding:20px;
+  position: absolute;
+  width:60vw;
 }
 
 @media screen 
- and (max-width: 600px) 
- and (min-width: 300px) 
+ and (max-device-width: 600px) 
+ and (min-device-width: 300px) 
 { 
-   /*#selector {
-    margin:800px 50px;
-    background: red;
-    width: 2000px;
-   }*/
+   #selectorMap {
+    width:100vw;
+    margin: 0;
+    font-size: 0.5rem; 
+    flex-direction:column;
+    bottom:0vh;
+
+   }
+
+   .mapButton {
+
+    width:100vw;
+   
+   }
+
+   .mapText {
+
+    width: 50vw;
+   
+   }
+
+   #map_button1, #map_button2, #map_button3, #map_button4, #map_button5 {
+  
+    transform: scale(0.5);
+
+   }
+  
+}
+
+
+#map_button1, #map_button2, #map_button3, #map_button4, #map_button5 {
+  
+  background:#fff;border:1px #000 solid;width:30px;height:30px;border-radius:50%;margin:-5px 10px;
 
 }
+
+.mapButton {
+
+  display:flex;flex-direction:row;
+}
+
 
 #houseInfo {
 }
@@ -11656,4 +11714,14 @@ h5 {
 .discoverMore:hover {
   color: #b39053;
 }
+
+#houseInfo {
+
+  width: 1000px; height: 800px; position: absolute;z-index: 100;transform: scale(0.25); visibility: hidden; text-align: center;
+}
+
+
+
+
+
 
