@@ -11729,5 +11729,19 @@ h5 {
 
 
 
+/* thought circle */
+#thought-circle{
+  opacity: 0;
+  width: 836.8px;
+  height: 220.8px;
+  position: absolute;
+  transform: scale(0.2);
+}
+
+.thoughful {
+  position: absolute;
+}
+
+
 
 
