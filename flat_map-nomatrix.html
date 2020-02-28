@@ -82,88 +82,71 @@
  
         function checkCar(e){
 
-        	var style = window.getComputedStyle(e);
-			var matrix = new WebKitCSSMatrix(style.webkitTransform);
-			// console.log(matrix.m42)
+   //      	var style = window.getComputedStyle(e);
+			// var matrix = new WebKitCSSMatrix(style.webkitTransform);
+
+			const transformStyle = document.getElementById('carsvg').style.transform;
+			const posArray = String(transformStyle).split(',');
+			const yArray = posArray[1].split('px');
+			const yPos = yArray[0];
+			
 			switch(true){
 
-				case matrix.m42 < 920 && matrix.m42 > 870: // bend 1
+				case yPos < 910 && yPos > 680: // bend 1
 
-					gsap.to('#carsvg', 1.3, { rotation:95})
-
-					carAnimation.timeScale(0.8); // slow animation down
+					gsap.to('#carsvg', 0.3, { rotation:95})
 
 				break;
 
-				case matrix.m42 <= 870 && matrix.m42 > 869: 
-					
-					carAnimation.timeScale(1);
-
-				break
-
-				case matrix.m42 <= 680 && matrix.m42 > 620:  // bend 2
+				case yPos <= 680 && yPos > 620:  // bend 2
 
 					gsap.to('#carsvg',1,{ rotation:5 })
 					
 				break;
 
-				case matrix.m42 <=  620 && matrix.m42 >560: // rotate onto dimple still close
+				case yPos <=  620 && yPos >560: // rotate onto dimple still close
 
 					 gsap.to('#carsvg', 0.7, { rotation:95})
 					
 				break;
 
-				case matrix.m42 <= 560 && matrix.m42 >440:
+				case yPos <= 560 && yPos >440:
 
 				break;
 
-				case matrix.m42 <=  440 && matrix.m42 >410: // rotate slightly on dimple  still close
+				case yPos <=  440 && yPos >410: // rotate slightly on dimple  still close
 
 					gsap.to('#carsvg', 0.5, { rotation:72})
 
 				break;
 
 
-				case matrix.m42 <  330 && matrix.m42 > 320: // reaches last junction
+				case yPos <  330 && yPos > 320: // reaches last junction
 
 
 				break;
 
-				case matrix.m42 <=  320: // reaches last junction
+				case yPos <=  320: // reaches last junction
 					
 					gsap.killTweensOf('#carsvg'); // kill path tween
 
-					// option1 
-					// let tl = new TimelineMax({ease:Linear.easeNone});
-					// tl.to('#carsvg', 0.7, {y:'-=10', x:'-=40', rotation:0 })
-					// tl.to('#carsvg', 0.7, {y:'-=5', x:'-=40'}, '-=0.5')
-					// tl.to('#carsvg', 0.7, {y:'-=35', x:'-=10', rotation:70}, '-=0.5')
-
-					// option2
 					let tl = new TimelineMax({ease:Linear.easeNone});
-					tl.to('#carsvg', 0.7, {y:'-=10', x:'-=30', rotation:10 })
-					tl.to('#carsvg', 0.7, {y:'-=3', x:'-=30', rotation:-5}, '-=0.5')
-					tl.to('#carsvg', 0.7, {y:'-=0', x:'-=30', rotation:0}, '-=0.5')
-					tl.to('#carsvg', 0.7, {y:'-=10', x:'-=10', rotation:30}, '-=0.5')
-					tl.to('#carsvg', 0.5, {y:'-=10', x:'-=0', rotation:50}, '-=0.5')
-					tl.to('#carsvg', 0.5, {y:'-=10', x:'-=0', rotation:60}, '-=0.5')
-					tl.to('#carsvg', 0.5, {y:'-=30', x:'-=0', rotation:70}, '-=0.5')
-
-					tl.timeScale(1.3) // increase speed
-				
+					tl.to('#carsvg', 1, {y:'-=10', x:'-=40', rotation:0, })
+					tl.to('#carsvg', 1.2, {y:'-=5', x:'-=40'}, '-=0.5')
+					tl.to('#carsvg', 1.2, {y:'-=30', x:'-=0', rotation:70}, '-=0.7')
 
 				break;
 
-				// case matrix.m42 <  332 && matrix.m42 > 300: // reaches last junction
+				// case yPos <  332 && yPos > 300: // reaches last junction
 
 
-					// 	manual tween into garage
-					// 	let tl = new TimelineMax({ease:Linear.none});
-					// 	tl.to('#carsvg', 1, {y:'-=35', x:'-=10'})
-					// 	tl.to('#carsvg', 0.5, {rotation:-15, x:'-=20', y:'+=15', transformOrigin: "0% 0%", delay:0.2})
-					// 	tl.to('#carsvg', 0.5, {x:'-=30', y:'+=5'})
-					// 	tl.to('#carsvg', 0.5, {rotation:73,x:'+=10',y:'-=15'})
-					// 	tl.to('#carsvg', 1, {y:'-=20', x:'-=5'})
+				// 		//manual tween into garage
+				// 		let tl = new TimelineMax({ease:Linear.none});
+				// 		tl.to('#carsvg', 1, {y:'-=35', x:'-=10'})
+				// 		tl.to('#carsvg', 0.5, {rotation:-15, x:'-=20', y:'+=15', transformOrigin: "0% 0%", delay:0.2})
+				// 		tl.to('#carsvg', 0.5, {x:'-=30', y:'+=5'})
+				// 		tl.to('#carsvg', 0.5, {rotation:73,x:'+=10',y:'-=15'})
+				// 		tl.to('#carsvg', 1, {y:'-=20', x:'-=5'})
 
 				// break;
 
