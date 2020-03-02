@@ -156,7 +156,7 @@
 					tl.to('#carsvg', 0.5, {y:'-=10', x:'-=0', rotation:60}, '-=0.5')
 					tl.to('#carsvg', 0.5, {y:'-=30', x:'-=0', rotation:70}, '-=0.5')
 
-					tl.timeScale(0.7) // increase speed
+					tl.timeScale() // increase speed
 				
 
 				break;
@@ -623,103 +623,101 @@
 
 		}
 
-		// async function loadData(id){
-
-		// 	let url;
-
-		// 	// reset buttons ====================================================
-		// 	if(document.getElementById('map_button1')){
-		// 		document.getElementById('map_button1').style.background = '#fff';	
-		// 		document.getElementById('map_button2').style.background = '#fff';	
-		// 		document.getElementById('map_button3').style.background = '#fff';	
-		// 		document.getElementById('map_button4').style.background = '#fff';	
-		// 		document.getElementById('map_button5').style.background = '#fff';	
-		// 	}
-			
-		// 	// set json & colours
-		// 	switch(id){
-
-		// 		case 0: // plot number & house type
-
-		// 			if(document.getElementById('map_button1')){
-		// 				document.getElementById('map_button1').style.background = '#deb08b';	
-		// 			}
-					
-		// 			url = '/assets/json/housesbynumbers.json';
-		// 			console.log('0-----')
-		// 		break;
-
-		// 		case 1: // not yet released
-					
-		// 			if(document.getElementById('map_button2')){
-		// 				document.getElementById('map_button2').style.background = '#deb08b';	
-		// 			}
-
-		// 			url = '/assets/json/housesbynotyetreleased.json';
-		// 			console.log('1-----')
-		// 		break;
-
-		// 		case 2: // for sale
-
-		// 			if(document.getElementById('map_button3')){
-		// 				document.getElementById('map_button3').style.background = '#deb08b';	
-		// 			}
-
-		// 			url = '/assets/json/housesbysale.json';
-		// 			console.log('2-----')
-		// 		break;
-
-		// 		case 3: // reserved
-
-		// 			if(document.getElementById('map_button4')){
-		// 				document.getElementById('map_button4').style.background = '#deb08b';	
-		// 			}
-
-		// 			url = '/assets/json/housesbyreserved.json';
-		// 			console.log('3-----')
-		// 		break;
-
-		// 		case 4: // sold
-
-		// 			if(document.getElementById('map_button5')){
-		// 				document.getElementById('map_button5').style.background = '#deb08b';	
-		// 			}
-
-		// 			url = '/assets/json/housesbysold.json';
-		// 			console.log('4-----')
-		// 		break;
-
-		// 		default: // plot number & house type
-
-		// 			if(document.getElementById('map_button1')){
-		// 				document.getElementById('map_button1').style.background = '#deb08b';	
-		// 			}
-
-		// 			url = '/assets/json/housesbynumbers.json';
-
-		// 		break;
-
-		// 	}
-
-		// 	// load data ====================================
-		// 	let response = await fetch(url);
-
-		// 	if (response.ok) { // if HTTP-status is 200-299
-			  
-		// 	  // get the response body (the method explained below)
-		// 	  json = await response.json();
-			  
-		// 	  colourHouses(id);
-		// 	  animateHouses();
-
-		// 	} else {
-		// 	  alert("HTTP-Error: " + response.status);
-		// 	}
-
-
-		// }
-
 		function loadData(id){
+
+			let url;
+
+			//reset buttons ====================================================
+			if(document.getElementById('map_button1')){
+				document.getElementById('map_button1').style.background = '#fff';	
+				document.getElementById('map_button2').style.background = '#fff';	
+				document.getElementById('map_button3').style.background = '#fff';	
+				document.getElementById('map_button4').style.background = '#fff';	
+				document.getElementById('map_button5').style.background = '#fff';	
+			}
+
+			//set json & colours
+			switch(id){
+
+				case 0: //plot number & house type
+
+					if(document.getElementById('map_button1')){
+						document.getElementById('map_button1').style.background = '#deb08b';	
+					}
+					
+					url = '/assets/json/housesbynumbers.json';
+					console.log('0-----')
+				break;
+
+				case 1: //not yet released
+					
+					if(document.getElementById('map_button2')){
+						document.getElementById('map_button2').style.background = '#deb08b';	
+					}
+
+					url = '/assets/json/housesbynotyetreleased.json';
+					console.log('1-----')
+				break;
+
+				case 2: //for sale
+
+					if(document.getElementById('map_button3')){
+						document.getElementById('map_button3').style.background = '#deb08b';	
+					}
+
+					url = '/assets/json/housesbysale.json';
+					console.log('2-----')
+				break;
+
+				case 3: //reserved
+
+					if(document.getElementById('map_button4')){
+						document.getElementById('map_button4').style.background = '#deb08b';	
+					}
+
+					url = '/assets/json/housesbyreserved.json';
+					console.log('3-----')
+				break;
+
+				case 4: //sold
+
+					if(document.getElementById('map_button5')){
+						document.getElementById('map_button5').style.background = '#deb08b';	
+					}
+
+					url = '/assets/json/housesbysold.json';
+					console.log('4-----')
+				break;
+
+				default: //plot number & house type
+
+					if(document.getElementById('map_button1')){
+						document.getElementById('map_button1').style.background = '#deb08b';	
+					}
+
+					url = '/assets/json/housesbynumbers.json';
+
+				break;
+
+			}
+
+			fetch(url)
+			  .then(function (response) {
+			    // The JSON data will arrive here
+			    return response.json()
+			  })
+			  .then((data) => {
+			      
+			  	  json = data;
+
+			      colourHouses(id);
+			 	  animateHouses();
+			  })
+			  .catch(function (err) {
+			    // If an error occured, you will catch it here
+			  });
+
+			
 
 		}
 
@@ -876,7 +874,7 @@
  
 
  <svg width="1469" height="1020" viewBox="0 0 1469 1020" id="svgCar">
-	<path style="fill:none;stroke:#ff0000;stroke-miterlimit:10;stroke-width:1px" id="pathCar" d="M511.799,277.711 C511.799,277.711 565.341,306.806 576.659,314.172 593.216,324.963 596.235,348.699 598.755,357.925 609.919,398.812 620.652,427.491 622.091,435.736 626.73,462.472 611.516,544.11 611.104,555.679 610.503,572.454 598.742,603.011 607.366,616.304 614.502,627.338 693.349,638.552 724.046,645.369 756.176,652.494 823.028,656.079 835.744,659.892 843.441,662.196 861.512,676.511 857.887,694.91 849.603,736.814 837.883,814.964 836.907,825.012 833.389,860.647 818.284,906.877 819.909,908.646 840.135,930.689 906.99401,936.37601 948.56501,954.44801 999.35101,976.50701 1043.33001,1004.02001 1043.33001,1004.02001 "/>
+	<path style="fill:none;stroke:#ff0000;stroke-miterlimit:10;stroke-width:1px" id="pathCar" d="M511.799,277.711 C511.799,277.711 565.341,306.806 576.659,314.172 593.216,324.963 596.235,348.699 598.755,357.925 609.919,398.812 620.652,427.491 622.091,435.736 626.73,462.472 611.516,544.11 611.104,555.679 610.503,572.454 598.742,603.011 607.366,616.304 614.502,627.338 693.349,638.552 724.046,645.369 756.176,652.494 823.028,656.079 835.744,659.892 843.441,662.196 861.512,676.511 857.887,694.91 849.603,736.814 837.883,814.964 836.907,825.012 833.389,860.647 818.284,906.877 819.909,908.646 840.135,930.689 906.99401,936.37601 948.56501,954.44801 999.35101,976.50701 1043.329,1037.977 1043.329,1037.977 "/>
 	</svg>
 
 	
