@@ -51,49 +51,43 @@
 			// register
 			gsap.registerPlugin(MotionPathPlugin);
 
-		    // display car
-		    gsap.set('#carHolder',{ css:{opacity:1}, delay:3 });
+		    // display car
+		    gsap.set('#carHolder',{ css:{opacity:1}, delay:3 });
 
-		    // amend svg
+		    // amend svg
 			gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:15, scale:0.1 });
 
 			// animate
-            carAnimation = gsap.to(carsvg, {
+            carAnimation = gsap.to(carsvg, {
 
-              duration: 19, 
-              repeat: 0,
-              repeatDelay: 0,
-              delay:2,
-              yoyo: false,
-              ease: "Linear.easeInOut",
-              motionPath:{
-                path: "#pathCar",
-                start: 1,
-                end:0,
-              },
-              onUpdate: checkCar,
-              onUpdateParams:[carsvg]
-            });
+              duration: 19, 
+              repeat: 0,
+              repeatDelay: 0,
+              delay:2,
+              yoyo: false,
+              ease: "Linear.easeInOut",
+              motionPath:{
+                path: "#pathCar",
+                start: 1,
+                end:0,
+              },
+              onUpdate: checkCar,
+              onUpdateParams:[carsvg]
+            });
 
-            // carAnimation.seek(12)
+            // carAnimation.seek(12)
 
-        }
+        }
 
- 
-        function checkCar(e){
+ 
+        function checkCar(e){
 
-   //      	var style = window.getComputedStyle(e);
-			// var matrix = new WebKitCSSMatrix(style.webkitTransform);
+        	var style = window.getComputedStyle(e);
+			var matrix = new WebKitCSSMatrix(style.webkitTransform);
 			// console.log(matrix.m42)
-
-			const transformStyle = document.getElementById('carsvg').style.transform;
-			const posArray = String(transformStyle).split(',');
-			const yArray = posArray[1].split('px');
-			const yPos = yArray[0];
-
 			switch(true){
 
-				case yPos < 920 && yPos > 870: // bend 1
+				case matrix.m42 < 920 && matrix.m42 > 870: // bend 1
 
 					gsap.to('#carsvg', 1.3, { rotation:95})
 
@@ -101,41 +95,41 @@
 
 				break;
 
-				case yPos <= 870 && yPos > 869: 
+				case matrix.m42 <= 870 && matrix.m42 > 869: 
 					
 					carAnimation.timeScale(1);
 
 				break
 
-				case yPos <= 680 && yPos > 620:  // bend 2
+				case matrix.m42 <= 680 && matrix.m42 > 620:  // bend 2
 
 					gsap.to('#carsvg',1,{ rotation:5 })
 					
 				break;
 
-				case yPos <=  620 && yPos >560: // rotate onto dimple still close
+				case matrix.m42 <=  620 && matrix.m42 >560: // rotate onto dimple still close
 
 					 gsap.to('#carsvg', 0.7, { rotation:95})
 					
 				break;
 
-				case yPos <= 560 && yPos >440:
+				case matrix.m42 <= 560 && matrix.m42 >440:
 
 				break;
 
-				case yPos <=  440 && yPos >410: // rotate slightly on dimple  still close
+				case matrix.m42 <=  440 && matrix.m42 >410: // rotate slightly on dimple  still close
 
 					gsap.to('#carsvg', 0.5, { rotation:72})
 
 				break;
 
 
-				case yPos <  330 && yPos > 320: // reaches last junction
+				case matrix.m42 <  330 && matrix.m42 > 320: // reaches last junction
 
 
 				break;
 
-				case yPos <=  320: // reaches last junction
+				case matrix.m42 <=  320: // reaches last junction
 					
 					gsap.killTweensOf('#carsvg'); // kill path tween
 
@@ -160,7 +154,7 @@
 
 				break;
 
-				// case matrix.m42 <  332 && matrix.m42 > 300: // reaches last junction
+				// case matrix.m42 <  332 && matrix.m42 > 300: // reaches last junction
 
 
 					// 	manual tween into garage
@@ -174,25 +168,25 @@
 				// break;
 
 			}
-        }
+        }
 
 		function setPopupPosition(e){
 
 			switch(true){
 
-				case window.innerHeight > 300  && window.innerHeight < 700:
+				case window.innerHeight > 300  && window.innerHeight < 700:
 
 					popupPosY = 150;
 
 				break;
 
-				case window.innerHeight > 700  && window.innerHeight < 1000:
+				case window.innerHeight > 700  && window.innerHeight < 1000:
 
 					popupPosY = 400;
 
 				break;
 
-				case window.innerHeight > 1000  && window.innerHeight < 3000:
+				case window.innerHeight > 1000  && window.innerHeight < 3000:
 
 					popupPosY = 400;
 
@@ -622,103 +616,99 @@
 
 		}
 
-		// async function loadData(id){
+		async function loadData(id){
 
-		// 	let url;
+			let url;
 
-		// 	// reset buttons ====================================================
-		// 	if(document.getElementById('map_button1')){
-		// 		document.getElementById('map_button1').style.background = '#fff';	
-		// 		document.getElementById('map_button2').style.background = '#fff';	
-		// 		document.getElementById('map_button3').style.background = '#fff';	
-		// 		document.getElementById('map_button4').style.background = '#fff';	
-		// 		document.getElementById('map_button5').style.background = '#fff';	
-		// 	}
+			// reset buttons ====================================================
+			if(document.getElementById('map_button1')){
+				document.getElementById('map_button1').style.background = '#fff';	
+				document.getElementById('map_button2').style.background = '#fff';	
+				document.getElementById('map_button3').style.background = '#fff';	
+				document.getElementById('map_button4').style.background = '#fff';	
+				document.getElementById('map_button5').style.background = '#fff';	
+			}
 			
-		// 	// set json & colours
-		// 	switch(id){
+			// set json & colours
+			switch(id){
 
-		// 		case 0: // plot number & house type
+				case 0: // plot number & house type
 
-		// 			if(document.getElementById('map_button1')){
-		// 				document.getElementById('map_button1').style.background = '#deb08b';	
-		// 			}
+					if(document.getElementById('map_button1')){
+						document.getElementById('map_button1').style.background = '#deb08b';	
+					}
 					
-		// 			url = '/assets/json/housesbynumbers.json';
-		// 			console.log('0-----')
-		// 		break;
+					url = '/assets/json/housesbynumbers.json';
+					console.log('0-----')
+				break;
 
-		// 		case 1: // not yet released
+				case 1: // not yet released
 					
-		// 			if(document.getElementById('map_button2')){
-		// 				document.getElementById('map_button2').style.background = '#deb08b';	
-		// 			}
+					if(document.getElementById('map_button2')){
+						document.getElementById('map_button2').style.background = '#deb08b';	
+					}
 
-		// 			url = '/assets/json/housesbynotyetreleased.json';
-		// 			console.log('1-----')
-		// 		break;
+					url = '/assets/json/housesbynotyetreleased.json';
+					console.log('1-----')
+				break;
 
-		// 		case 2: // for sale
+				case 2: // for sale
 
-		// 			if(document.getElementById('map_button3')){
-		// 				document.getElementById('map_button3').style.background = '#deb08b';	
-		// 			}
+					if(document.getElementById('map_button3')){
+						document.getElementById('map_button3').style.background = '#deb08b';	
+					}
 
-		// 			url = '/assets/json/housesbysale.json';
-		// 			console.log('2-----')
-		// 		break;
+					url = '/assets/json/housesbysale.json';
+					console.log('2-----')
+				break;
 
-		// 		case 3: // reserved
+				case 3: // reserved
 
-		// 			if(document.getElementById('map_button4')){
-		// 				document.getElementById('map_button4').style.background = '#deb08b';	
-		// 			}
+					if(document.getElementById('map_button4')){
+						document.getElementById('map_button4').style.background = '#deb08b';	
+					}
 
-		// 			url = '/assets/json/housesbyreserved.json';
-		// 			console.log('3-----')
-		// 		break;
+					url = '/assets/json/housesbyreserved.json';
+					console.log('3-----')
+				break;
 
-		// 		case 4: // sold
+				case 4: // sold
 
-		// 			if(document.getElementById('map_button5')){
-		// 				document.getElementById('map_button5').style.background = '#deb08b';	
-		// 			}
+					if(document.getElementById('map_button5')){
+						document.getElementById('map_button5').style.background = '#deb08b';	
+					}
 
-		// 			url = '/assets/json/housesbysold.json';
-		// 			console.log('4-----')
-		// 		break;
+					url = '/assets/json/housesbysold.json';
+					console.log('4-----')
+				break;
 
-		// 		default: // plot number & house type
+				default: // plot number & house type
 
-		// 			if(document.getElementById('map_button1')){
-		// 				document.getElementById('map_button1').style.background = '#deb08b';	
-		// 			}
+					if(document.getElementById('map_button1')){
+						document.getElementById('map_button1').style.background = '#deb08b';	
+					}
 
-		// 			url = '/assets/json/housesbynumbers.json';
+					url = '/assets/json/housesbynumbers.json';
 
-		// 		break;
+				break;
 
-		// 	}
+			}
 
-		// 	// load data ====================================
-		// 	let response = await fetch(url);
+			// load data ====================================
+			let response = await fetch(url);
 
-		// 	if (response.ok) { // if HTTP-status is 200-299
-			  
-		// 	  // get the response body (the method explained below)
-		// 	  json = await response.json();
-			  
-		// 	  colourHouses(id);
-		// 	  animateHouses();
+			if (response.ok) { // if HTTP-status is 200-299
+			  
+			  // get the response body (the method explained below)
+			  json = await response.json();
+			  
+			  colourHouses(id);
+			  animateHouses();
 
-		// 	} else {
-		// 	  alert("HTTP-Error: " + response.status);
-		// 	}
+			} else {
+			  alert("HTTP-Error: " + response.status);
+			}
 
-
-		// }
-
-		function loadData(id){
 
 		}
 
@@ -751,7 +741,7 @@
 				let house = document.getElementById("_"+i);
 
 				house.addEventListener('click', showInfo);
-			    
+			    
 			}
 
 		}
@@ -827,7 +817,7 @@
 
 				if(house)
 				gsap.set(house, {scale:0, transformOrigin:"50% 50%"});
-			    
+			    
 			}
 
 			// animate selected houses
@@ -837,14 +827,10 @@
 
 				if(house){
 					gsap.set(house, {scale:0, transformOrigin:"50% 50%"})
-			    	gsap.to(house, 0.2, {scale:1, transformOrigin:"50% 50%", delay:1} );
+			    	gsap.to(house, 0.2, {scale:1, transformOrigin:"50% 50%", delay:1} );
 				}
 			 
 			}
-		}
-
-		window.onload = function(e){
-			init();
 		}
 
 	</script>
@@ -853,7 +839,7 @@
 
 
 
-<body>
+<body onload="init()">
 
 	
 <!-- 1469px; height: 1020px -->
@@ -872,9 +858,9 @@
 
 
 <div id="carPath" style="position: absolute; width:1469; height:1020; border:1px blue solid; visibility: hidden;">
- 
+ 
 
- <svg width="1469" height="1020" viewBox="0 0 1469 1020" id="svgCar">
+ <svg width="1469" height="1020" viewBox="0 0 1469 1020" id="svgCar">
 	<path style="fill:none;stroke:#ff0000;stroke-miterlimit:10;stroke-width:1px" id="pathCar" d="M511.799,277.711 C511.799,277.711 565.341,306.806 576.659,314.172 593.216,324.963 596.235,348.699 598.755,357.925 609.919,398.812 620.652,427.491 622.091,435.736 626.73,462.472 611.516,544.11 611.104,555.679 610.503,572.454 598.742,603.011 607.366,616.304 614.502,627.338 693.349,638.552 724.046,645.369 756.176,652.494 823.028,656.079 835.744,659.892 843.441,662.196 861.512,676.511 857.887,694.91 849.603,736.814 837.883,814.964 836.907,825.012 833.389,860.647 818.284,906.877 819.909,908.646 840.135,930.689 906.99401,936.37601 948.56501,954.44801 999.35101,976.50701 1043.33001,1004.02001 1043.33001,1004.02001 "/>
 	</svg>
 
@@ -2917,4 +2903,4 @@
 </body>
 
 
-</html
+</html>
