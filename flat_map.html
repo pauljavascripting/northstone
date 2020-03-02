@@ -7,6 +7,7 @@
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <script type="text/javascript" src="/gsap-member/minified/MotionPathPlugin.min.js"></script>
 	 <script type="text/javascript" src="/gsap-member/minified/MotionPathHelper.min.js"></script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	
 	<script type="text/javascript">
 
@@ -2908,10 +2909,132 @@
 
 </div>
 
-<div id="selectorMap"><div class="mapButton"><div class="mapText">Plot number and house type</div><div id="map_button1" onClick="loadData(0)" style=""></div></div><div class="mapButton"><div class="mapText">Not Yet Released</div><div id="map_button2" onClick="loadData(1)" style=""></div></div><div class="mapButton"><div class="mapText">For Sale</div><div id="map_button3" onClick="loadData(2)" style=""></div></div><div class="mapButton"><div class="mapText">Reserved</div><div id="map_button4" onClick="loadData(3)" style=""></div></div><div class="mapButton"><div class="mapText">Sold</div><div id="map_button5" onClick="loadData(4)" style=""></div></div></div>
+<!-- <div id="selectorMap"><div class="mapButton"><div class="mapText">Plot number and house type</div><div id="map_button1" onClick="loadData(0)" style=""></div></div><div class="mapButton"><div class="mapText">Not Yet Released</div><div id="map_button2" onClick="loadData(1)" style=""></div></div><div class="mapButton"><div class="mapText">For Sale</div><div id="map_button3" onClick="loadData(2)" style=""></div></div><div class="mapButton"><div class="mapText">Reserved</div><div id="map_button4" onClick="loadData(3)" style=""></div></div><div class="mapButton"><div class="mapText">Sold</div><div id="map_button5" onClick="loadData(4)" style=""></div></div></div> -->
 
+<!-- <div id="selectorMap">
+	<div class="mapButton"><div class="mapCopy">House Type</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
+	<div class="mapButton"><div class="mapCopy">Not Yet Released</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
+	<div class="mapButton"><div class="mapCopy">For Sale</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
+	<div class="mapButton"><div class="mapCopy">Reserved</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
+	<div class="mapButton"><div class="mapCopy">Sold</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
+</div> -->
 
+<!-- <div class="row offset-md-2 selectorMap">
+    
+    <div class="col-md-2 selectorMapBox">
+    	
+    	<div class="float-left xx">House Type</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
 
+    </div>
+
+    <div class="col-md-2 selectorMapBox">
+    	
+    	<div class="float-left xx">Not Yet Released</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
+
+    </div>
+
+    <div class="col-md-2 selectorMapBox">
+    	
+    	<div class="float-left xx">For Sale</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
+
+    </div>
+
+    <div class="col-md-2 selectorMapBox">
+    	
+    	<div class="float-left xx">Reserved</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
+
+    </div>
+
+    <div class="col-md-2 selectorMapBox">
+    	
+    	<div class="float-left xx">Sold</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
+
+    </div>
+
+    
+</div>
+ -->
+
+<!-- https://stackoverflow.com/questions/35077631/how-to-hide-one-column-from-grid-in-bootstrap-mobile-version -->
+
+ <div class="container selectorMap">
+ <div class="row xyz">
+ 	<!-- col 1 on desktop / mobile -->
+	<div class="col">
+  	
+  		<div class="row xx">
+	  		<div class="col-8 xyz">House Type</div>
+	  		<div class="col-4 xyz"><div class="test rounded-circle"></div><div class="filled-circle-mask"><div class="filled-circle"></div></div></div>
+  		</div>
+
+  		<div class="row xx d-md-none">
+	  		<div class="col-8 xyz">Not Yet Released</div>
+	  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		</div>
+
+  		<div class="row xx d-md-none">
+	  		<div class="col-8 xyz">For Sale</div>
+	  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		</div>
+
+  	</div>
+    <!-- col 2 on desktop -->
+    <div class="col d-none d-lg-block">
+  	
+  		<div class="row xx">
+  		<div class="col-8 xyz">Not Yet Released</div>
+  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		</div>
+
+    </div>
+    <!-- col 3 on desktop -->
+    <div class="col d-none d-lg-block">
+  	
+  		<div class="row xx">
+  		<div class="col-8 xyz">For Sale</div>
+  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		</div>
+
+    </div>
+    <!-- col 4 on desktop -->
+    <div class="col d-none d-lg-block">
+  	
+  		<div class="row xx">
+  		<div class="col-8 xyz">Reserved</div>
+  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		</div>
+
+    </div>
+    <!-- col 5 on desktop -->
+    <div class="col d-none d-lg-block">
+  	
+  		<div class="row xx">
+  		<div class="col-8 xyz">Sold</div>
+  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		</div>
+
+    </div>
+
+    <!-- col 2 on mobile -->
+    <div class="col d-block d-md-none">
+  	
+  		<div class="row xyz">
+  		<div class="col-8 xx">Reserved</div>
+  		<div class="col-4 xx"><div class="test rounded-circle"></div></div>
+  		</div>
+
+  		<div class="row xyz">
+  		<div class="col-8 xx">Sold</div>
+  		<div class="col-4 xx"><div class="test rounded-circle"></div></div>
+  		</div>
+
+    </div>
+  	
+  
+</div>
+</div>
+
+<!-- resevcerd & sold  in column2 on mobile -->
 
 </body>
 

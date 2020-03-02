@@ -11622,7 +11622,7 @@ h5 {
 }*/
 
 /* houses map --------------------- */
-#selectorMap {
+/*#selectorMap {
  
   font-family: "Montserrat Regular";
   font-size: 0.75rem; 
@@ -11676,7 +11676,101 @@ h5 {
 .mapButton {
 
   display:flex;flex-direction:row;
+}*/
+
+
+/* houses map --------------------- */
+.selectorMap {
+ 
+  padding-top: 80px;
+  font-size: 0.7rem;
+  font-family: "Montserrat Regular";
+  
 }
+
+.xx {
+ /*border: 1px red solid;*/
+ background: #ffffff;
+}
+
+.xyz {
+  background: #ffffff;
+  padding: 10px;
+}
+
+.test {
+  width: 20px;
+  height: 20px;
+  border:2px blue solid;
+  position: absolute;
+  z-index: 1;
+}
+
+.filled-circle-mask {
+
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  clip-path: circle(10px at center);
+
+}
+
+.filled-circle {
+
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: green;
+  margin-top: -10px;
+}
+
+/*
+.xy {
+  background: red;
+  width: 15px;
+  height: 15px;
+}
+*/
+/*.test {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+}
+*/
+/*#selectorMap {
+ 
+  font-family: "Montserrat Regular";
+  font-size: 0.75rem; 
+  margin:80px 22vw;
+  background:#fff;
+  position: absolute;
+  padding: 1vw;
+}
+
+.mapButton {
+
+  border:1px red solid;
+  float: left;
+  padding: 0 2vw 0 2vw;
+}
+
+.mapCopy {
+
+  float: left;
+}
+
+.circleButtonHolder {
+  float: left;
+}
+
+.circleButton {
+  
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 0 0 3px;
+}*/
 
 
 #houseInfo {
@@ -11722,7 +11816,7 @@ h5 {
 
 #car {
 
-  /*position: absolute;width:50px; height:auto; bottom: 0px; left:830px;*/
+  /*position: absolute;width:50px; height:auto; bottom: 0px; left:830px;
   /*transform: scale(0.3);
   position: absolute;*/
 }
