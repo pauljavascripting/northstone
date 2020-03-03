@@ -11824,7 +11824,10 @@ h5 {
 
 /* --------------------------- */
 
-.keydropdown .list-group-item{ width: 100px!important; }
+.xxx {
+
+  min-width: 50vw;
+}
 
 
 /* --------------------------- */
