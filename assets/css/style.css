@@ -11688,14 +11688,15 @@ h5 {
   
 }
 
-.xx {
- /*border: 1px red solid;*/
+.mapRow {
+ 
  background: #ffffff;
 }
 
-.xyz {
+.mapOption {
   background: #ffffff;
   padding: 10px;
+  /*border: 1px red solid;*/
 }
 
 .circleEmpty {
@@ -11743,55 +11744,12 @@ h5 {
 
 }
 
-
-
-/*
-.xy {
-  background: red;
-  width: 15px;
-  height: 15px;
+.buttonHidden {
+  border:#fff;
+  background: #fff;
+  color: #fff;
 }
-*/
-/*.test {
-  width: 10px;
-  height: 10px;
-  background-color: black;
-}
-*/
-/*#selectorMap {
- 
-  font-family: "Montserrat Regular";
-  font-size: 0.75rem; 
-  margin:80px 22vw;
-  background:#fff;
-  position: absolute;
-  padding: 1vw;
-}
-
-.mapButton {
-
-  border:1px red solid;
-  float: left;
-  padding: 0 2vw 0 2vw;
-}
-
-.mapCopy {
-
-  float: left;
-}
-
-.circleButtonHolder {
-  float: left;
-}
-
-.circleButton {
-  
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #000;
-  margin: 0 0 0 3px;
-}*/
+/* --------------------------- */
 
 
 #houseInfo {

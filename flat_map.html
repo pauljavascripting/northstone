@@ -636,7 +636,9 @@
 				document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#ffffff';
 				document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#ffffff';
 				document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ffffff';	
+				document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ffffff';	
 				document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#ffffff';
+				document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#ffffff';
 				
 			}
 
@@ -679,6 +681,7 @@
 
 					if(document.getElementsByClassName('circleFull rounded-circle mapButton4')){
 						document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ef784a';	
+						document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ef784a';	
 					}
 
 					url = '/assets/json/housesbyreserved.json';
@@ -689,6 +692,7 @@
 
 					if(document.getElementsByClassName('circleFull rounded-circle mapButton5')){
 						document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#d21e3d';
+						document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#d21e3d';
 					}
 
 					url = '/assets/json/housesbysold.json';
@@ -2961,59 +2965,59 @@
 <!-- https://stackoverflow.com/questions/35077631/how-to-hide-one-column-from-grid-in-bootstrap-mobile-version -->
 
  <div class="container selectorMap">
- <div class="row xyz">
+ <div class="row mapOption">
  	<!-- col 1 on desktop / mobile -->
 	<div class="col">
   	
-  		<div class="row xx" onClick="loadData(0)">
-	  		<div class="col-8 xyz">House Type</div>
-	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton1"></div></div>
+  		<div class="row mapRow" onClick="loadData(0)">
+	  		<div class="col-8 mapOption">House Type</div>
+	  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton1"></div></div>
   		</div>
 
-  		<div class="row xx d-md-none" onClick="loadData(1)">
-	  		<div class="col-8 xyz">Not Yet Released</div>
-	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
+  		<div class="row mapRow d-md-none" onClick="loadData(1)">
+	  		<div class="col-8 mapOption">Not Yet Released</div>
+	  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
   		</div>
 
-  		<div class="row xx d-md-none" onClick="loadData(2)">
-	  		<div class="col-8 xyz">For Sale</div>
-	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
+  		<div class="row mapRow d-md-none" onClick="loadData(2)">
+	  		<div class="col-8 mapOption">For Sale</div>
+	  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
   		</div>
 
   	</div>
     <!-- col 2 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx" onClick="loadData(1)">
-  		<div class="col-8 xyz">Not Yet Released</div>
-  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
+  		<div class="row mapRow" onClick="loadData(1)">
+  		<div class="col-8 mapOption">Not Yet Released</div>
+  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
   		</div>
 
     </div>
     <!-- col 3 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx" onClick="loadData(2)">
-  		<div class="col-8 xyz">For Sale</div>
-  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
+  		<div class="row mapRow" onClick="loadData(2)">
+  		<div class="col-8 mapOption">For Sale</div>
+  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
   		</div>
 
     </div>
     <!-- col 4 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx" onClick="loadData(3)">
-  		<div class="col-8 xyz">Reserved</div>
-  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
+  		<div class="row mapRow" onClick="loadData(3)">
+  		<div class="col-8 mapOption">Reserved</div>
+  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
   		</div>
 
     </div>
     <!-- col 5 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx" onClick="loadData(4)">
-  		<div class="col-8 xyz">Sold</div>
-  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
+  		<div class="row mapRow" onClick="loadData(4)">
+  		<div class="col-8 mapOption">Sold</div>
+  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
   		</div>
 
     </div>
@@ -3021,17 +3025,22 @@
     <!-- col 2 on mobile -->
     <div class="col d-block d-md-none">
   	
-  		<div class="row xyz" onClick="loadData(3)">
-  		<div class="col-8 xx">Reserved</div>
-  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
+  		<div class="row mapRow" onClick="loadData(3)">
+	  		<div class="col-8 mapOption">Reserved</div>
+	  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
   		</div>
 
-  		<div class="row xyz" onClick="loadData(4)">
-  		<div class="col-8 xx">Sold</div>
-  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
+  		<div class="row mapRow d-md-none" onClick="loadData(4)">
+	  		<div class="col-8 mapOption">Sold</div>
+	  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
   		</div>
 
-    </div>
+  		<div class="row mapRow d-md-none">
+	  		<div class="col-8 mapOption buttonHidden">Empty</div>
+	  		<div class="col-4 mapOption"><div class="circleEmpty rounded-circle buttonHidden"></div><div class="circleFull rounded-circle mapButton5 buttonHidden"></div></div>
+  		</div>
+
+  	</div>
   	
   
 </div>
