@@ -706,15 +706,13 @@
 			  .then(function (response) {
 			    // The JSON data will arrive here
 			    return response.json()
-			  })
-			  .then((data) => {
+			  }).then((data) => {
 			      
 			  	  json = data;
 
 			      colourHouses(id);
 			 	  animateHouses();
-			  })
-			  .catch(function (err) {
+			  }).catch(function (err) {
 			    // If an error occured, you will catch it here
 			  });
 
@@ -2962,7 +2960,7 @@
  	<!-- col 1 on desktop / mobile -->
 	<div class="col">
   	
-  		<div class="row xx">
+  		<div class="row xx" onClick="" >
 	  		<div class="col-8 xyz">House Type</div>
 	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle"></div></div>
   		</div>
