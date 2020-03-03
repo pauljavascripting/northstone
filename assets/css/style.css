@@ -11701,7 +11701,7 @@ h5 {
 .circleEmpty {
   width: 20px;
   height: 20px;
-  border:2px blue solid;
+  border:4px #deb08b solid;
   position: absolute;
   z-index: 1;
 }
@@ -11709,9 +11709,38 @@ h5 {
 .circleFull {
   width: 20px;
   height: 20px;
-  background: red;
   position: absolute;
   z-index: 0;
+}
+
+.mapButton1 {
+
+  background: #fff;
+
+}
+
+.mapButton2 {
+
+  background: #fff;
+
+}
+
+.mapButton3 {
+
+  background: #fff;
+
+}
+
+.mapButton4 {
+
+  background: #fff;
+
+}
+
+.mapButton5 {
+
+  background: #fff;
+
 }
 
 

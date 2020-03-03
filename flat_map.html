@@ -629,12 +629,15 @@
 			let url;
 
 			//reset buttons ====================================================
-			if(document.getElementById('map_button1')){
-				document.getElementById('map_button1').style.background = '#fff';	
-				document.getElementById('map_button2').style.background = '#fff';	
-				document.getElementById('map_button3').style.background = '#fff';	
-				document.getElementById('map_button4').style.background = '#fff';	
-				document.getElementById('map_button5').style.background = '#fff';	
+			if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
+				document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#ffffff';	
+				document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#ffffff';
+				document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#ffffff';	
+				document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#ffffff';
+				document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#ffffff';
+				document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ffffff';	
+				document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#ffffff';
+				
 			}
 
 			//set json & colours
@@ -642,8 +645,8 @@
 
 				case 0: //plot number & house type
 
-					if(document.getElementById('map_button1')){
-						document.getElementById('map_button1').style.background = '#deb08b';	
+					if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
+						document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
 					}
 					
 					url = '/assets/json/housesbynumbers.json';
@@ -652,8 +655,9 @@
 
 				case 1: //not yet released
 					
-					if(document.getElementById('map_button2')){
-						document.getElementById('map_button2').style.background = '#deb08b';	
+					if(document.getElementsByClassName('circleFull rounded-circle mapButton2')){
+						document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#728393';
+						document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#728393';	
 					}
 
 					url = '/assets/json/housesbynotyetreleased.json';
@@ -662,8 +666,9 @@
 
 				case 2: //for sale
 
-					if(document.getElementById('map_button3')){
-						document.getElementById('map_button3').style.background = '#deb08b';	
+					if(document.getElementsByClassName('circleFull rounded-circle mapButton3')){
+						document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#d9a831';	
+						document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#d9a831';	
 					}
 
 					url = '/assets/json/housesbysale.json';
@@ -672,8 +677,8 @@
 
 				case 3: //reserved
 
-					if(document.getElementById('map_button4')){
-						document.getElementById('map_button4').style.background = '#deb08b';	
+					if(document.getElementsByClassName('circleFull rounded-circle mapButton4')){
+						document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ef784a';	
 					}
 
 					url = '/assets/json/housesbyreserved.json';
@@ -682,8 +687,8 @@
 
 				case 4: //sold
 
-					if(document.getElementById('map_button5')){
-						document.getElementById('map_button5').style.background = '#deb08b';	
+					if(document.getElementsByClassName('circleFull rounded-circle mapButton5')){
+						document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#d21e3d';
 					}
 
 					url = '/assets/json/housesbysold.json';
@@ -692,8 +697,8 @@
 
 				default: //plot number & house type
 
-					if(document.getElementById('map_button1')){
-						document.getElementById('map_button1').style.background = '#deb08b';	
+					if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
+						document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
 					}
 
 					url = '/assets/json/housesbynumbers.json';
@@ -2960,55 +2965,55 @@
  	<!-- col 1 on desktop / mobile -->
 	<div class="col">
   	
-  		<div class="row xx" onClick="" >
+  		<div class="row xx" onClick="loadData(0)">
 	  		<div class="col-8 xyz">House Type</div>
-	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle"></div></div>
+	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton1"></div></div>
   		</div>
 
-  		<div class="row xx d-md-none">
+  		<div class="row xx d-md-none" onClick="loadData(1)">
 	  		<div class="col-8 xyz">Not Yet Released</div>
-	  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
   		</div>
 
-  		<div class="row xx d-md-none">
+  		<div class="row xx d-md-none" onClick="loadData(2)">
 	  		<div class="col-8 xyz">For Sale</div>
-	  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+	  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
   		</div>
 
   	</div>
     <!-- col 2 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx">
+  		<div class="row xx" onClick="loadData(1)">
   		<div class="col-8 xyz">Not Yet Released</div>
-  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
   		</div>
 
     </div>
     <!-- col 3 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx">
+  		<div class="row xx" onClick="loadData(2)">
   		<div class="col-8 xyz">For Sale</div>
-  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
   		</div>
 
     </div>
     <!-- col 4 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx">
+  		<div class="row xx" onClick="loadData(3)">
   		<div class="col-8 xyz">Reserved</div>
-  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
   		</div>
 
     </div>
     <!-- col 5 on desktop -->
     <div class="col d-none d-lg-block">
   	
-  		<div class="row xx">
+  		<div class="row xx" onClick="loadData(4)">
   		<div class="col-8 xyz">Sold</div>
-  		<div class="col-4 xyz"><div class="test rounded-circle"></div></div>
+  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
   		</div>
 
     </div>
@@ -3016,14 +3021,14 @@
     <!-- col 2 on mobile -->
     <div class="col d-block d-md-none">
   	
-  		<div class="row xyz">
+  		<div class="row xyz" onClick="loadData(3)">
   		<div class="col-8 xx">Reserved</div>
-  		<div class="col-4 xx"><div class="test rounded-circle"></div></div>
+  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
   		</div>
 
-  		<div class="row xyz">
+  		<div class="row xyz" onClick="loadData(4)">
   		<div class="col-8 xx">Sold</div>
-  		<div class="col-4 xx"><div class="test rounded-circle"></div></div>
+  		<div class="col-4 xyz"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
   		</div>
 
     </div>
