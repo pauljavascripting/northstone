@@ -1,0 +1,45 @@
+<html>
+<head>
+	
+<style type="text/css">
+	
+.myimage {
+
+	position: absolute;
+	margin: 50px;
+	opacity: 0.4;
+
+}
+
+#xx{
+margin: 50px;
+
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+
+<svg id="xx" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200" xml:space="preserve" width="200px" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!--defines the shape to use for clipping-->
+    <circle id="circle" cx="100" cy="100" r="100" />
+  </defs>
+  <clipPath id="clip">
+    <!--creates the clipping mask from the shape-->
+    <use xlink:href="#circle" overflow="visible"></use>
+  </clipPath>
+  <!--group containing the image with clipping applied-->
+  <g id="cc" clip-path="url(#clip)">
+    <image class="myimage" overflow="visible" width="768" height="432" xlink:href="http://cp91279.biography.com/Leonardo-da-Vinci_A-Divine-Mind_HD_768x432-16x9.jpg"></image>
+  </g>
+</svg>
+
+</body>
+
+
+</html>
