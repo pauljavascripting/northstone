@@ -8,13 +8,16 @@
 	 <script type="text/javascript" src="/gsap-member/minified/MotionPathPlugin.min.js"></script>
 	 <script type="text/javascript" src="/gsap-member/minified/MotionPathHelper.min.js"></script>
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	
 	<script type="text/javascript">
 
 		let json;
 		let houseType_id;
-		let popupPosX = 500;
-		let popupPosY;
+		let popupPosX = 100;
+		let popupPosY = 20;
 		let carAnimation;
 
 		function init(){
@@ -25,11 +28,13 @@
 
 			defineHouses();
 
-			window.addEventListener('resize', setPopupPosition);
+			// window.addEventListener('resize', setPopupPosition);
 
-			setPopupPosition(null);
+			// setPopupPosition(null);
 
 			moveCar();
+
+			showInfoStart(null)
 
 		}
 
@@ -178,38 +183,38 @@
 			}
         }
 
-		function setPopupPosition(e){
+		// function setPopupPosition(e){
 
-			switch(true){
+		// 	switch(true){
 
-				case window.innerHeight > 300  && window.innerHeight < 700:
+		// 		case window.innerHeight > 300  && window.innerHeight < 700:
 
-					popupPosY = 150;
+		// 			popupPosY = 150;
 
-				break;
+		// 		break;
 
-				case window.innerHeight > 700  && window.innerHeight < 1000:
+		// 		case window.innerHeight > 700  && window.innerHeight < 1000:
 
-					popupPosY = 400;
+		// 			popupPosY = 400;
 
-				break;
+		// 		break;
 
-				case window.innerHeight > 1000  && window.innerHeight < 3000:
+		// 		case window.innerHeight > 1000  && window.innerHeight < 3000:
 
-					popupPosY = 400;
+		// 			popupPosY = 400;
 
-				break;
+		// 		break;
 
-				case window.innerHeight > 3000:
+		// 		case window.innerHeight > 3000:
 
-					popupPosY = 400;
+		// 			popupPosY = 400;
 
-				break;
+		// 		break;
 
 
 
-			}
-		}
+		// 	}
+		// }
 
 		function getHouseType(){
 
@@ -731,21 +736,30 @@
 
 		function hideInfo(){
 
-			document.getElementById('houseInfo').style.visibility = 'hidden';
+			document.getElementsByClassName('houseInfo')[0].style.visibility = 'hidden';
 		}
 
 		function showInfo(e){
-		
-			// retrieve house details using lodash
-			let house = _.find(json, { 'house_id': e.target.parentNode.id });
-			
-			// show pop up
-			document.getElementById('houseInfo').style.visibility = 'visible';
-			document.getElementById('houseInfo').style.left = e.clientX - popupPosX +'px';
-			document.getElementById('houseInfo').style.top = e.clientY - popupPosY +'px';
-			document.getElementById('houseInfo').addEventListener('click', hideInfo);
-			document.getElementById('house_text').innerHTML = "<div class='montserratBold'>Plot"+house.house_id+"</div><div><i>House Type: </i>"+house.house_name+", "+house.num_of_bedrooms+" bedrooms"+"</div><div class='discoverMore'>Discover more</div>";
 
+			let house = _.find(json, { 'house_id': e.target.parentNode.id });
+			document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
+			document.getElementsByClassName('houseInfo')[0].style.left = Number(e.clientX-popupPosX) +'px';
+			document.getElementsByClassName('houseInfo')[0].style.top = Number(e.clientY+popupPosY) +'px';
+			document.getElementsByClassName('houseInfo1')[0].innerHTML = '<b>Plot '+house.house_id+'</b> - '+house.num_of_bedrooms+' bedrooms';
+			// document.getElementsByClassName('houseInfo1b')[0].innerHTML = house.num_of_bedrooms+' bedrooms';
+			document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>'+house.house_name;
+	
+		}
+
+		function showInfoStart(){
+
+			document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
+			document.getElementsByClassName('houseInfo')[0].style.left = '300px';
+			document.getElementsByClassName('houseInfo')[0].style.top = '600px'
+			document.getElementsByClassName('houseInfo1')[0].innerHTML = '';
+			document.getElementsByClassName('houseInfo2')[0].innerHTML = 'Click on a plot to';
+			document.getElementsByClassName('houseInfo3')[0].innerHTML = 'discover more';
+	
 		}
 
 		function defineHouses(){
@@ -2903,68 +2917,26 @@
 </svg>
 </div>
 
+<div class="houseInfo" onClick="hideInfo()">
+	<div class="container">
+		<div class="row houseInfo1 align-items-center justify-content-center">
+			<!-- <div class="col houseInfo1a d-flex justify-content-right"></div> - <div class="col houseInfo1b"></div> -->
+		</div>
+		<div class="row houseInfo2 d-flex align-items-center justify-content-center">
+			Type
+		</div>
+		<div class="row houseInfo3 d-flex align-items-center justify-content-center">
+			Discover more
+		</div>
 
-
-
-<div id="houseInfo" style="">
-	
-	<div id="house_text"></div>
-	<div id="house_shadow"></div>
-	<div class="house_info_svg">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024.49 360.43"><title>popup for plotplan</title><g id="Pop_up" data-name="Pop up"><polygon points="1023.04 310.75 1023.04 1.98 1.9 1.98 1.9 310.75 447.89 310.75 449.91 310.75 498.34 357.16 542.74 310.75 544.76 310.75 1023.04 310.75" style="fill:#fbf9f4"/><path d="M1038.39,613.59,1037.1,305l1.45,1.45L783.26,307l-127.64,0L528,306.64c-85.1-.26-170.19-.82-255.28-.85-85.1-.27-170.19.13-255.29.25L18.47,305l.83,308.77-1.89-1.9,224-.41,224,0h.94l.68.65,48.41,46.45-3.26.07,44.47-46.35.65-.68h.94Zm.32.32-480.46,2,1.6-.68-44.33,46.49-1.59,1.67-1.67-1.6L463.8,615.44l1.62.66-224,0-224-.42h-1.9v-1.89L16.36,305v-1.05h1.05c85.1.12,170.19.52,255.29.24,85.09,0,170.18-.58,255.28-.84L655.62,303l127.64,0,255.29.54H1040V305Z" transform="translate(-15.51 -303)"/></g><g id="X"><path d="M980.31,328.07l9.39,7.49,9.3,7.61c3.09,2.54,6.34,4.91,9.2,7.71a83.12,83.12,0,0,1,8.15,8.9l-.19.21a80.21,80.21,0,0,1-9.87-6.95c-3.14-2.48-5.89-5.41-8.81-8.14l-8.73-8.26-8.63-8.36Z" transform="translate(-15.51 -303)"/><path d="M982.27,362l7.5-9.39,7.6-9.29c2.55-3.09,4.91-6.34,7.71-9.2a85.17,85.17,0,0,1,8.9-8.15l.22.19a81.31,81.31,0,0,1-7,9.87c-2.5,3.13-5.41,5.89-8.15,8.81l-8.25,8.73-8.36,8.62Z" transform="translate(-15.51 -303)"/></g></svg>
 	</div>
-
 </div>
 
-<!-- <div id="selectorMap"><div class="mapButton"><div class="mapText">Plot number and house type</div><div id="map_button1" onClick="loadData(0)" style=""></div></div><div class="mapButton"><div class="mapText">Not Yet Released</div><div id="map_button2" onClick="loadData(1)" style=""></div></div><div class="mapButton"><div class="mapText">For Sale</div><div id="map_button3" onClick="loadData(2)" style=""></div></div><div class="mapButton"><div class="mapText">Reserved</div><div id="map_button4" onClick="loadData(3)" style=""></div></div><div class="mapButton"><div class="mapText">Sold</div><div id="map_button5" onClick="loadData(4)" style=""></div></div></div> -->
-
-<!-- <div id="selectorMap">
-	<div class="mapButton"><div class="mapCopy">House Type</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
-	<div class="mapButton"><div class="mapCopy">Not Yet Released</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
-	<div class="mapButton"><div class="mapCopy">For Sale</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
-	<div class="mapButton"><div class="mapCopy">Reserved</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
-	<div class="mapButton"><div class="mapCopy">Sold</div><div class="circleButtonHolder"><div class="circleButton"></div></div></div>
-</div> -->
-
-<!-- <div class="row offset-md-2 selectorMap">
-    
-    <div class="col-md-2 selectorMapBox">
-    	
-    	<div class="float-left xx">House Type</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
-
-    </div>
-
-    <div class="col-md-2 selectorMapBox">
-    	
-    	<div class="float-left xx">Not Yet Released</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
-
-    </div>
-
-    <div class="col-md-2 selectorMapBox">
-    	
-    	<div class="float-left xx">For Sale</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
-
-    </div>
-
-    <div class="col-md-2 selectorMapBox">
-    	
-    	<div class="float-left xx">Reserved</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
-
-    </div>
-
-    <div class="col-md-2 selectorMapBox">
-    	
-    	<div class="float-left xx">Sold</div><div class="float-left xx"><div class="float-left xy rounded-circle"></div></div>
-
-    </div>
-
-    
-</div>
- -->
 
 <!-- https://stackoverflow.com/questions/35077631/how-to-hide-one-column-from-grid-in-bootstrap-mobile-version -->
 
- <div class="container selectorMap">
+<!-- menu start -->
+ <div class="container selectorMap border" >
  <div class="row mapOption">
  	<!-- col 1 on desktop / mobile -->
 	<div class="col">
@@ -3045,10 +3017,79 @@
   
 </div>
 </div>
+<!-- menu end -->
 
-<!-- resevcerd & sold  in column2 on mobile -->
+<!-- key  for desktop -->
+<div class="container-sm-4 pt-5 colourKey d-none d-md-none d-lg-block">
+ <!-- row 1-->
+ <div class="row row0">	
+	<div class="col">
+		 <div class="row justify-content-center cell1" style="background: #b2d1e3;">
+		 	Six51
+		 </div>
+		 <div class="row justify-content-center cell1" style="background: #d9b38a">
+		 	Seven68
+		 </div>
+		 <div class="row justify-content-center cell0" style="background: #7e9775; color:#fff">
+		 	Seven62
+		 </div>
+	</div>
+	<div class="col d-flex align-items-center justify-content-center cell2" style="background: #f9faf5">
+		2 Bedrooms
+	</div>
+ </div>
+ <!-- row 1-->
+ <div class="row row1">	
+	<div class="col">
+		 <div class="row justify-content-center cell1" style="background: #004a53; color:#fff">
+		 	Six51
+		 </div>
+		 <div class="row justify-content-center cell1" style="background: #ed7748">
+		 	Seven68
+		 </div>
+		 <div class="row justify-content-center cell0" style="background: #daa732">
+		 	Seven62
+		 </div>
+	</div>
+	<div class="col d-flex align-items-center justify-content-center cell2" style="background: #d5c391">
+		2 Bedrooms
+	</div>
+ </div>
+ <!-- row 2-->
+ <div class="row row2">	
+	<div class="col">
+		 <div class="row justify-content-center cell1" style="background: #d11a3c; color:#fff">
+		 	One160
+		 </div>
+		 <div class="row justify-content-center cell1" style="background: #70838f; color:#fff">
+		 	One165
+		 </div>
+		 <div class="row justify-content-center cell1" style="background: #4281a0; color:#fff">
+		 	One277
+		 </div>
+		 <div class="row justify-content-center cell0" style="background: #c2b4cd; color:#000">
+		 	One370
+		 </div>
+	</div>
+	<div class="col d-flex align-items-center justify-content-center cell2" style="background: #b49052">
+		2 Bedrooms
+	</div>
+ </div>
+
+</div>
+<!-- end of key for desktop -->
+
+<div class="dropdown d-block d-md-block d-lg-none d-flex justify-content-center keydropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Key
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
 
 </body>
-
-
 </html

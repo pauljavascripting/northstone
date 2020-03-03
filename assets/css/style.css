@@ -11679,22 +11679,23 @@ h5 {
 }*/
 
 
-/* houses map --------------------- */
+/* houses map buttons--------------------- */
 .selectorMap {
  
-  padding-top: 80px;
+  /*padding-top: 80px;*/
   font-size: 0.7rem;
   font-family: "Montserrat Regular";
-  
+  background: #fff;
+  position: relative;
 }
 
 .mapRow {
  
- background: #ffffff;
+ /*background: #ffffff;*/
 }
 
 .mapOption {
-  background: #ffffff;
+  /*background: #ffffff;*/
   padding: 10px;
   /*border: 1px red solid;*/
 }
@@ -11750,57 +11751,83 @@ h5 {
   color: #fff;
 }
 /* --------------------------- */
-
-
-#houseInfo {
-}
-
-#house_text {
+.colourKey {
+  /*background: #fff;*/
+  margin: 400px 14vw 0px 69vw;
+  position: relative;
+  font-size: 0.7rem;
   font-family: "Montserrat Regular";
-  font-size: 3rem; 
-  margin:2rem; position: absolute; top:10px; left:0; right:0; margin-left:0; margin-right:0; width:'100%'; 
 
 }
 
-.montserratBold {
-
-  font-family: "Montserrat Bold";
-  font-size: 3rem; 
-  
+.row0 {
+  border-top:1px #000 solid;
+  border-left:1px #000 solid;
+  border-right:1px #000 solid;
 }
 
-.montserratMedium {
-
-  font-family: "Montserrat Medium";
-  font-size: 3rem; 
-  
+.row1 {
+  border-top:1px #000 solid;
+  border-left:1px #000 solid;
+  border-right:1px #000 solid;
 }
 
-.discoverMore {
-
-  font-family: "Montserrat Medium";
-  font-size: 3rem; 
-  color:#000;
-  
+.row2 {
+  border-top:1px #000 solid;
+  border-left:1px #000 solid;
+  border-right:1px #000 solid;
+  border-bottom:1px #000 solid;
 }
 
-.discoverMore:hover {
-  color: #b39053;
+.cell0 {
+  border: none;
+  padding: 5px 0px 5px 0px;
 }
 
-#houseInfo {
-
-  width: 1000px; height: 800px; position: absolute;z-index: 100;transform: scale(0.25); visibility: hidden; text-align: center;
+.cell1 {
+  border-bottom: 1px #000 solid;
+  padding: 5px 0px 5px 0px;
 }
 
-#car {
-
-  /*position: absolute;width:50px; height:auto; bottom: 0px; left:830px;
-  /*transform: scale(0.3);
-  position: absolute;*/
+.cell2 {
+  border-left:1px #000 solid;
 }
 
+/* --------------------------- */
 
+.houseInfo {
+
+  position: absolute;
+  font-size: 0.7rem;
+  font-family: "Montserrat Regular";
+  height: 70px;
+  width: 200px;
+  background: url('/assets/svg/mapinfo.svg') bottom center;
+  background-size: cover;
+  padding-top: 4px;
+  visibility: hidden;
+}
+
+.houseInfo1a, .houseInfo3 {
+
+  font-size: 0.7rem;
+  font-family: 'Montserrat Bold';
+
+}
+
+.houseInfo1b {
+
+  font-family: 'Montserrat Regular';
+  font-size: 0.7rem;
+ 
+}
+
+/* --------------------------- */
+
+.keydropdown .list-group-item{ width: 100px!important; }
+
+
+/* --------------------------- */
 
 /* thought circle */
 #thought-circle{
