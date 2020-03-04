@@ -11680,14 +11680,13 @@ h5 {
 
 
 /* houses map buttons--------------------- */
-.selectorMapHolder {
+/*.selectorMapHolder {
 
   padding-top: 50px;
 
 }
 .selectorMap {
  
-  /*padding-top: 80px;*/
   font-size: 0.7rem;
   font-family: "Montserrat Regular";
   position: relative;
@@ -11712,7 +11711,7 @@ h5 {
 
   padding-top: 80px;
 
-}
+}*/
 
 .mapRow {
  
@@ -11940,6 +11939,79 @@ h5 {
 .thoughful {
   position: absolute;
 }
+
+
+/* ------------------------------------------------- */
+/* map object */
+.map-section {
+  
+}
+
+.map-section .container-map {
+  width: 100%;
+  height:800px;
+  overflow: scroll;
+  position: relative;
+  border:1px red solid;
+}
+
+@media (max-width: 576px) {
+  .map-section .container-map {
+    width: 96%;
+    margin-left: 2%;
+    height:300px;
+  }
+}
+
+/* menu object */
+.menu-section {
+  padding-top: 0rem;
+  position: relative;
+  margin-top: -44rem;
+  /*padding-bottom: 4.5rem;*/
+}
+
+.menu-section .container-menu {
+  width: 90%;
+  border: 1px #000 solid;
+  background: #fff;
+}
+
+@media (max-width: 576px) {
+  .menu-section {
+    margin-top: 2rem;
+    position: none;
+  }
+}
+
+/* dropdown object */
+.dropdown-section {
+  padding-top: 1rem;
+  /*padding-bottom: 4.5rem;*/
+}
+
+.dropdown-section .container-dropdown {
+  width: 90%;
+}
+
+/* map object */
+.dander-section {
+  padding-top: 1rem;
+}
+
+.dander-section .container-dander {
+  width: 30%;
+  background-color: #dcb18e;
+  position: relative;
+  
+}
+
+@media (max-width: 576px) {
+  .dander-section .container-dander {
+    width: 90%;
+  }
+}
+
 
 
 
