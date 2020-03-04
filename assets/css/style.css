@@ -11680,13 +11680,34 @@ h5 {
 
 
 /* houses map buttons--------------------- */
+.selectorMapHolder {
+
+  padding-top: 50px;
+
+}
 .selectorMap {
  
   /*padding-top: 80px;*/
   font-size: 0.7rem;
   font-family: "Montserrat Regular";
-  background: #fff;
   position: relative;
+  border: 1px #000 solid;
+  text-align: right;
+
+}
+
+
+@media (max-width: 700px) {
+  .selectorMap {
+    text-align: left;
+    margin-top: 90vh;
+  }
+}
+
+.mapButtonHolder {
+
+  padding-top: 80px;
+
 }
 
 .mapRow {
@@ -11699,6 +11720,7 @@ h5 {
   padding: 10px;
   /*border: 1px red solid;*/
 }
+
 
 .circleEmpty {
   width: 20px;
@@ -11751,9 +11773,15 @@ h5 {
   color: #fff;
 }
 /* --------------------------- */
+/* colour key desktop */
+.key {
+  position: absolute;
+  margin: 350px 1200px;
+  width: 300px;
+}
 .colourKey {
   /*background: #fff;*/
-  margin: 400px 14vw 0px 69vw;
+  /*margin: 400px 14vw 0px 69vw;*/
   position: relative;
   font-size: 0.7rem;
   font-family: "Montserrat Regular";
@@ -11792,6 +11820,37 @@ h5 {
 .cell2 {
   border-left:1px #000 solid;
 }
+
+/* --------------------------- */
+/* key - mobile */
+
+.keydropdown{
+
+  padding-top: 20px;
+}
+
+.dropdownKeyButton {
+
+  border-radius: 0 !important;
+  width:88vw;
+  font-family: 'Montserrat Regular';
+  font-size: 0.7rem;
+  /*border: 1px #000 solid;*/
+
+}
+
+.keydropdown .dropdown-toggle::after {
+
+  margin-left: 90%;
+}
+
+.keydropdown .dropdown-item {
+
+  font-family: 'Montserrat Regular';
+  font-size: 0.7rem;
+  width:88vw; 
+}
+
 
 /* --------------------------- */
 
