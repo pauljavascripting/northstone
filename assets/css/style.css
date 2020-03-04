@@ -11701,6 +11701,10 @@ h5 {
   .selectorMap {
     text-align: left;
     margin-top: 90vh;
+    width:88vw; 
+  }
+  .selectorMapHolder {
+    margin: 0vw 5vw 0vw 5vw;
   }
 }
 
@@ -11832,7 +11836,7 @@ h5 {
 .dropdownKeyButton {
 
   border-radius: 0 !important;
-  width:88vw;
+  width:90vw;
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
   /*border: 1px #000 solid;*/
@@ -11848,8 +11852,41 @@ h5 {
 
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
-  width:88vw; 
+  width:90vw; 
 }
+
+/* --------------------------- */
+
+.danderHolder {
+  font-family: 'Montserrat Regular';
+  font-size: 0.9rem;
+  position: absolute;
+  margin: 670px 1200px;
+  width: 300px;
+}
+
+.dander {
+  padding: 10px;
+  background: #dcb18e;
+}
+
+.danderRow {
+
+   width: 100%;
+   justify-content: center;
+
+}
+
+@media (max-width: 700px) {
+  .danderHolder {
+    margin:20px 5vw 0vw 5vw;
+    width: 90vw;
+  }
+  .dander {
+   
+  }
+}
+
 
 
 /* --------------------------- */
