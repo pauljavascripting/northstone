@@ -416,18 +416,18 @@ function loadData(id){
 let url;
 
 //reset buttons ====================================================
-if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
-	document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#ffffff';
+// if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#ffffff';	
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#ffffff';
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#ffffff';	
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#ffffff';
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#ffffff';
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ffffff';	
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ffffff';	
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#ffffff';
+// 	document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#ffffff';
 	
-}
+// }
 
 //set json & colours
 switch(id){
@@ -435,7 +435,7 @@ switch(id){
 	case 0: //plot number & house type
 
 		if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
-			document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
+			// document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
 		}
 		
 		url = '/assets/json/housesbynumbers.json';
@@ -445,8 +445,8 @@ switch(id){
 	case 1: //not yet released
 		
 		if(document.getElementsByClassName('circleFull rounded-circle mapButton2')){
-			document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#728393';
-			document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#728393';	
+			// document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#728393';
+			// document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#728393';	
 		}
 
 		url = '/assets/json/housesbynotyetreleased.json';
@@ -456,8 +456,8 @@ switch(id){
 	case 2: //for sale
 
 		if(document.getElementsByClassName('circleFull rounded-circle mapButton3')){
-			document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#d9a831';	
-			document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#d9a831';	
+			// document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#d9a831';	
+			// document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#d9a831';	
 		}
 
 		url = '/assets/json/housesbysale.json';
@@ -467,8 +467,8 @@ switch(id){
 	case 3: //reserved
 
 		if(document.getElementsByClassName('circleFull rounded-circle mapButton4')){
-			document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ef784a';	
-			document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ef784a';	
+			// document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ef784a';	
+			// document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ef784a';	
 		}
 
 		url = '/assets/json/housesbyreserved.json';
@@ -478,8 +478,8 @@ switch(id){
 	case 4: //sold
 
 		if(document.getElementsByClassName('circleFull rounded-circle mapButton5')){
-			document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#d21e3d';
-			document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#d21e3d';
+			// document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#d21e3d';
+			// document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#d21e3d';
 		}
 
 		url = '/assets/json/housesbysold.json';
@@ -489,7 +489,7 @@ switch(id){
 	default: //plot number & house type
 
 		if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
-			document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
+			// document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
 		}
 
 		url = '/assets/json/housesbynumbers.json';
