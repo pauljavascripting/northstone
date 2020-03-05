@@ -24,7 +24,7 @@
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff"> -->
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style-pt.css">
 </head>
 
 <body>
@@ -106,134 +106,36 @@
 
       <!-- map -->
        <section class="map-section">
-           <div class="container-map">
+           <div class="container-map" style="position: absolute;">
+                <div class="row no-gutters">
+                    <div class="mapObject" style="border:1px red solid; padding-top: 50px">
+                        <img src="./assets/images/map/Plotplan-3d-layered-for-website-flat-background-01-01.png" width="1469" height="800" />
+                    </div>
+                </div>
+           </div>
+
+            <div class="container-map" style="position: absolute;z-index: 1;">
                 <div class="row no-gutters">
                     <div class="mapObject">
-                        <img src="./Plotplan-3d-layered-for-website-flat-background-x1.png" />
+                        <div  style="width:1469; height:800;">ppp</div>
                     </div>
                 </div>
            </div>
+
+
        </section>
 
-       <!-- menu -->
-       <section class="menu-section">
-           <div class="container container-menu">
+     <!--  <section class="map-section" style="position: absolute;z-index: 1; height:800px">
+           <div class="container-map">
                 <div class="row no-gutters">
-                    <div class="col menuCol">
-    
-                        <div class="row mapRow" onClick="loadData(0)">
-                            <div class="col-8 mapOption">House Type</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton1"></div></div>
-                        </div>
-
-                        <div class="row mapRow d-md-none" onClick="loadData(1)">
-                            <div class="col-8 mapOption">Not Yet Released</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
-                        </div>
-
-                        <div class="row mapRow d-md-none" onClick="loadData(2)">
-                            <div class="col-8 mapOption">For Sale</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
-                        </div>
-
-                    </div>
-                    <!-- col 2 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(1)">
-                        <div class="col-8 mapOption">Not Yet Released</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
-                        </div>
-
-                    </div>
-                    <!-- col 3 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(2)">
-                        <div class="col-8 mapOption">For Sale</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
-                        </div>
-
-                    </div>
-                    <!-- col 4 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(3)">
-                        <div class="col-8 mapOption">Reserved</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
-                        </div>
-
-                    </div>
-                    <!-- col 5 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(4)">
-                        <div class="col-8 mapOption">Sold</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
-                        </div>
-
-                    </div>
-
-                    <!-- col 2 on mobile -->
-                    <div class="col d-block d-md-none menuCol">
-                    
-                        <div class="row mapRow" onClick="loadData(3)">
-                            <div class="col-8 mapOption">Reserved</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
-                        </div>
-
-                        <div class="row mapRow d-md-none" onClick="loadData(4)">
-                            <div class="col-8 mapOption">Sold</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
-                        </div>
-
-                        <div class="row mapRow d-md-none">
-                            <div class="col-8 mapOption buttonHidden">Empty</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle buttonHidden"></div><div class="circleFull rounded-circle mapButton5 buttonHidden"></div></div>
-                        </div>
-
-                    </div>
-                </div>
-                </div>
-           </div>
-       </section>
-
-       <!-- dropdown -->
-       <section class="dropdown-section">
-           <div class="container container-dropdown">
-                <div class="row">
-                    <div class="dropdown d-block d-md-none d-lg-none d-flex justify-content-center">
-                      <button class="btn btn-secondary dropdown-toggle dropdownKeyButton" style="text-align: left; background: #dcb18e;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Key
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:90vw;">
-                        <a class="dropdown-item" href="#" style="background: #b2d1e3;">Six51</a>
-                        <a class="dropdown-item" href="#" style="background: #d9b38a">Seven68</a>
-                        <a class="dropdown-item" href="#" style="background: #7e9775;">Seven62</a>
-                        <a class="dropdown-item" href="#" style="background: #004a53;">Eight66</a>
-                        <a class="dropdown-item" href="#" style="background: #ed7748">Nine74</a>
-                        <a class="dropdown-item" href="#" style="background: #daa732;">One050</a>
-                        <a class="dropdown-item" href="#" style="background: #d11a3c;">One160</a>
-                        <a class="dropdown-item" href="#" style="background: #70838f">One165</a>
-                        <a class="dropdown-item" href="#" style="background: #4281a0;">One277</a>
-                        <a class="dropdown-item" href="#" style="background: #c2b4cd;">One370</a>
-                      </div>
+                    <div class="mapObject" style="">
+                        ppp
                     </div>
                 </div>
            </div>
-       </section>
+       </section> -->
 
-
-        <section class="dander-section">
-           <div class="container container-dander">
-                <div class="row no-gutters">
-                    <div class="row danderRow">Dander over to Our Huddle</div>
-                    <div class="row danderRow">book your visit</div>
-                    <div class="row danderRow">*to dander - to stroll leisurely</div>
-                </div>
-            </div>
-        </section>
-
+      
         
        
     </main>
@@ -262,6 +164,22 @@
     <script type="text/javascript" src="assets/scripts/home.js"></script>
 
     <!-- <script type="text/javascript" src="/assets/vendors/picturefill/picturefill.min.js"></script> -->
+
+    <script type="text/javascript" src="/gsap-member/minified/MotionPathPlugin.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/car.js"></script>
+
+    <script type="text/javascript">
+        
+        window.onload = function(e){
+            init();
+        }
+
+        function init(){
+            //moveCar();
+        }
+
+
+    </script>
 
 
 </body>
