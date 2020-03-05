@@ -13810,3 +13810,40 @@ and (max-width: 992px) {
   margin-left:auto; 
   margin-right:0;
 }
+
+
+
+/*
+.scheme-page-header {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}*/
+
+/*.scheme-page-header .container-custom {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 992px) {
+  .scheme-page-header .container-custom {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.scheme-page-header .inner {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+*/
+
