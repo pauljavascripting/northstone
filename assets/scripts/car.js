@@ -13,16 +13,15 @@ function getCar(){
 }
 
 function moveCar(){
-	console.log('******')
-
+	
 	// register
 	gsap.registerPlugin(MotionPathPlugin);
 
     // display car
-    gsap.set('#carHolder',{ css:{opacity:1}, delay:3 });
+    gsap.set('.carHolder',{ css:{opacity:1}, delay:3 });
 
     // amend svg
-	//gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:15, scale:0.1 });
+	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:15, scale:0.1 });
 
 	// animate
             carAnimation = gsap.to(carsvg, {

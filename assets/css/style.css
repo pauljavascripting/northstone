@@ -13753,6 +13753,10 @@ and (max-width: 992px) {
 }
 
 .dropdown-section .container-dropdown {
+  /*width: 90%;*/
+}
+
+.dropdown {
   width: 90%;
 }
 
