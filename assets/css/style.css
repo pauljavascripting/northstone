@@ -13804,30 +13804,18 @@ and (max-width: 992px) {
   width:90vw; 
 }
 
-/* dander object map */
-/*.dander-section-map {
-  padding-top: 47rem;
-}
-
-.dander-section-map .container-dander-map {
-  width: 20rem;
-  position: relative;  
-  margin-left:auto; 
-  margin-right:1rem;
-}*/
-
-/* dander object - mobile */
+/* dander object */
 .dander-section {
-  padding-top: 47rem;
-
+  padding-top: 46rem;
 }
 
 .dander-section .container-dander {
-  width: 12rem;
+  width: 15rem;
   margin-left:auto; 
-  margin-right:0;
-  background: #dcb18e;
-  text-align: center;
+  margin-right:0rem;
+  border: 1px #000 solid;
+  background-color: #dcb18e;
+  font-size: 0.7rem;
 }
 
 @media (max-width: 576px) {
@@ -13841,26 +13829,24 @@ and (max-width: 992px) {
   }
 }
 
-.danderRow {
-  border: 1px #000 solid;
-  background-color: #dcb18e;
-}
-
 .danderRow1{
   width: 100%;
   justify-content: center;
+  padding: 5px 10px 0px 10px;
 }
 
 .danderRow2{
   width: 100%;
   justify-content: center;
   font-style: italic;
+  padding: 5px 10px 0px 10px;
 }
 
 .danderRow3{
   width: 100%;
   justify-content: center;
   font-size: 0.65rem;
+  padding: 5px 10px 5px 10px;
 }
 
 @media (max-width: 576px) {
@@ -13881,7 +13867,7 @@ and (max-width: 992px) {
 
 .key-section .container-key {
   width: 10rem;
-  position: relative;  
+  /*position: relative;  */
   margin-left:auto; 
   margin-right:0rem;
 }
