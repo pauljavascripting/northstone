@@ -128,23 +128,22 @@
                             <img src="./assets/images/map/Plotplan-3d-layered-for-website-flat-background-01-01.png" width="1469">
                         </div>
 
-
-                        <div class="menu-section" style="position: absolute; width: 100%; z-index: 1;">
+                        <div class="menu-section d-none d-md-block" style="position: absolute; width: 100%; z-index: 1;">
                             <div class="container container-menu">
                                 <div class="row no-gutters">
                                     <div class="col menuCol">
                                     
-                                         <div class="row mapRow" onClick="loadData(0)">
+                                         <div class="row menuRow" onClick="loadData(0)">
                                             <div class="col-8 mapOption">House Type</div>
                                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton1"></div></div>
                                         </div>
 
-                                        <div class="row mapRow d-md-none" onClick="loadData(1)">
+                                        <div class="row menuRow d-md-none" onClick="loadData(1)">
                                             <div class="col-8 mapOption">Not Yet Released</div>
                                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
                                         </div>
 
-                                        <div class="row mapRow d-md-none" onClick="loadData(2)">
+                                        <div class="row menuRow d-md-none" onClick="loadData(2)">
                                             <div class="col-8 mapOption">For Sale</div>
                                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
                                         </div>
@@ -156,7 +155,7 @@
                                      <!-- col 2 on desktop -->
                                     <div class="col d-none d-md-block">
                                     
-                                        <div class="row mapRow" onClick="loadData(1)">
+                                        <div class="row menuRow" onClick="loadData(1)">
                                         <div class="col-8 mapOption">Not Yet Released</div>
                                         <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
                                         </div>
@@ -166,7 +165,7 @@
                                     <!-- col 3 on desktop -->
                                     <div class="col d-none d-md-block">
                                     
-                                        <div class="row mapRow" onClick="loadData(2)">
+                                        <div class="row menuRow" onClick="loadData(2)">
                                         <div class="col-8 mapOption">For Sale</div>
                                         <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
                                         </div>
@@ -175,7 +174,7 @@
                                     <!-- col 4 on desktop -->
                                     <div class="col d-none d-md-block">
                                     
-                                        <div class="row mapRow" onClick="loadData(3)">
+                                        <div class="row menuRow" onClick="loadData(3)">
                                         <div class="col-8 mapOption">Reserved</div>
                                         <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
                                         </div>
@@ -184,7 +183,7 @@
                                     <!-- col 5 on desktop -->
                                     <div class="col d-none d-md-block">
                                     
-                                        <div class="row mapRow" onClick="loadData(4)">
+                                        <div class="row menuRow" onClick="loadData(4)">
                                         <div class="col-8 mapOption">Sold</div>
                                         <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
                                         </div>
@@ -194,17 +193,17 @@
                                     <!-- col 2 on mobile -->
                                     <div class="col d-block d-md-none menuCol">
                                     
-                                        <div class="row mapRow" onClick="loadData(3)">
+                                        <div class="row menuRow" onClick="loadData(3)">
                                             <div class="col-8 mapOption">Reserved</div>
                                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
                                         </div>
 
-                                        <div class="row mapRow d-md-none" onClick="loadData(4)">
+                                        <div class="row menuRow d-md-none" onClick="loadData(4)">
                                             <div class="col-8 mapOption">Sold</div>
                                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
                                         </div>
 
-                                        <div class="row mapRow d-md-none">
+                                        <div class="row menuRow d-md-none">
                                             <div class="col-8 mapOption buttonHidden">Empty</div>
                                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle buttonHidden"></div><div class="circleFull rounded-circle mapButton5 buttonHidden"></div></div>
                                         </div>
@@ -272,8 +271,8 @@
                         </div>
 
                          <!-- dander -->
-                        <div class="dander-section-map d-none d-md-block" style="position: absolute; width: 100%; z-index: 1;">
-                           <div class="container-dander-map">
+                        <div class="dander-section d-none d-md-block" style="position: absolute; width: 100%; z-index: 1;">
+                           <div class="container-dander">
                                <div class="row no-gutter danderRow">
                                     <div class="row danderRow1">Dander over to Our Huddle</div>
                                     <div class="row danderRow2">book your visit</div>
@@ -2313,86 +2312,85 @@
        </section>
 
 
-       <section class="map-section">
-           <div class="container" style="border:1px red solid; ">
-                <div class="row ">
+       <section class="menu-section d-md-none">
+           <div class="container-menu" style="">
+                <div class="row">
                     
-                    <div class="col menuCol">
-    
-                        <div class="row mapRow" onClick="loadData(0)">
-                            <div class="col-8 mapOption">House Type</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton1"></div></div>
-                        </div>
+                        <div class="col menuCol">
+        
+                            <div class="row menuRow" onClick="loadData(0)">
+                                <div class="col-8 mapOption">House Type</div>
+                                <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton1"></div></div>
+                            </div>
 
-                        <div class="row mapRow d-md-none" onClick="loadData(1)">
+                            <div class="row menuRow d-md-none" onClick="loadData(1)">
+                                <div class="col-8 mapOption">Not Yet Released</div>
+                                <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
+                            </div>
+
+                            <div class="row menuRow d-md-none" onClick="loadData(2)">
+                                <div class="col-8 mapOption">For Sale</div>
+                                <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
+                            </div>
+
+                        </div>
+                        <!-- col 2 on desktop -->
+                        <div class="col d-none d-md-block">
+                        
+                            <div class="row menuRow" onClick="loadData(1)">
                             <div class="col-8 mapOption">Not Yet Released</div>
                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
-                        </div>
+                            </div>
 
-                        <div class="row mapRow d-md-none" onClick="loadData(2)">
+                        </div>
+                        <!-- col 3 on desktop -->
+                        <div class="col d-none d-md-block">
+                        
+                            <div class="row menuRow" onClick="loadData(2)">
                             <div class="col-8 mapOption">For Sale</div>
                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
+                            </div>
+
                         </div>
-
-                    </div>
-                    <!-- col 2 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(1)">
-                        <div class="col-8 mapOption">Not Yet Released</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton2"></div></div>
-                        </div>
-
-                    </div>
-                    <!-- col 3 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(2)">
-                        <div class="col-8 mapOption">For Sale</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton3"></div></div>
-                        </div>
-
-                    </div>
-                    <!-- col 4 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(3)">
-                        <div class="col-8 mapOption">Reserved</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
-                        </div>
-
-                    </div>
-                    <!-- col 5 on desktop -->
-                    <div class="col d-none d-md-block">
-                    
-                        <div class="row mapRow" onClick="loadData(4)">
-                        <div class="col-8 mapOption">Sold</div>
-                        <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
-                        </div>
-
-                    </div>
-
-                    <!-- col 2 on mobile -->
-                    <div class="col d-block d-md-none menuCol">
-                    
-                        <div class="row mapRow" onClick="loadData(3)">
+                        <!-- col 4 on desktop -->
+                        <div class="col d-none d-md-block">
+                        
+                            <div class="row menuRow" onClick="loadData(3)">
                             <div class="col-8 mapOption">Reserved</div>
                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
-                        </div>
+                            </div>
 
-                        <div class="row mapRow d-md-none" onClick="loadData(4)">
+                        </div>
+                        <!-- col 5 on desktop -->
+                        <div class="col d-none d-md-block">
+                        
+                            <div class="row menuRow" onClick="loadData(4)">
                             <div class="col-8 mapOption">Sold</div>
                             <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
+                            </div>
+
                         </div>
 
-                        <div class="row mapRow d-md-none">
-                            <div class="col-8 mapOption buttonHidden">Empty</div>
-                            <div class="col-4 mapOption"><div class="circleEmpty rounded-circle buttonHidden"></div><div class="circleFull rounded-circle mapButton5 buttonHidden"></div></div>
-                        </div>
+                        <!-- col 2 on mobile -->
+                        <div class="col d-block d-md-none menuCol">
+                        
+                            <div class="row menuRow" onClick="loadData(3)">
+                                <div class="col-8 mapOption">Reserved</div>
+                                <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton4"></div></div>
+                            </div>
 
+                            <div class="row menuRow d-md-none" onClick="loadData(4)">
+                                <div class="col-8 mapOption">Sold</div>
+                                <div class="col-4 mapOption"><div class="circleEmpty rounded-circle"></div><div class="circleFull rounded-circle mapButton5"></div></div>
+                            </div>
+
+                            <div class="row menuRow d-md-none">
+                                <div class="col-8 mapOption buttonHidden">Empty</div>
+                                <div class="col-4 mapOption"><div class="circleEmpty rounded-circle buttonHidden"></div><div class="circleFull rounded-circle mapButton5 buttonHidden"></div></div>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-
 
                 </div>
            </div>
@@ -2400,7 +2398,7 @@
        
 
         <section class="dropdown-section">
-           <div class="container-dropdown  d-flex justify-content-center" style="border:1px red solid; ">
+           <div class="container-dropdown d-flex justify-content-center">
                 <div class="row ">
                     <div class="col-12" >
                         <div class="dropdown d-block d-md-none d-lg-none">
@@ -2425,8 +2423,8 @@
            </div>
        </section>
 
-       <section class="map-section">
-           <div class="container" style="border:1px red solid; ">
+       <section class="dander-section d-md-none">
+           <div class="container-dander">
                 <div class="row ">
                     <div class="col-12" >
                         <div class="row danderRow1">Dander over to Our Huddle</div>

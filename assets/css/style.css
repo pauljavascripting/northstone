@@ -13695,7 +13695,6 @@ h5 {
 /*# sourceMappingURL=style.css.map */
 
 
-
 /* ------------------------------------------------- */
 /* map object */
 .map-section {
@@ -13703,11 +13702,7 @@ h5 {
 }
 
 .map-section .container-map {
-  /*width: 100%;*/
-  /*height:800px;*/
-  margin-left:5%;margin-right:5%;height:1020px;border:0px red solid; 
-  /*position: relative;*/
-  border:1px #000 solid;
+  margin-left:5%;margin-right:5%;height:1020px;
 }
 
 @media (max-width: 992px) {
@@ -13717,13 +13712,11 @@ h5 {
   }
 }
 
-
 /* menu object */
 .menu-section {
   padding-top: 6rem;
-  /*position: relative;
-  margin-top: -44rem;*/
-  /*padding-bottom: 4.5rem;*/
+  font-family: 'Montserrat Regular';
+  font-size: 0.7rem;
 }
 
 .menu-section .container-menu {
@@ -13734,8 +13727,10 @@ h5 {
 
 @media (max-width: 576px) {
   .menu-section {
-    margin-top: 10rem;
-    width: 100%;
+    padding-top: 0rem;
+  }
+  .menu-section .container-menu {
+   margin-left:5%;margin-right:5%;
   }
 }
 
@@ -13756,7 +13751,7 @@ and (max-width: 992px) {
   border-image: url('/assets/svg/plotplan-menu-icon.svg') 10 round;
   position: absolute;
   z-index: 1;
-  margin-top: 3px;
+  /*margin-top: 3px;*/
 }
 
 .circleFull {
@@ -13764,6 +13759,14 @@ and (max-width: 992px) {
   height: 20px;
   position: absolute;
   z-index: 0;
+}
+
+.buttonHidden {
+  visibility: hidden;
+}
+
+.menuRow {
+  padding: 10px;
 }
 
 /* dropdown object */
@@ -13786,7 +13789,6 @@ and (max-width: 992px) {
   width:90vw;
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
-  /*border: 1px #000 solid;*/
 
 }
 
@@ -13803,7 +13805,7 @@ and (max-width: 992px) {
 }
 
 /* dander object map */
-.dander-section-map {
+/*.dander-section-map {
   padding-top: 47rem;
 }
 
@@ -13812,22 +13814,34 @@ and (max-width: 992px) {
   position: relative;  
   margin-left:auto; 
   margin-right:1rem;
-}
+}*/
 
-/* dander object */
+/* dander object - mobile */
 .dander-section {
-  padding-top: 1rem;
+  padding-top: 47rem;
+
 }
 
 .dander-section .container-dander {
-  width: 20rem;
-  position: relative;  
+  width: 12rem;
   margin-left:auto; 
   margin-right:0;
+  background: #dcb18e;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .dander-section {
+   padding-top: 1rem;
+  }
+  .dander-section .container-dander {
+    margin-left: 5%; 
+    margin-right: 5%;
+    margin-bottom: 1rem;
+  }
 }
 
 .danderRow {
-
   border: 1px #000 solid;
   background-color: #dcb18e;
 }
@@ -13840,11 +13854,13 @@ and (max-width: 992px) {
 .danderRow2{
   width: 100%;
   justify-content: center;
+  font-style: italic;
 }
 
 .danderRow3{
   width: 100%;
   justify-content: center;
+  font-size: 0.65rem;
 }
 
 @media (max-width: 576px) {
@@ -13857,15 +13873,16 @@ and (max-width: 992px) {
   }
 }
 
-
+/* key object */
 .key-section {
-  padding-top: 30rem;
+  padding-top: 36rem;
+  font-size: 0.7rem;
 }
 
 .key-section .container-key {
-  width: 15rem;
+  width: 10rem;
   position: relative;  
   margin-left:auto; 
-  margin-right:1rem;
+  margin-right:0rem;
 }
 
