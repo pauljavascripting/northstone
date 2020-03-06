@@ -416,7 +416,8 @@ function loadData(id){
 let url;
 
 
-if(document.getElementById('menuButton1')){
+// desktop menu
+if(document.getElementById('menuButton1').contentDocument){
 	document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = 'white'
 	document.getElementById('menuButton2').contentDocument.getElementById("middle").style.fill = 'white'
 	document.getElementById('menuButton3').contentDocument.getElementById("middle").style.fill = 'white'
@@ -424,14 +425,31 @@ if(document.getElementById('menuButton1')){
 	document.getElementById('menuButton5').contentDocument.getElementById("middle").style.fill = 'white'
 }
 
+// mobile menu
+if(document.getElementById('menuButton1a').contentDocument){
+	document.getElementById('menuButton1a').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton2a').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton3a').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton4a').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton5a').contentDocument.getElementById("middle").style.fill = 'white'
+}
+
+
 
 //set json & colours
 switch(id){
 
 	case 0: //plot number & house type
 
-		if(document.getElementById('menuButton1')){
-			document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
+		if(document.getElementById('menuButton1').contentDocument){
+			// document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
+			gsap.to(document.getElementById('menuButton1').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
+
+		}
+
+		if(document.getElementById('menuButton1a').contentDocument){
+			// document.getElementById('menuButton1a').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
+			gsap.to(document.getElementById('menuButton1a').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
 		}
 		
 		
@@ -441,8 +459,14 @@ switch(id){
 
 	case 1: //not yet released
 		
-		if(document.getElementById('menuButton2')){
-			document.getElementById('menuButton2').contentDocument.getElementById("middle").style.fill = '#728393';	
+		if(document.getElementById('menuButton2').contentDocument){
+			// document.getElementById('menuButton2').contentDocument.getElementById("middle").style.fill = '#728393';	
+			gsap.to(document.getElementById('menuButton2').contentDocument.getElementById("middle"), 1, {fill: "#728393"});
+		}
+
+		if(document.getElementById('menuButton2a').contentDocument){
+			// document.getElementById('menuButton2a').contentDocument.getElementById("middle").style.fill = '#728393';	
+			gsap.to(document.getElementById('menuButton2a').contentDocument.getElementById("middle"), 1, {fill: "#728393"});
 		}
 
 		url = '/assets/json/housesbynotyetreleased.json';
@@ -451,8 +475,14 @@ switch(id){
 
 	case 2: //for sale
 
-		if(document.getElementById('menuButton3')){
-			document.getElementById('menuButton3').contentDocument.getElementById("middle").style.fill = '#d9a831';	
+		if(document.getElementById('menuButton3').contentDocument){
+			// document.getElementById('menuButton3').contentDocument.getElementById("middle").style.fill = '#d9a831';	
+			gsap.to(document.getElementById('menuButton3').contentDocument.getElementById("middle"), 1, {fill: "#d9a831"});
+		}
+
+		if(document.getElementById('menuButton3a').contentDocument){
+			// document.getElementById('menuButton3a').contentDocument.getElementById("middle").style.fill = '#d9a831';	
+			gsap.to(document.getElementById('menuButton3a').contentDocument.getElementById("middle"), 1, {fill: "#d9a831"});
 		}
 
 		url = '/assets/json/housesbysale.json';
@@ -461,8 +491,14 @@ switch(id){
 
 	case 3: //reserved
 
-		if(document.getElementById('menuButton4')){
-			document.getElementById('menuButton4').contentDocument.getElementById("middle").style.fill = '#ef784a';	
+		if(document.getElementById('menuButton4').contentDocument){
+			// document.getElementById('menuButton4').contentDocument.getElementById("middle").style.fill = '#ef784a';	
+			gsap.to(document.getElementById('menuButton4').contentDocument.getElementById("middle"), 1, {fill: "#ef784a"});
+		}
+
+		if(document.getElementById('menuButton4a').contentDocument){
+			// document.getElementById('menuButton4a').contentDocument.getElementById("middle").style.fill = '#ef784a';	
+			gsap.to(document.getElementById('menuButton4a').contentDocument.getElementById("middle"), 1, {fill: "#ef784a"});
 		}
 
 		url = '/assets/json/housesbyreserved.json';
@@ -471,7 +507,15 @@ switch(id){
 
 	case 4: //sold
 
-		document.getElementById('menuButton5').contentDocument.getElementById("middle").style.fill = '#d21e3d';
+		if(document.getElementById('menuButton5').contentDocument){
+			// document.getElementById('menuButton5').contentDocument.getElementById("middle").style.fill = '#d21e3d';
+			gsap.to(document.getElementById('menuButton5').contentDocument.getElementById("middle"), 1, {fill: "#d21e3d"});
+		}
+
+		if(document.getElementById('menuButton5a').contentDocument){
+			// document.getElementById('menuButton5a').contentDocument.getElementById("middle").style.fill = '#d21e3d';
+			gsap.to(document.getElementById('menuButton5a').contentDocument.getElementById("middle"), 1, {fill: "#d21e3d"});
+		}
 
 		url = '/assets/json/housesbysold.json';
 		// console.log('4-----')
@@ -479,8 +523,14 @@ switch(id){
 
 	default: //plot number & house type
 
-		if(document.getElementById('menuButton1')){
-			document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
+		if(document.getElementById('menuButton1').contentDocument){
+			// document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
+			gsap.to(document.getElementById('menuButton1').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
+		}
+
+		if(document.getElementById('menuButton1a').contentDocument){
+			// document.getElementById('menuButton1a').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
+			gsap.to(document.getElementById('menuButton1a').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
 		}
 
 		url = '/assets/json/housesbynumbers.json';
