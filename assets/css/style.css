@@ -13714,7 +13714,7 @@ h5 {
 
 /* menu object */
 .menu-section {
-  padding-top: 6rem;
+  padding-top: 5rem;
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
 }
@@ -13723,6 +13723,7 @@ h5 {
   border: 1px #000 solid;
   background: #fff;
   padding: 10px;
+  /*width: 45rem;*/
 }
 
 @media (max-width: 576px) {
@@ -13747,6 +13748,10 @@ and (max-width: 992px) {
 
 .menuRow {
   padding: 10px;
+}
+
+.mapOption {
+  /*border: 1px red solid;*/
 }
 
 .mapButton1 {
@@ -13777,6 +13782,19 @@ and (max-width: 992px) {
 
   background: #fff;
 
+}
+
+.houseInfo {
+
+  position: absolute;
+  font-size: 0.7rem;
+  font-family: "Montserrat Regular";
+  height: 70px;
+  width: 200px;
+  background: url('/assets/svg/mapinfo.svg') bottom center;
+  background-size: cover;
+  padding-top: 4px;
+  visibility: hidden;
 }
 
 /* dropdown object */

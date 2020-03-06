@@ -123,6 +123,22 @@
                 <div class="row no-gutters ">
                     <div class="col-12" >
 
+                        <!-- info -->
+                        <div class="houseInfo" onClick="hideInfo()" style="position: absolute; z-index: 11;">
+                            <div class="container">
+                                <div class="row houseInfo1 align-items-center justify-content-center">
+                                    <!-- <div class="col houseInfo1a d-flex justify-content-right"></div> - <div class="col houseInfo1b"></div> -->
+                                </div>
+                                <div class="row houseInfo2 d-flex align-items-center justify-content-center">
+                                    Type
+                                </div>
+                                <div class="row houseInfo3 d-flex align-items-center justify-content-center">
+                                    Discover more
+                                </div>
+
+                            </div>
+                        </div>
+
                         <!-- map -->
                         <div class="mapObject" style="position: absolute;">
                             <img src="./assets/images/map/Plotplan-3d-layered-for-website-flat-background-01-01.png" width="1469">
@@ -297,7 +313,7 @@
                             </svg>
                         </div>
 
-                        <div class="houses" style="position: absolute;border:0px black solid; ">
+                        <div class="houses" style="position: absolute;border:0px black solid;z-index: 10; ">
                         <svg style="border:0px red solid; width:1469px; height:1020px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 2155.6 1496.2" style="enable-background:new 0 0 2155.6 1496.2;" xml:space="preserve">
                         <style type="text/css">
@@ -2765,18 +2781,9 @@
 
         defineHouses();
 
-        // window.addEventListener('resize', setPopupPosition);
-
-        // setPopupPosition(null);
-
         moveCar();
 
-        //showInfoStart(null)
-
-        // let xx = document.getElementsByClassName('menuButton1')
-        // let xx = document.getElementById('svg1').contentDocument.getElementById("middle")
-        // xx.style.fill = 'red'
-
+        showInfoStart(null)
 
     }
 

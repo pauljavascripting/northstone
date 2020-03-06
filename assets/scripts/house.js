@@ -563,11 +563,14 @@ document.getElementsByClassName('houseInfo')[0].style.visibility = 'hidden';
 }
 
 function showInfo(e){
-
+	
+let popupPosY = -60;
+let popupPosX = 100;
 let house = _.find(json, { 'house_id': e.target.parentNode.id });
+
 document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
-document.getElementsByClassName('houseInfo')[0].style.left = Number(e.clientX-popupPosX) +'px';
-document.getElementsByClassName('houseInfo')[0].style.top = Number(e.clientY+popupPosY) +'px';
+document.getElementsByClassName('houseInfo')[0].style.left = Number(e.offsetX-popupPosX) +'px';
+document.getElementsByClassName('houseInfo')[0].style.top = Number(e.offsetY+popupPosY) +'px';
 document.getElementsByClassName('houseInfo1')[0].innerHTML = '<b>Plot '+house.house_id+'</b> - '+house.num_of_bedrooms+' bedrooms';
 // document.getElementsByClassName('houseInfo1b')[0].innerHTML = house.num_of_bedrooms+' bedrooms';
 document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>'+house.house_name;
