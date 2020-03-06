@@ -13741,26 +13741,6 @@ and (max-width: 992px) {
   }
 }
 
-.circleEmpty {
-  /*width: 20px;
-  height: 20px;*/
-  /*border:4px #deb08b solid;
-  border-image: url('/assets/svg/mapinfo.svg') 30 round;*/
-  border: 10px solid transparent;
-  /*padding: 5px;*/
-  border-image: url('/assets/svg/plotplan-menu-icon.svg') 10 round;
-  position: absolute;
-  z-index: 1;
-  /*margin-top: 3px;*/
-}
-
-.circleFull {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  z-index: 0;
-}
-
 .buttonHidden {
   visibility: hidden;
 }

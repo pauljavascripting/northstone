@@ -415,81 +415,72 @@ function loadData(id){
 
 let url;
 
-//reset buttons ====================================================
-if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
-	document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ffffff';	
-	document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#ffffff';
-	document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#ffffff';
-	
+
+if(document.getElementById('menuButton1')){
+	document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton2').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton3').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton4').contentDocument.getElementById("middle").style.fill = 'white'
+	document.getElementById('menuButton5').contentDocument.getElementById("middle").style.fill = 'white'
 }
+
 
 //set json & colours
 switch(id){
 
 	case 0: //plot number & house type
 
-		if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
-			document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
+		if(document.getElementById('menuButton1')){
+			document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
 		}
 		
+		
 		url = '/assets/json/housesbynumbers.json';
-		console.log('0-----')
+		// console.log('0-----')
 	break;
 
 	case 1: //not yet released
 		
-		if(document.getElementsByClassName('circleFull rounded-circle mapButton2')){
-			// document.getElementsByClassName('circleFull rounded-circle mapButton2')[0].style.background = '#728393';
-			// document.getElementsByClassName('circleFull rounded-circle mapButton2')[1].style.background = '#728393';	
+		if(document.getElementById('menuButton2')){
+			document.getElementById('menuButton2').contentDocument.getElementById("middle").style.fill = '#728393';	
 		}
 
 		url = '/assets/json/housesbynotyetreleased.json';
-		console.log('1-----')
+		// console.log('1-----')
 	break;
 
 	case 2: //for sale
 
-		if(document.getElementsByClassName('circleFull rounded-circle mapButton3')){
-			// document.getElementsByClassName('circleFull rounded-circle mapButton3')[0].style.background = '#d9a831';	
-			// document.getElementsByClassName('circleFull rounded-circle mapButton3')[1].style.background = '#d9a831';	
+		if(document.getElementById('menuButton3')){
+			document.getElementById('menuButton3').contentDocument.getElementById("middle").style.fill = '#d9a831';	
 		}
 
 		url = '/assets/json/housesbysale.json';
-		console.log('2-----')
+		// console.log('2-----')
 	break;
 
 	case 3: //reserved
 
-		if(document.getElementsByClassName('circleFull rounded-circle mapButton4')){
-			// document.getElementsByClassName('circleFull rounded-circle mapButton4')[0].style.background = '#ef784a';	
-			// document.getElementsByClassName('circleFull rounded-circle mapButton4')[1].style.background = '#ef784a';	
+		if(document.getElementById('menuButton4')){
+			document.getElementById('menuButton4').contentDocument.getElementById("middle").style.fill = '#ef784a';	
 		}
 
 		url = '/assets/json/housesbyreserved.json';
-		console.log('3-----')
+		// console.log('3-----')
 	break;
 
 	case 4: //sold
 
-		if(document.getElementsByClassName('circleFull rounded-circle mapButton5')){
-			// document.getElementsByClassName('circleFull rounded-circle mapButton5')[0].style.background = '#d21e3d';
-			// document.getElementsByClassName('circleFull rounded-circle mapButton5')[1].style.background = '#d21e3d';
-		}
+		document.getElementById('menuButton5').contentDocument.getElementById("middle").style.fill = '#d21e3d';
 
 		url = '/assets/json/housesbysold.json';
-		console.log('4-----')
+		// console.log('4-----')
 	break;
 
 	default: //plot number & house type
 
-		if(document.getElementsByClassName('circleFull rounded-circle mapButton1')){
-			// document.getElementsByClassName('circleFull rounded-circle mapButton1')[0].style.background = '#dcb18e';	
+		if(document.getElementById('menuButton1')){
+			document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
 		}
 
 		url = '/assets/json/housesbynumbers.json';
