@@ -415,6 +415,8 @@ function loadData(id){
 
 let url;
 
+hideInfo()
+
 
 // desktop menu
 if(document.getElementById('menuButton1').contentDocument){
@@ -557,9 +559,17 @@ fetch(url)
 
 }
 
+function hideDander(){
+
+	document.getElementsByClassName('dander-arrow')[0].style.visibility = 'hidden';
+	document.getElementsByClassName('dander-section')[0].style.visibility = 'hidden';
+}
+
 function hideInfo(){
 
 document.getElementsByClassName('houseInfo')[0].style.visibility = 'hidden';
+
+
 }
 
 function showInfo(e){
@@ -568,16 +578,24 @@ let popupPosY = -60;
 let popupPosX = 100;
 let house = _.find(json, { 'house_id': e.target.parentNode.id });
 
+document.getElementsByClassName('houseInfo')[0].style.paddingTop = '5px';
+document.getElementsByClassName('houseInfo')[0].style.fontSize = '0.7rem';
+
 document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
 document.getElementsByClassName('houseInfo')[0].style.left = Number(e.offsetX-popupPosX) +'px';
 document.getElementsByClassName('houseInfo')[0].style.top = Number(e.offsetY+popupPosY) +'px';
-document.getElementsByClassName('houseInfo1')[0].innerHTML = '<b>Plot '+house.house_id+'</b> - '+house.num_of_bedrooms+' bedrooms';
+document.getElementsByClassName('houseInfo1')[0].innerHTML = '<span class="houseInfoHeader">Plot '+house.house_id+'</span>&nbsp;- '+house.num_of_bedrooms+' bedrooms';
 // document.getElementsByClassName('houseInfo1b')[0].innerHTML = house.num_of_bedrooms+' bedrooms';
-document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>'+house.house_name;
+document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>&nbsp;'+house.house_name;
+
+document.getElementsByClassName('houseInfo3')[0].innerHTML = 'Discover more';
 
 }
 
 function showInfoStart(){
+
+document.getElementsByClassName('houseInfo')[0].style.paddingTop = '10px';
+document.getElementsByClassName('houseInfo')[0].style.fontSize = '0.8rem';
 
 document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
 document.getElementsByClassName('houseInfo')[0].style.left = '300px';
