@@ -13857,28 +13857,37 @@ and (max-width: 992px) {
 /* dander object */
 .dander-arrow {
 
-  padding-top: 46rem;
+  padding-top: 51rem;
  
 }
 
 .dander-arrow .container-arrow {
-  width: 16rem;
-  margin-left:auto; 
-  margin-right:10rem;
+  /*width: 25rem;*/
+  margin-left:940px;
+  width: 300px;
+  /*margin-right:12rem;*/
+  /*margin-left:auto; 
+  margin-right:10rem;*/
   /*border: 1px red solid*/
+  transform: rotate(20deg);
 }
 
 .dander-section {
-  padding-top: 54rem;
+  padding-top: 58rem;
+  
 }
 
 .dander-section .container-dander {
-  width: 15rem;
-  margin-left:auto; 
-  margin-right:0rem;
+  /*width: 15rem;*/
+  width: 300px;
+  /*margin-left:auto; // not working on ipad
+  margin-right:0px;*/
+  margin-left:1220px; 
+  margin-right: 0px;
   border: 1px #000 solid;
   background-color:#b49052;
-  font-size: 0.7rem;
+  font-size: 1.1rem;
+
 }
 
 @media (max-width: 576px) {
@@ -13924,13 +13933,13 @@ and (max-width: 992px) {
 
 /* key object */
 .key-section {
-  padding-top: 36rem;
+  padding-top: 28rem;
   font-family: 'Montserrat Regular';
-  font-size: 0.7rem;
+  font-size: 1.1rem;
 }
 
 /* hide if too close to map */
-@media (max-width: 1560px) {
+/*@media (max-width: 1300px) {
 
   .dander-arrow {
     visibility: hidden;
@@ -13943,17 +13952,19 @@ and (max-width: 992px) {
     visibility: hidden;
   }
 
-}
+}*/
 
 .key-section .container-key {
-  width: 10rem;
-  margin-left:auto; 
-  margin-right:0rem;
+  /*width: 10rem;*/
+  width: 250px;
+  /*margin-left:auto;  // not working on ipad
+  margin-right:0rem;*/
+  margin-left:1270px; 
   border:1px #000 solid
 }
 
 .keyCol1 {
-  padding: 5px; justify-content: center;
+  padding: 10px; justify-content: center;
   border-bottom: 1px #000 solid;
 }
 
