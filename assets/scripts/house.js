@@ -572,7 +572,13 @@ document.getElementsByClassName('houseInfo')[0].style.visibility = 'hidden';
 
 }
 
-function showInfo(e){
+function showInfo(e, i){
+
+let x = (document.getElementById('_'+i).getBoundingClientRect().x)+'px';
+let y = (document.getElementById('_'+i).getBoundingClientRect().y)+'px';
+// console.log(x +' '+y)
+
+(e.target.x)
 	
 let popupPosY = -60;
 let popupPosX = 100;
@@ -589,6 +595,7 @@ document.getElementsByClassName('houseInfo1')[0].innerHTML = '<span class="house
 document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>&nbsp;'+house.house_name;
 
 document.getElementsByClassName('houseInfo3')[0].innerHTML = 'Discover more';
+
 
 }
 
@@ -614,8 +621,11 @@ let numHouses = 151;
 for(let i=1;i<numHouses;i++){
 
 	let house = document.getElementById("_"+i);
+	// house.houseID = '_'+i
+	// house.addEventListener('click', showInfo);
+	house.addEventListener("click",function (e) {
 
-	house.addEventListener('click', showInfo);
+		showInfo(e,i)},true);
     
 }
 
