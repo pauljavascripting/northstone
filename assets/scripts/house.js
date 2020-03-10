@@ -560,8 +560,8 @@ fetch(url)
 
 function hideDander(e){
 
-	document.getElementsByClassName('dander-arrow')[0].style.visibility = 'hidden';
-	document.getElementsByClassName('dander-section')[0].style.visibility = 'hidden';
+	// document.getElementsByClassName('dander-arrow')[0].style.visibility = 'hidden';
+	document.getElementsByClassName('dander-section-desktop')[0].style.visibility = 'hidden';
 }
 
 function hideInfo(){
