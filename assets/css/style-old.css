@@ -13709,6 +13709,8 @@ h5 {
 .map {
 
   height: 764px;
+  /*width: 1110px;*/
+  
 }
 
 @media (max-width: 992px) {
@@ -13717,22 +13719,44 @@ h5 {
     overflow: scroll;
     border: 1px red solid;
     margin-left:5%;margin-right:5%;
-
   }
 }
 
+
+
+/*.map-section .container-map {
+  margin-left:5%;margin-right:5%;
+  height:764px;
+}
+
+@media (max-width: 992px) {
+  .map-section .container-map {
+    height:300px;
+    overflow: scroll;
+  }
+}*/
+
 /* menu object */
 .menu-section {
+ /* padding-top: 2rem;
+  padding-left: 5rem;*/
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
   cursor: pointer;
 }
 
+/*menu-section .container-menu {
+  border: 1px #000 solid;
+  background: #fff;
+  padding: 10px;
+  width: 57rem;
+}*/
+
 .menu-desktop {
 
    border: 1px #000 solid;
    background: #fff;
-   margin-top: 3rem;
+   margin-top: 1rem;
   
 }
 
@@ -13746,12 +13770,29 @@ h5 {
 }
 
 
-/*.menu {
+.menu {
   width: 170px;
   margin-left:auto; 
   margin-right:0rem;
   
   border:1px #000 solid
+}
+
+/*@media (max-width: 576px) {
+  .menu-section {
+    padding-top: 0rem;
+  }
+  .menu-section .container-menu {
+   margin-left:5%;margin-right:5%;
+   width: 90%;
+  }
+}*/
+
+/*@media (min-width: 576px)
+and (max-width: 992px) {
+  .menu-section {
+    margin-top: -24rem;
+  }
 }*/
 
 .buttonHidden {
@@ -13879,25 +13920,44 @@ h5 {
   transform: rotate(20deg);
 }
 
-.dander-section-desktop {
-  padding-top: 43rem;
-  min-width: 1110px;
-    
-}
-
 .dander-section {
   padding-top: 43rem;
     
 }
 
-.dander-desktop {
+.dander-button {
 
   background-color:#b49052;
   width: 22rem;
+  /*width: 100%;*/
    margin-left:auto;
   margin-right:0px;
 
 
+}
+
+/*.dander-section .container-dander {
+  width: 15rem;
+  width: 230px;
+  margin-left:auto;
+  margin-right:0px;
+  margin-left:870px; 
+  margin-right: 0px;
+  border: 1px #000 solid;
+  background-color:#b49052;
+  font-size: 0.7rem;
+
+}*/
+
+@media (max-width: 576px) {
+  .dander-section {
+   padding-top: 1rem;
+  }
+  .dander-section .container-dander {
+    margin-left: 5%; 
+    margin-right: 5%;
+    margin-bottom: 1rem;
+  }
 }
 
 .danderRow {
@@ -13942,9 +14002,33 @@ h5 {
   padding-top: 24rem;
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
-  min-width: 1110px;
 
 }
+
+/* hide if too close to map */
+/*@media (max-width: 1300px) {
+
+  .dander-arrow {
+    visibility: hidden;
+  }
+
+}
+@media (max-width: 1300px) {
+
+  .key-section, .dander-section {
+    visibility: hidden;
+  }
+
+}*/
+
+/*.key-section .container-key {
+  
+  width: 170px;
+  margin-left:auto; 
+  margin-right:0rem;
+  margin-left:930px; 
+  border:1px #000 solid
+}*/
 
 .key {
 

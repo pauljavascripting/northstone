@@ -556,10 +556,9 @@ fetch(url)
   });
 
 
-
 }
 
-function hideDander(){
+function hideDander(e){
 
 	document.getElementsByClassName('dander-arrow')[0].style.visibility = 'hidden';
 	document.getElementsByClassName('dander-section')[0].style.visibility = 'hidden';
@@ -572,29 +571,87 @@ document.getElementsByClassName('houseInfo')[0].style.visibility = 'hidden';
 
 }
 
+// reduce y by 120px
+
+let popupPosArray = [
+	
+	[0, 0],
+	[801, 790, 1],
+	[816 ,737],
+	[834 ,705],
+	[829 ,690],
+	[840 ,669],
+
+	[830 ,625],
+	[832 ,608],
+
+	[780 ,514],
+	[769 ,534],
+	[756 ,546],
+	[682 ,540],
+	[643 ,538],
+
+	[622 ,640, 13],
+	[645 ,641],
+	[721 ,649],
+	[720 ,694],
+	[717 ,711, 17],
+	[691 ,790],
+	[671 ,785],
+
+	[586 ,633],
+	[556 ,627],
+	[513 ,620, 22],
+	[487 ,621],
+	[465 ,616],
+	[441 ,613],
+	[415 ,606],
+	[390 ,602, 27],
+	[362 ,592],
+	[338 ,584],
+	[315 ,584],
+	[288 ,580, 31],
+
+	[186 ,694, 32],
+	[190 ,673],
+	[202 ,659],
+
+]
+
+
+
 function showInfo(e, i){
 
-let x = (document.getElementById('_'+i).getBoundingClientRect().x)+'px';
-let y = (document.getElementById('_'+i).getBoundingClientRect().y)+'px';
-// console.log(x +' '+y)
-
-(e.target.x)
-	
 let popupPosY = -60;
 let popupPosX = 100;
+
+
+let x = Number(e.offsetX-popupPosX)
+let y = Number(e.offsetY-popupPosY)
+
+console.log(x+" ,"+y)
+
+// let posX = popupPosArray[i][0];
+// let posY = popupPosArray[i][1];
+
+
+
 let house = _.find(json, { 'house_id': e.target.parentNode.id });
+
+
 
 document.getElementsByClassName('houseInfo')[0].style.paddingTop = '5px';
 document.getElementsByClassName('houseInfo')[0].style.fontSize = '0.7rem';
 
 document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
-document.getElementsByClassName('houseInfo')[0].style.left = Number(e.offsetX-popupPosX) +'px';
+document.getElementsByClassName('houseInfo')[0].style.left = Number(e.offsetX-popupPosX) +'px'; //posX+'px';//
 document.getElementsByClassName('houseInfo')[0].style.top = Number(e.offsetY+popupPosY) +'px';
 document.getElementsByClassName('houseInfo1')[0].innerHTML = '<span class="houseInfoHeader">Plot '+house.house_id+'</span>&nbsp;- '+house.num_of_bedrooms+' bedrooms';
 // document.getElementsByClassName('houseInfo1b')[0].innerHTML = house.num_of_bedrooms+' bedrooms';
 document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>&nbsp;'+house.house_name;
 
 document.getElementsByClassName('houseInfo3')[0].innerHTML = 'Discover more';
+
 
 
 }
