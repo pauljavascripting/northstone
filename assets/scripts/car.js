@@ -18,10 +18,10 @@ function moveCar(){
 	gsap.registerPlugin(MotionPathPlugin);
 
     // display car
-    gsap.set('.carHolder',{ css:{opacity:1}, delay:3 });
+    gsap.set('.carHolder',{ css:{opacity:1}, delay:5 });
 
     // amend svg
-	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:20, scale:0.1 });
+	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:20, scale:0.08 });
 
 	// animate
             carAnimation = gsap.to(carsvg, {
@@ -41,17 +41,12 @@ function moveCar(){
               onUpdateParams:[carsvg]
             });
 
-	carAnimation.seek(10)
+	// carAnimation.seek(14) // start at 14 seconds
 
 }
 
  
 function checkCar(e){
-
-	// doesn't work on ie11
-         	//var style = window.getComputedStyle(e);
-	// var matrix = new WebKitCSSMatrix(style.webkitTransform);
-	// console.log(matrix.m42)
 
 	const transformStyle = document.getElementById('carsvg').style.transform;
 	const posArray = String(transformStyle).split(',');
@@ -60,13 +55,9 @@ function checkCar(e){
 	// console.log(yPos)
 	switch(true){
 
-		case yPos < 800 && yPos >= 690: // bend 1
-
-		// gsap.killTweensOf('#carsvg');
+		case yPos < 800 && yPos >= 690: 
 
 			gsap.to('#carsvg', 2, { rotation:30})
-
-			// carAnimation.timeScale(0.8); // slow animation down
 
 		break;
 
@@ -74,7 +65,7 @@ function checkCar(e){
 
 			gsap.to('#carsvg', 2, { rotation:95})
 
-			carAnimation.timeScale(0.8); // slow animation down
+			carAnimation.timeScale(1); // slow animation down
 
 		break;
 
@@ -85,9 +76,11 @@ function checkCar(e){
 		break
 
 
-		case yPos < 520 && yPos >= 510: // bend 2
+		case yPos < 518 && yPos >= 510: // bend 2
 
 			gsap.to('#carsvg', 1.3, { rotation:5})
+
+			// carAnimation.timeScale(0.8); // slow animation down
 
 
 		break;
@@ -106,28 +99,31 @@ function checkCar(e){
 
 		break
 
-		case yPos < 360 && yPos >= 350: // road 3 - dimple
+		case yPos < 355 && yPos >= 350: // road 3 - dimple
 
 			gsap.to('#carsvg', 0.5, { rotation:72})
 
 		break
 
-		case yPos < 200 && yPos >= 150: // into drive
-
-		// gsap.killTweensOf('#carsvg');
+		case yPos < 250 && yPos >= 249: // into drive
+			
+				gsap.killTweensOf('#carsvg');
 
 				let tl = new TimelineMax({ease:Linear.none});
-				tl.to('#carsvg', 1, {y:'-=35', x:'-=10'})
-				tl.to('#carsvg', 0.5, {rotation:-15, x:'-=20', y:'+=15', transformOrigin: "0% 0%", delay:0.2})
-				tl.to('#carsvg', 0.5, {x:'-=30', y:'+=5'})
-				tl.to('#carsvg', 0.5, {rotation:73,x:'+=10',y:'-=15'})
-				tl.to('#carsvg', 1, {y:'-=20', x:'-=5'})
+				tl.to('#carsvg', 0.4, { rotation:55, y:'-=10', x:'-=10'})
+				tl.to('#carsvg', 0.4, { rotation:35, y:'-=5', x:'-=10'}, '-=0.2')
+				tl.to('#carsvg', 0.4, { rotation:15, y:'-=4', x:'-=10'}, '-=0.25')
+				tl.to('#carsvg', 0.4, { rotation:-10, y:'+=2', x:'-=10'}, '-=0.2')
+				tl.to('#carsvg', 0.4, { rotation:-10, y:'+=0', x:'-=10'}, '-=0.2')
+				tl.to('#carsvg', 0.4, { rotation:15, y:'-=3', x:'-=8'}, '-=0.2')
+				tl.to('#carsvg', 0.4, { rotation:40, y:'-=10', x:'-=2'}, '-=0.2')
+				tl.to('#carsvg', 0.4, { rotation:60, y:'-=10', x:'-=2'}, '-=0.2')
+				tl.to('#carsvg', 0.4, { rotation:70, y:'-=8', x:'+=2'}, '-=0.2')
+				
+				tl.timeScale(1); // speed animation up
 
 		break
 
-
-
-		
 
 	}
 }
