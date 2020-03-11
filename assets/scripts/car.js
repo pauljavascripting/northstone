@@ -18,7 +18,7 @@ function moveCar(){
 	gsap.registerPlugin(MotionPathPlugin);
 
     // display car
-    gsap.set('.carHolder',{ css:{opacity:1}, delay:5 });
+    gsap.set('.carHolder',{ css:{opacity:1}, delay:6 });
 
     // amend svg
 	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:20, scale:0.08 });
@@ -26,7 +26,7 @@ function moveCar(){
 	// animate
             carAnimation = gsap.to(carsvg, {
 
-              duration: 19, 
+              duration: 21, 
               repeat: 0,
               repeatDelay: 0,
               delay:2,

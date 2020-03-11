@@ -13715,7 +13715,7 @@ h5 {
   .map {
     height:300px;
     overflow: scroll;
-    border: 1px red solid;
+    /*border: 1px red solid;*/
     margin-left:5%;margin-right:5%;
 
   }
@@ -13807,13 +13807,23 @@ h5 {
   position: absolute;
   font-size: 0.7rem;
   font-family: "Montserrat Regular";
-  height: 70px;
-  width: 200px;
-  background: url('/assets/svg/mapinfo.svg') bottom center;
+  height: 67px;
+  width: 210px;
+  background:   url('/assets/images/map/popupdropshadow.png');
   background-size: cover;
-  padding-top: 4px;
   visibility: hidden;
 }
+
+.container-houseinfo {
+
+   background: url('/assets/svg/mapinfo.svg') bottom center;
+   background-size: cover;
+   height: 70px;
+   width: 200px;
+   position: absolute;
+    padding-top: 4px;
+    /*margin-top: -3px;*/
+  }
 
 .houseInfoHeader {
 

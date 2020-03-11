@@ -576,76 +576,200 @@ document.getElementsByClassName('houseInfo')[0].style.visibility = 'hidden';
 let popupPosArray = [
 	
 	[0, 0],
-	[801, 790, 1],
-	[816 ,737],
-	[834 ,705],
-	[829 ,690],
-	[840 ,669],
+	[579 ,698, 1],
+	[596 ,661],
+	[600 ,638],
+	[606 ,626],
+	[607 ,609],
 
-	[830 ,625],
-	[832 ,608],
+	[603 ,581, 6],
+	[606 ,563],
 
-	[780 ,514],
-	[769 ,534],
-	[756 ,546],
-	[682 ,540],
-	[643 ,538],
+	[566 ,494, 8],
+	[554 ,506],
+	[546 ,518],
+	[490 ,511],
+	[462 ,504],
 
-	[622 ,640, 13],
-	[645 ,641],
-	[721 ,649],
-	[720 ,694],
-	[717 ,711, 17],
-	[691 ,790],
-	[671 ,785],
+	[446 ,590, 13],
+	[463 ,588],
+	[522 ,594],
+	[518 ,631],
+	[517 ,646, 17],
+	[499 ,700],
+	[483 ,697],
 
-	[586 ,633],
-	[556 ,627],
-	[513 ,620, 22],
-	[487 ,621],
-	[465 ,616],
-	[441 ,613],
-	[415 ,606],
-	[390 ,602, 27],
-	[362 ,592],
-	[338 ,584],
-	[315 ,584],
-	[288 ,580, 31],
+	[419 ,580],
+	[391 ,576],
+	[364 ,570, 22],
+	[346 ,569],
+	[326 ,565],
+	[307 ,563],
+	[289 ,562],
+	[271 ,557, 27],
+	[251 ,552],
+	[229 ,553],
+	[211 ,547],
+	[193 ,541, 31],
 
-	[186 ,694, 32],
-	[190 ,673],
-	[202 ,659],
+	[111 ,624, 32],
+	[122 ,611],
+	[130 ,604],
+	[146 ,580],
+
+	[152 ,513, 36],
+	[145 ,498],
+	[103 ,481],
+	[95 ,449],
+	[82 ,439],
+	[64 ,416],
+
+	[18 ,386, 42],
+	[11 ,377],
+	[1 ,371],
+	[-15 ,353],
+
+	[49 ,356, 46],
+	[87 ,340],
+	[112 ,331],
+	[137 ,319],
+
+	[183 ,285, 50],
+	[196 ,298],
+	[209 ,309],
+	[225 ,361],
+	[204 ,383],
+	[186 ,398],
+	[170 ,411],
+	[152 ,429],
+
+	[211 ,465, 58],
+	[236 ,469],
+	[258 ,473],
+	[283 ,479],
+	[311 ,481],
+	[336 ,485],
+
+	[434 ,501, 64],
+	[409 ,497],
+	[395 ,496],
+	[404 ,409],
+	[434 ,416],
+	[461 ,414, 69],
+	[478 ,418],
+	[496 ,419],
+	[517 ,426],
+
+	[566 ,397, 73],
+	[614 ,427],
+	[592 ,453],
+	[582 ,468],
+
+	[628 ,292, 77],
+	[674 ,277],
+	[673 ,274],
+	[740 ,284],
+	[733 ,294],
+	[717 ,321, 82],
+	[686 ,353],
+	[659 ,386],
+	[617 ,344],
+	[593 ,326],
+	[570 ,306],
+
+	[514 ,381, 88],
+	[516 ,367],
+	[517 ,355],
+
+	[501 ,290, 91],
+	[467 ,308],
+	[453 ,311],
+	[432 ,313],
+	[413 ,318],
+	[333 ,406],
+	[331 ,385, 97],
+	[334 ,406],
+	[338 ,428],
+	[272 ,409],
+
+	[332 ,326, 101],
+	[280 ,362],
+	[277 ,348],
+	[275 ,334],
+
+	[259 ,280, 105],
+	[283 ,268],
+	[304 ,255],
+	[318 ,250],
+	[337 ,242, 109],
+	[352 ,238],
+	[376 ,232],
+	[399 ,233],
+	[426 ,225],
+	[464 ,218, 114],
+	[490 ,222],
+	[520 ,223],
+	[548 ,217],
+	[579 ,220],
+	[608 ,218],
+	[643 ,219, 120],
+	[663 ,218],
+	[691 ,221],
+	[712 ,221],
+	[743 ,220],
+	[757 ,220],
+	[773 ,220],
+	[785 ,220],
+	[842 ,208, 128],
+	[844 ,189],
+
+	[924 ,186, 130],
+	[924 ,205],
+	[926 ,220],
+	[869 ,256, 133],
+	[859 ,268],
+	[849 ,278],
+	[839 ,294],
+	[830 ,302, 137],
+	[825 ,313],
+	[812 ,325],
+	[771 ,348, 140],
+	[760 ,360],
+	[746 ,383],
+	[738 ,417],
+	[728 ,429, 144],
+	[712 ,444],
+	[703 ,458],
+	[675 ,472],
+	[660 ,494],
+	[650 ,523],
+	[637 ,536],
 
 ]
 
-
-
 function showInfo(e, i){
 
-let popupPosY = -60;
-let popupPosX = 100;
+// let popupPosY = -60;
+// let popupPosX = 100;
+// let x = Number(e.offsetX-popupPosX)
+// let y = Number(e.offsetY-popupPosY)
+// console.log(x+" ,"+y)
 
 
-let x = Number(e.offsetX-popupPosX)
-let y = Number(e.offsetY-popupPosY)
-
-console.log(x+" ,"+y)
-
-// let posX = popupPosArray[i][0];
-// let posY = popupPosArray[i][1];
 
 
+let posX = popupPosArray[i][0];
+let posY = popupPosArray[i][1];
 
 let house = _.find(json, { 'house_id': e.target.parentNode.id });
 
-
-
-document.getElementsByClassName('houseInfo')[0].style.paddingTop = '5px';
+// document.getElementsByClassName('houseInfo')[0].style.paddingTop = '5px';
+document.getElementsByClassName('houseInfo1')[0].style.marginTop = '3px';
 document.getElementsByClassName('houseInfo')[0].style.fontSize = '0.7rem';
 
 document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
-document.getElementsByClassName('houseInfo')[0].style.left = Number(e.offsetX-popupPosX) +'px'; //posX+'px';//
-document.getElementsByClassName('houseInfo')[0].style.top = Number(e.offsetY+popupPosY) +'px';
+document.getElementsByClassName('houseInfo')[0].style.left = posX+'px';//Number(e.offsetX-popupPosX) +'px'; //
+document.getElementsByClassName('houseInfo')[0].style.top = (posY-125)+'px';//Number(e.offsetY+popupPosY) +'px';
 document.getElementsByClassName('houseInfo1')[0].innerHTML = '<span class="houseInfoHeader">Plot '+house.house_id+'</span>&nbsp;- '+house.num_of_bedrooms+' bedrooms';
 // document.getElementsByClassName('houseInfo1b')[0].innerHTML = house.num_of_bedrooms+' bedrooms';
 document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>&nbsp;'+house.house_name;
@@ -658,12 +782,13 @@ document.getElementsByClassName('houseInfo3')[0].innerHTML = 'Discover more';
 
 function showInfoStart(){
 
-document.getElementsByClassName('houseInfo')[0].style.paddingTop = '10px';
+document.getElementsByClassName('houseInfo')[0].style.paddingTop = '5px';
+document.getElementsByClassName('houseInfo1')[0].style.marginTop = '5px';
 document.getElementsByClassName('houseInfo')[0].style.fontSize = '0.8rem';
 
 document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
-document.getElementsByClassName('houseInfo')[0].style.left = '300px';
-document.getElementsByClassName('houseInfo')[0].style.top = '600px'
+document.getElementsByClassName('houseInfo')[0].style.left = '116px';
+document.getElementsByClassName('houseInfo')[0].style.top = '504px'
 document.getElementsByClassName('houseInfo1')[0].innerHTML = '';
 document.getElementsByClassName('houseInfo2')[0].innerHTML = 'Click on a plot to';
 document.getElementsByClassName('houseInfo3')[0].innerHTML = 'discover more';
