@@ -18,7 +18,7 @@ function moveCar(){
 	gsap.registerPlugin(MotionPathPlugin);
 
     // display car
-    gsap.set('.carHolder',{ css:{opacity:1}, delay:6 });
+    gsap.set('.carHolder',{ css:{opacity:1}, delay:5 });
 
     // amend svg
 	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:20, scale:0.08 });
@@ -57,7 +57,7 @@ function checkCar(e){
 
 		case yPos < 800 && yPos >= 690: 
 
-			gsap.to('#carsvg', 2, { rotation:30})
+			gsap.to('#carsvg', 2, { rotation:20})
 
 		break;
 
