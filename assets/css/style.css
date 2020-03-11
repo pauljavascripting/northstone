@@ -13708,20 +13708,104 @@ h5 {
 
 .map {
 
-  height: 764px;
+  /*border:1px red solid;*/
+  position: relative;
+  width: 100%;
+  height: 770px;
+
+}
+
+.mapImage, .houses, .carHolder, .carpathsvg, .nav1, .key1, .houseInfo1, .dander1 {
+  /*width: 100%;*/
+  width: 1110px;
+  position: absolute;
+  display: block;
 }
 
 @media (max-width: 992px) {
   .map {
     height:300px;
     overflow: scroll;
-    /*border: 1px red solid;*/
+    /*margin-left:5%;margin-right:5%;*/
+  }
+  .mapImage, .houses, .carHolder, .carpathsvg, .nav1, .key1, .houseInfo1, .dander1{
+    width: 1110px;
+  }
+}
+
+.houseInfo1 {
+
+  z-index: 3;
+}
+
+.nav1{
+
+  z-index: 10;
+}
+
+/*
+.map {
+
+  height: 770px;
+  width: 100%;
+  border: 1px green solid
+}
+
+@media (max-width: 992px) {
+  .map {
+    height:300px;
+    overflow: scroll;
+    border: 1px red solid;
     margin-left:5%;margin-right:5%;
 
   }
 }
 
+
+.map1 {
+  position: absolute; width:1110px;
+  height: 770px;
+  border: 1px red solid
+
+}
+
+@media (max-width: 992px) {
+  .map1 {
+    width:100%;
+    overflow: scroll;
+    height:300px;
+  }
+}
+
+*/
+
+
 /* menu object */
+
+.nav1 {
+  
+  margin-top: 2rem;
+  /*width: 50rem;*/
+  font-size: 0.7rem;
+  
+}
+
+.container-nav {
+  
+  
+  margin-right: auto;
+  margin-left: auto;
+  background: #fff;
+  padding: 10px;
+}
+
+.navigation_menu{
+/*border:1px red solid;*/
+
+}
+
+
+
 .menu-section {
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
@@ -13746,13 +13830,13 @@ h5 {
 }
 
 
-/*.menu {
+.menu {
   width: 170px;
   margin-left:auto; 
   margin-right:0rem;
   
   border:1px #000 solid
-}*/
+}
 
 .buttonHidden {
   visibility: hidden;
@@ -13822,6 +13906,8 @@ h5 {
    width: 200px;
    position: absolute;
     padding-top: 4px;
+    font-size: 0.7rem;
+  font-family: "Montserrat Regular";
     /*margin-top: -3px;*/
   }
 
@@ -13900,13 +13986,13 @@ h5 {
     
 }
 
-.dander-desktop {
+.container-dander {
 
   background-color:#b49052;
   width: 22rem;
-   margin-left:auto;
+  margin-left:auto;
   margin-right:0px;
-
+  margin-top: 43rem;
 
 }
 
@@ -13956,12 +14042,14 @@ h5 {
 
 }
 
-.key {
+.container-key {
 
   width: 13rem;
   margin-left:auto;
   margin-right:0px;
   border: 1px #000 solid;
+  margin-top: 25rem;
+  font-size: 0.7rem;
 }
 
 .keyCol1 {
