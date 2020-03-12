@@ -13738,11 +13738,6 @@ h5 {
   z-index: 3;
 }
 
-.nav1{
-
-  z-index: 10;
-}
-
 /*
 .map {
 
@@ -13782,6 +13777,25 @@ h5 {
 
 /* menu object */
 
+.nav1{
+
+  z-index: 10;
+  cursor: pointer;
+}
+
+.nav1Element {
+
+  padding: 7px 10px 0px 10px;
+  /*border: 1px red solid*/
+}
+
+.nav2Element {
+
+  padding: 0px 10px 0px 10px;
+  display: block;
+  /*border: 1px red solid*/
+}
+
 .nav1 {
   
   margin-top: 2rem;
@@ -13799,25 +13813,17 @@ h5 {
   padding: 10px;
 }
 
-.navigation_menu{
-/*border:1px red solid;*/
+/*.navigation_menu{
+border:1px red solid;
 
-}
+}*/
 
-
+/* menu mobile ----------------------- */
 
 .menu-section {
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
   cursor: pointer;
-}
-
-.menu-desktop {
-
-   border: 1px #000 solid;
-   background: #fff;
-   margin-top: 3rem;
-  
 }
 
 .menu-mobile {
@@ -13827,15 +13833,6 @@ h5 {
   margin-right: 1%;
   margin-left: 1%;
   
-}
-
-
-.menu {
-  width: 170px;
-  margin-left:auto; 
-  margin-right:0rem;
-  
-  border:1px #000 solid
 }
 
 .buttonHidden {
@@ -13855,6 +13852,8 @@ h5 {
   text-align:right;
   /*border: 1px red solid;*/
 }
+
+/* ----------------------- */
 
 .mapButton1 {
 
@@ -13886,29 +13885,17 @@ h5 {
 
 }
 
-.houseInfo {
-
-  position: absolute;
-  font-size: 0.7rem;
-  font-family: "Montserrat Regular";
-  height: 67px;
-  width: 210px;
-  background:   url('/assets/images/map/popupdropshadow.png');
-  background-size: cover;
-  visibility: hidden;
-}
-
 .container-houseinfo {
 
-   background: url('/assets/svg/mapinfo.svg') bottom center;
+   background: url('/assets/svg/mapinfo.svg'), url('/assets/images/map/popupdropshadow.png') 2px -2px;
    background-size: cover;
    height: 70px;
    width: 200px;
    position: absolute;
-    padding-top: 4px;
-    font-size: 0.7rem;
-  font-family: "Montserrat Regular";
-    /*margin-top: -3px;*/
+   padding-top: 4px;
+   font-size: 0.7rem;
+   font-family: "Montserrat Regular";
+   
   }
 
 .houseInfoHeader {

@@ -2191,42 +2191,42 @@
                                     <div class="row no-gutters">
                                         
                                        <!-- 1 -->
-                                       <div onClick="loadData(0)"  style="border:0px red solid; padding: 5px;">
+                                       <div class="nav1Element" onClick="loadData(0)">
                                         House Type
                                        </div>
-                                        <div onClick="loadData(0)" style="border:0px red solid">
-                                        <object  id="menuButton1"  width="30" data="/assets/svg/plotplan-menu-icon.svg" type="image/svg+xml"></object>
+                                        <div class="nav2Element">
+                                        <object id="menuButton1"  width="30" data="/assets/svg/plotplan-menu-icon.svg" type="image/svg+xml"></object>
                                        </div>
 
                                         <!-- 2 -->
-                                       <div onClick="loadData(1)" style="border:0px red solid; padding: 5px;">
+                                       <div class="nav1Element" onClick="loadData(1)">
                                         Not Yet Released
                                        </div>
-                                        <div  style="border:0px red solid">
-                                        <object id="menuButton2"  width="30" data="/assets/svg/plotplan-menu-icon.svg" type="image/svg+xml"></object>
+                                        <div class="nav2Element" onClick="alert('click!')">
+                                        <object id="menuButton2"  width="30" height="30" data="/assets/svg/plotplan-menu-icon.svg" type="image/svg+xml"></object>
                                        </div>
 
                                         <!-- 3 -->
-                                       <div onClick="loadData(2)" style="border:0px red solid; padding: 5px;">
+                                       <div class="nav1Element" onClick="loadData(2)">
                                         For Sale
                                        </div>
-                                        <div style="border:0px red solid">
+                                        <div class="nav2Element">
                                         <object  id="menuButton3"  width="30" data="/assets/svg/plotplan-menu-icon.svg" type="image/svg+xml"></object>
                                        </div>
 
                                         <!-- 4 -->
-                                       <div onClick="loadData(3)" style="border:0px red solid; padding: 5px;">
+                                       <div class="nav1Element" onClick="loadData(3)">
                                        Reserved
                                        </div>
-                                        <div  style="border:0px red solid">
+                                        <div class="nav2Element">
                                         <object id="menuButton4"  width="30" data="/assets/svg/plotplan-menu-icon.svg" type="image/svg+xml"></object>
                                        </div>
 
                                         <!-- 5 -->
-                                       <div onClick="loadData(4)" style="border:0px red solid; padding: 5px;">
+                                       <div class="nav1Element" onClick="loadData(4)">
                                         Sold
                                        </div>
-                                        <div  style="border:0px red solid">
+                                        <div class="nav2Element">
                                         <object id="menuButton5" width="30" data="/assets/svg/plotplan-menu-icon.svg" type="image/svg+xml"></object>
                                        </div>
 
@@ -2727,7 +2727,7 @@
 
         moveCar();
 
-        //showInfoStart(null)
+        showInfoStart(null)
 
         document.addEventListener('click', hideDander)
 

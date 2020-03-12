@@ -561,7 +561,7 @@ fetch(url)
 function hideDander(e){
 
 	// document.getElementsByClassName('dander-arrow')[0].style.visibility = 'hidden';
-	document.getElementsByClassName('dander-section-desktop')[0].style.visibility = 'hidden';
+	document.getElementsByClassName('dander1')[0].style.visibility = 'hidden';
 }
 
 function hideInfo(){
@@ -763,7 +763,7 @@ let posY = popupPosArray[i][1];
 
 let house = _.find(json, { 'house_id': e.target.parentNode.id });
 
-// document.getElementsByClassName('houseInfo')[0].style.paddingTop = '5px';
+document.getElementsByClassName('houseInfo1a')[0].style.paddingTop = '2px';
 
 document.getElementsByClassName('houseInfo1')[0].style.visibility = 'visible';
 document.getElementsByClassName('houseInfo1')[0].style.left = posX+'px';//Number(e.offsetX-popupPosX) +'px'; //
@@ -780,14 +780,13 @@ document.getElementsByClassName('houseInfo3')[0].innerHTML = 'Discover more';
 
 function showInfoStart(){
 
-document.getElementsByClassName('houseInfo')[0].style.paddingTop = '5px';
+document.getElementsByClassName('houseInfo1a')[0].style.paddingTop = '10px';
 document.getElementsByClassName('houseInfo1')[0].style.marginTop = '5px';
-document.getElementsByClassName('houseInfo')[0].style.fontSize = '0.8rem';
 
-document.getElementsByClassName('houseInfo')[0].style.visibility = 'visible';
-document.getElementsByClassName('houseInfo')[0].style.left = '116px';
-document.getElementsByClassName('houseInfo')[0].style.top = '504px'
-document.getElementsByClassName('houseInfo1')[0].innerHTML = '';
+document.getElementsByClassName('houseInfo1')[0].style.visibility = 'visible';
+document.getElementsByClassName('houseInfo1')[0].style.left = '116px';
+document.getElementsByClassName('houseInfo1')[0].style.top = '504px'
+document.getElementsByClassName('houseInfo1a')[0].innerHTML = '';
 document.getElementsByClassName('houseInfo2')[0].innerHTML = 'Click on a plot to';
 document.getElementsByClassName('houseInfo3')[0].innerHTML = 'discover more';
 
