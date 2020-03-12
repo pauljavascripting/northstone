@@ -1,5 +1,5 @@
 function enableNavButtons(){
-console.log('enableNavButtons')
+
 	 // make desktop buttons clickable
         if(document.getElementById('menuButton1').contentDocument){
             var object = document.getElementById('menuButton1')
