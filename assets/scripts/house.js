@@ -566,7 +566,7 @@ function hideDander(e){
 
 function hideInfo(){
 
-// document.getElementsByClassName('houseInfo')[0].style.visibility = 'hidden';
+document.getElementsByClassName('houseInfo1')[0].style.visibility = 'hidden';
 
 
 }
