@@ -1,3 +1,76 @@
+function enableNavButtons(){
+console.log('enableNavButtons')
+	 // make desktop buttons clickable
+        if(document.getElementById('menuButton1').contentDocument){
+            var object = document.getElementById('menuButton1')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(0)
+            });
+
+            var object = document.getElementById('menuButton2')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(1)
+            });
+
+            var object = document.getElementById('menuButton3')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(2)
+            });
+
+            var object = document.getElementById('menuButton4')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(3)
+            });
+
+            var object = document.getElementById('menuButton5')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(4)
+            });
+        }
+
+        // make mobile buttons clickable
+        if(document.getElementById('menuButton1a').contentDocument){
+
+            var object = document.getElementById('menuButton1a')
+            console.log(object)
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(0)
+            });
+
+            var object = document.getElementById('menuButton2a')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(1)
+            });
+
+            var object = document.getElementById('menuButton3a')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(2)
+            });
+
+            var object = document.getElementById('menuButton4a')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(3)
+            });
+
+            var object = document.getElementById('menuButton5a')
+            var svg = object.contentDocument.rootElement;
+            svg.addEventListener('click', function() {
+              loadData(4)
+            });
+        
+        }
+}
+
+
 function getHouseType(){
 
 	return houseType_id;

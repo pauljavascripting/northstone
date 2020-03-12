@@ -13786,6 +13786,9 @@ h5 {
 
   z-index: 10;
   cursor: pointer;
+   margin-top: 2rem;
+  /*width: 50rem;*/
+  font-size: 0.7rem;
 }
 
 .nav1Element {
@@ -13798,15 +13801,8 @@ h5 {
 
   padding: 0px 10px 0px 10px;
   display: block;
+  cursor: pointer;
   /*border: 1px red solid*/
-}
-
-.nav1 {
-  
-  margin-top: 2rem;
-  /*width: 50rem;*/
-  font-size: 0.7rem;
-  
 }
 
 .container-nav {
