@@ -16,7 +16,7 @@ function startCar4(){
 	gsap.set('.carHolder',{ css:{opacity:1},  });
 	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:280, scale:0.08, x:297, y:477 });
 
-	let tl = gsap.timeline({ease:Linear.none, onComplete:continueCar4 });
+	let tl = gsap.timeline({ease:Linear.none });
 	tl.to('#carsvg', 0.3, { rotation:280, y:'-=5', x:'-=3'},'-=0')
 	tl.to('#carsvg', 0.4, { rotation:300, y:'-=5', x:'+=1'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:310, y:'-=5', x:'+=2'},'-=0.2')
@@ -25,66 +25,53 @@ function startCar4(){
 	tl.to('#carsvg', 0.4, { rotation:340, y:'-=5', x:'+=5'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:350, y:'-=5', x:'+=5'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:370, y:'-=5', x:'+=5'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:370, y:'-=3', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:370, y:'-=3', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:370, y:'-=3', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:370, y:'-=3', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:380, y:'-=5', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:390, y:'-=7', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:400, y:'-=7', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:400, y:'-=7', x:'-=10'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:400, y:'-=7', x:'-=7'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:405, y:'-=7', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:405, y:'-=7', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:405, y:'-=7', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:410, y:'-=7', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:410, y:'-=7', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:410, y:'-=7', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:420, y:'-=7', x:'-=0'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:430, y:'-=7', x:'-=0'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:440, y:'-=7', x:'+=2'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:450, y:'-=7', x:'+=4'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:460, y:'-=7', x:'+=6'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:470, y:'-=7', x:'+=7'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:480, y:'-=7', x:'+=9'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:490, y:'-=5', x:'+=11'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:495, y:'-=5', x:'+=8'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:495, y:'-=5', x:'+=8'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:495, y:'-=5', x:'+=6'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:495, y:'-=5', x:'+=6'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:480, y:'-=5', x:'+=3'},'-=0.2')
+	tl.to('#carsvg', 0.5, { rotation:475, y:'-=5', x:'+=3'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:465, y:'-=5', x:'-=0'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:455, y:'-=5', x:'-=0'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:445, y:'-=5', x:'-=2'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:435, y:'-=5', x:'-=2'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:425, y:'-=5', x:'-=3'},'-=0.2')
+	tl.to('#carsvg', 0.4, { rotation:415, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:405, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:405, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:405, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:405, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:405, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:415, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:415, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:415, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.3, { rotation:415, y:'-=5', x:'-=4'},'-=0.2')
+	tl.to('#carsvg', 0.6, { rotation:415, y:'-=5', x:'-=4'},'-=0.2')
 
-	
-}
-
-function continueCar4(){
-	
-	  carAnimation = gsap.to(carsvg, {
-
-              duration: 15, 
-              repeat: 0,
-              repeatDelay: 0,
-              delay:1,
-              yoyo: false,
-              ease: "Linear.easeInOut",
-              motionPath:{
-                path: "#pathCar3",
-                start: 1,
-                end:0,
-              },
-              onUpdate: checkCar4,
-              onUpdateParams:[carsvg],
-            });
-
-	// carAnimation.seek(12) // start at 14 seconds
-}
-
-
-function checkCar4(){
-
-	let posX;
-	const transformStyle = document.getElementById('carsvg').style.transform;
-	const posArray = String(transformStyle).split(',');
-
-
-	if(posArray.length>3){
-		
-		const split1 = posArray[0].split('translate3d(');
-		const split2 = split1[1].split('px');
-		let posX = split2[0];
-		console.log(posX)
-		switch(true){
-
-			case posX > 294 && posX < 295:
-
-				gsap.to('#carsvg', 1, { rotation:400});
-
-			break;
-
-			case posX > 220 && posX < 222:
-
-				gsap.to('#carsvg', 2, { rotation:500});
-
-			break;
-
-
-		}
-
-	}
-
-
+	tl.timeScale(1.1); // speed animation up
 
 }
 
