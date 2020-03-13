@@ -13708,15 +13708,13 @@ h5 {
 
 .map {
 
-  /*border:1px red solid;*/
   position: relative;
   width: 100%;
   height: 770px;
 
 }
 
-.mapImage, .houses, .carHolder, .carpathsvg, .nav1, .key1, .houseInfo1, .dander1 {
-  /*width: 100%;*/
+.mapImage, .houses, .carHolder, .carpathsvg, .menu-desktop-section, .keycolour-section, .houseInfo-section, .dander-desktop, .arrow-section {
   width: 1110px;
   position: absolute;
   display: block;
@@ -13726,14 +13724,13 @@ h5 {
   .map {
     height:300px;
     overflow: scroll;
-    /*margin-left:5%;margin-right:5%;*/
   }
-  .mapImage, .houses, .carHolder, .carpathsvg, .nav1, .key1, .houseInfo1, .dander1{
+  .mapImage, .houses, .carHolder, .carpathsvg, .menu-desktop-section, .keycolour-section, .houseInfo-section, .dander-desktop, .arrow-section{
     width: 1110px;
   }
 }
 
-.houseInfo1 {
+.houseInfo-section {
 
   z-index: 3;
   cursor: pointer;
@@ -13744,58 +13741,18 @@ h5 {
   opacity: 0;
 }
 
-/*
-.map {
-
-  height: 770px;
-  width: 100%;
-  border: 1px green solid
-}
-
-@media (max-width: 992px) {
-  .map {
-    height:300px;
-    overflow: scroll;
-    border: 1px red solid;
-    margin-left:5%;margin-right:5%;
-
-  }
-}
-
-
-.map1 {
-  position: absolute; width:1110px;
-  height: 770px;
-  border: 1px red solid
-
-}
-
-@media (max-width: 992px) {
-  .map1 {
-    width:100%;
-    overflow: scroll;
-    height:300px;
-  }
-}
-
-*/
-
-
 /* menu object */
-
-.nav1{
+.menu-desktop-section{
 
   z-index: 10;
   cursor: pointer;
    margin-top: 2rem;
-  /*width: 50rem;*/
   font-size: 0.7rem;
 }
 
 .nav1Element {
 
   padding: 7px 10px 0px 10px;
-  /*border: 1px red solid*/
 }
 
 .nav2Element {
@@ -13803,11 +13760,9 @@ h5 {
   padding: 0px 10px 0px 10px;
   display: block;
   cursor: pointer;
-  /*border: 1px red solid*/
 }
 
 .container-nav {
-  
   
   margin-right: auto;
   margin-left: auto;
@@ -13815,14 +13770,8 @@ h5 {
   padding: 10px;
 }
 
-/*.navigation_menu{
-border:1px red solid;
-
-}*/
-
 /* menu mobile ----------------------- */
-
-.menu-section {
+.menu-mobile-section {
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
   cursor: pointer;
@@ -13914,11 +13863,9 @@ border:1px red solid;
 /* dropdown object */
 .dropdown-section {
   padding-top: 1rem;
-  /*padding-bottom: 4.5rem;*/
 }
 
 .dropdown-section .container-dropdown {
-  /*width: 90%;*/
 }
 
 .dropdown {
@@ -13954,13 +13901,8 @@ border:1px red solid;
 }
 
 .dander-arrow .container-arrow {
-  /*width: 25rem;*/
   margin-left:710px;
   width: 200px;
-  /*margin-right:12rem;*/
-  /*margin-left:auto; 
-  margin-right:10rem;*/
-  /*border: 1px red solid*/
   transform: rotate(20deg);
 }
 
@@ -14020,6 +13962,30 @@ border:1px red solid;
   .dander-section .container-dander {
     width: 90%;
   }
+}
+
+/* dander arrow */
+
+.arrow-section {
+   
+}
+
+.container-arrow {
+
+  /*background-color:#b49052;
+  width: 27rem;
+  margin-left:auto;
+  margin-right:0px;
+  */
+  background: url('/assets/svg/danderarrow.svg');
+  background-size: cover;
+
+  margin-top: 39.5rem;
+  margin-left: 695px;
+  width:10rem;
+  height:40px;
+  transform: rotate(20deg);
+
 }
 
 /* key object */

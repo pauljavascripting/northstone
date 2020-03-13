@@ -517,94 +517,81 @@ switch(id){
 	case 0: //plot number & house type
 
 		if(document.getElementById('menuButton1').contentDocument){
-			// document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
 			gsap.to(document.getElementById('menuButton1').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
 
 		}
 
 		if(document.getElementById('menuButton1a').contentDocument){
-			// document.getElementById('menuButton1a').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
 			gsap.to(document.getElementById('menuButton1a').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
 		}
 		
-		
 		url = '/assets/json/housesbynumbers.json';
-		// console.log('0-----')
+		
 	break;
 
 	case 1: //not yet released
 		
 		if(document.getElementById('menuButton2').contentDocument){
-			// document.getElementById('menuButton2').contentDocument.getElementById("middle").style.fill = '#728393';	
 			gsap.to(document.getElementById('menuButton2').contentDocument.getElementById("middle"), 1, {fill: "#728393"});
 		}
 
 		if(document.getElementById('menuButton2a').contentDocument){
-			// document.getElementById('menuButton2a').contentDocument.getElementById("middle").style.fill = '#728393';	
 			gsap.to(document.getElementById('menuButton2a').contentDocument.getElementById("middle"), 1, {fill: "#728393"});
 		}
 
 		url = '/assets/json/housesbynotyetreleased.json';
-		// console.log('1-----')
+		
 	break;
 
 	case 2: //for sale
 
 		if(document.getElementById('menuButton3').contentDocument){
-			// document.getElementById('menuButton3').contentDocument.getElementById("middle").style.fill = '#d9a831';	
 			gsap.to(document.getElementById('menuButton3').contentDocument.getElementById("middle"), 1, {fill: "#d9a831"});
 		}
 
 		if(document.getElementById('menuButton3a').contentDocument){
-			// document.getElementById('menuButton3a').contentDocument.getElementById("middle").style.fill = '#d9a831';	
 			gsap.to(document.getElementById('menuButton3a').contentDocument.getElementById("middle"), 1, {fill: "#d9a831"});
 		}
 
 		url = '/assets/json/housesbysale.json';
-		// console.log('2-----')
+		
 	break;
 
 	case 3: //reserved
 
 		if(document.getElementById('menuButton4').contentDocument){
-			// document.getElementById('menuButton4').contentDocument.getElementById("middle").style.fill = '#ef784a';	
 			gsap.to(document.getElementById('menuButton4').contentDocument.getElementById("middle"), 1, {fill: "#ef784a"});
 		}
 
 		if(document.getElementById('menuButton4a').contentDocument){
-			// document.getElementById('menuButton4a').contentDocument.getElementById("middle").style.fill = '#ef784a';	
 			gsap.to(document.getElementById('menuButton4a').contentDocument.getElementById("middle"), 1, {fill: "#ef784a"});
 		}
 
 		url = '/assets/json/housesbyreserved.json';
-		// console.log('3-----')
+		
 	break;
 
 	case 4: //sold
 
 		if(document.getElementById('menuButton5').contentDocument){
-			// document.getElementById('menuButton5').contentDocument.getElementById("middle").style.fill = '#d21e3d';
 			gsap.to(document.getElementById('menuButton5').contentDocument.getElementById("middle"), 1, {fill: "#d21e3d"});
 		}
 
 		if(document.getElementById('menuButton5a').contentDocument){
-			// document.getElementById('menuButton5a').contentDocument.getElementById("middle").style.fill = '#d21e3d';
 			gsap.to(document.getElementById('menuButton5a').contentDocument.getElementById("middle"), 1, {fill: "#d21e3d"});
 		}
 
 		url = '/assets/json/housesbysold.json';
-		// console.log('4-----')
+		
 	break;
 
 	default: //plot number & house type
 
 		if(document.getElementById('menuButton1').contentDocument){
-			// document.getElementById('menuButton1').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
 			gsap.to(document.getElementById('menuButton1').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
 		}
 
 		if(document.getElementById('menuButton1a').contentDocument){
-			// document.getElementById('menuButton1a').contentDocument.getElementById("middle").style.fill = '#dcb18e';	
 			gsap.to(document.getElementById('menuButton1a').contentDocument.getElementById("middle"), 1, {fill: "#dcb18e"});
 		}
 
@@ -633,13 +620,13 @@ fetch(url)
 
 function hideDander(e){
 
-	// document.getElementsByClassName('dander-arrow')[0].style.visibility = 'hidden';
-	document.getElementsByClassName('dander1')[0].style.visibility = 'hidden';
+	document.getElementsByClassName('arrow-section')[0].style.visibility = 'hidden';
+	document.getElementsByClassName('dander-desktop')[0].style.visibility = 'hidden';
 }
 
 function hideInfo(){
 
-document.getElementsByClassName('houseInfo1')[0].style.visibility = 'hidden';
+document.getElementsByClassName('houseInfo-section')[0].style.visibility = 'hidden';
 
 
 }
@@ -822,43 +809,28 @@ let popupPosArray = [
 
 function showInfo(e, i){
 
-// let popupPosY = -60;
-// let popupPosX = 100;
-// let x = Number(e.offsetX-popupPosX)
-// let y = Number(e.offsetY-popupPosY)
-// console.log(x+" ,"+y)
-
-
-
-
 let posX = popupPosArray[i][0];
 let posY = popupPosArray[i][1];
 
 let house = _.find(json, { 'house_id': e.target.parentNode.id });
 
 document.getElementsByClassName('houseInfo1a')[0].style.paddingTop = '2px';
-
-document.getElementsByClassName('houseInfo1')[0].style.visibility = 'visible';
-document.getElementsByClassName('houseInfo1')[0].style.left = posX+'px';//Number(e.offsetX-popupPosX) +'px'; //
-document.getElementsByClassName('houseInfo1')[0].style.top = (posY-125)+'px';//Number(e.offsetY+popupPosY) +'px';
-
+document.getElementsByClassName('houseInfo-section')[0].style.visibility = 'visible';
+document.getElementsByClassName('houseInfo-section')[0].style.left = posX+'px';
+document.getElementsByClassName('houseInfo-section')[0].style.top = (posY-125)+'px';
 document.getElementsByClassName('houseInfo1a')[0].innerHTML = '<span class="houseInfoHeader">Plot '+house.house_id+'</span>&nbsp;- '+house.num_of_bedrooms+' bedrooms';
-// document.getElementsByClassName('houseInfo1b')[0].innerHTML = house.num_of_bedrooms+' bedrooms';
 document.getElementsByClassName('houseInfo2')[0].innerHTML = '<i>House Type</i>&nbsp;'+house.house_name;
-
 document.getElementsByClassName('houseInfo3')[0].innerHTML = 'Discover more';
-
 
 }
 
 function showInfoStart(){
 
 document.getElementsByClassName('houseInfo1a')[0].style.paddingTop = '10px';
-document.getElementsByClassName('houseInfo1')[0].style.marginTop = '5px';
-
-document.getElementsByClassName('houseInfo1')[0].style.visibility = 'visible';
-document.getElementsByClassName('houseInfo1')[0].style.left = '116px';
-document.getElementsByClassName('houseInfo1')[0].style.top = '504px'
+document.getElementsByClassName('houseInfo-section')[0].style.marginTop = '5px';
+document.getElementsByClassName('houseInfo-section')[0].style.visibility = 'visible';
+document.getElementsByClassName('houseInfo-section')[0].style.left = '116px';
+document.getElementsByClassName('houseInfo-section')[0].style.top = '504px'
 document.getElementsByClassName('houseInfo1a')[0].innerHTML = '';
 document.getElementsByClassName('houseInfo2')[0].innerHTML = 'Click on a plot to';
 document.getElementsByClassName('houseInfo3')[0].innerHTML = 'discover more';
@@ -873,8 +845,6 @@ let numHouses = 151;
 for(let i=1;i<numHouses;i++){
 
 	let house = document.getElementById("_"+i);
-	// house.houseID = '_'+i
-	// house.addEventListener('click', showInfo);
 	house.addEventListener("click",function (e) {
 
 		showInfo(e,i)},true);
