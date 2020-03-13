@@ -17,7 +17,7 @@ function startCar5(){
 	gsap.set('.carHolder',{ css:{opacity:1},  });
 	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:415, scale:0.08, x:250, y:246 });
 
-	let tl = gsap.timeline({ease:Linear.none, delay:0 });
+	let tl = gsap.timeline({ease:Linear.none, delay:10 });
 	tl.to('#carsvg', 0.6, { rotation:415, y:'+=5', x:'+=4'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:415, y:'+=5', x:'+=4'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:415, y:'+=5', x:'+=4'},'-=0.2')
@@ -146,7 +146,7 @@ function startCar4(){
 	gsap.set('.carHolder',{ css:{opacity:1},  });
 	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:280, scale:0.08, x:297, y:477 });
 
-	let tl = gsap.timeline({ease:Linear.none, onComplete:startCar5, delay:5 });
+	let tl = gsap.timeline({ease:Linear.none, onComplete:startCar5, delay:10 });
 	tl.to('#carsvg', 0.3, { rotation:280, y:'-=5', x:'-=3'},'-=0')
 	tl.to('#carsvg', 0.4, { rotation:300, y:'-=5', x:'+=1'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:310, y:'-=5', x:'+=2'},'-=0.2')
@@ -212,7 +212,7 @@ function startCar3(){
 	gsap.set('.carHolder',{ css:{opacity:1}});
 	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:220, scale:0.08, x:916, y:248 });
 
-	let tl = new TimelineMax({ease:Linear.none, onComplete:continueCar3, delay:5 });
+	let tl = new TimelineMax({ease:Linear.none, onComplete:continueCar3, delay:10 });
 	tl.to('#carsvg', 0.4, { rotation:250, y:'-=10', x:'-=10'},'-=0')
 	tl.to('#carsvg', 0.4, { rotation:260, y:'-=10', x:'-=10'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:275, y:'-=10', x:'-=10'},'-=0.2')
@@ -318,7 +318,7 @@ function startCar2(){
 	// gsap.set('.carHolder',{ css:{opacity:1} });
 	// gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:70, scale:0.08, x:419, y:211 });
 
-	let tl = new TimelineMax({ease:Linear.none, onComplete:continueCar2, delay:5 });
+	let tl = new TimelineMax({ease:Linear.none, onComplete:continueCar2, delay:10 });
 	tl.to('#carsvg', 0.4, { rotation:70, y:'+=5', x:'-=0'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:80, y:'+=5', x:'-=0'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:90, y:'+=5', x:'-=0'},'-=0.2')
