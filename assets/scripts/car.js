@@ -17,7 +17,7 @@ function startCar5(){
 	gsap.set('.carHolder',{ css:{opacity:1},  });
 	gsap.set('#carsvg',{ transformOrigin: "0% 0%", rotation:415, scale:0.08, x:250, y:246 });
 
-	let tl = gsap.timeline({ease:Linear.none, delay:5 });
+	let tl = gsap.timeline({ease:Linear.none, delay:0 });
 	tl.to('#carsvg', 0.6, { rotation:415, y:'+=5', x:'+=4'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:415, y:'+=5', x:'+=4'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:415, y:'+=5', x:'+=4'},'-=0.2')
@@ -67,7 +67,7 @@ function startCar5(){
 	tl.to('#carsvg', 0.4, { rotation:570, y:'+=4', x:'+=10'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:563, y:'+=4', x:'+=10'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:560, y:'+=4', x:'+=7', onComplete: continueCar5},'-=0.2') // 287.785, 442.257
-	tl.to('#carsvg', 0.4, { rotation:550, y:'+=4', x:'+=12'},'-=0.2') //292.285,447.193
+	tl.to('#carsvg', 0.4, { rotation:550, y:'+=3', x:'+=12'},'-=0.2') //292.285,447.193
 	
 
 }
@@ -328,11 +328,7 @@ function startCar2(){
 	tl.to('#carsvg', 0.4, { rotation:130, y:'+=5', x:'-=0'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:140, y:'+=5', x:'-=0'},'-=0.2')
 	tl.to('#carsvg', 0.4, { rotation:150, y:'+=5', x:'-=0'},'-=0.2')
-	tl.to('#carsvg', 0.4, { rotation:165, y:'+=5', x:'-=0'},'-=0.2')
-
-	// tl.timeScale(1.1); // speed animation up
-	
-	
+	tl.to('#carsvg', 0.4, { rotation:165, y:'+=8', x:'+=0.5'},'-=0.2')
 
 }
 
@@ -343,7 +339,7 @@ function continueCar2(){
               duration: 25, 
               repeat: 0,
               repeatDelay: 0,
-              delay:1,
+              delay:0.5,
               yoyo: false,
               ease: "Linear.easeInOut",
               motionPath:{
