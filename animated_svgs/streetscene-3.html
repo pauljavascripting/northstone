@@ -37,13 +37,8 @@
 
 
              let tl = gsap.timeline({ease:Linear.none, delay:0 });
-             tl.set(['.scene1','.scene3','.scene4'], {y:0, opacity:0})
              tl.set(['.scene0_blur'], {scale:1, y:0})
-             //tl.to('.scene0_blur', 5, {opacity:1, y:-350})
-           
-             let tl1 = gsap.timeline({ease:Linear.none, delay:0 });
-             tl1.set(['.scene2_blur'], {scale:1, y:100})
-             tl1.to('.scene2_blur', 6, {opacity:1, y:-300})
+             tl.to('.scene0_blur', 5, {opacity:1, y:-550, scale:1.2})
             
         }
 
@@ -57,59 +52,15 @@
             <div >
                                
 
-
-             
-
-                 <div class="scene3"  style="position: absolute; z-index:0; width: 50rem;   background: none; z-index: 0;">
-
-                    <img src="streetscene-colourwashonly-01.png" width="100%">
-                   
-                </div>
-
-                <div class="scene4"  style="position: absolute; z-index:0; width: 50rem;   background: none; z-index: 0;">
-
-                    <img src="streetscene-colourwashonly-02.png" width="100%">
-                   
-                </div>
-
-                 
-
-
-
-                <div class="scene2"  style="position: absolute; z-index:0; width: 50rem;   background: none; z-index: 0;">
-
-                    <img src="streetscene-colourwashonly-03.png" width="100%">
-                   
-                </div>
-
-
-
-
-
-                 <div class="scene2_blur"  style="position: absolute; z-index:0; width: 50rem;   background: none; z-index: 0; border:0px red solid">
-
-                    <img src="white_blur.png" width="100%">
-                   
-                </div>
-
-
-
-
-
-                <!-- 1 -->
-
-
                 <div class="scene1"  style="position: absolute; z-index:0; width: 50rem;   background: none; z-index: 0;">
 
                     <img src="streetscene-colourwashonly-04.png" width="100%">
                    
                 </div>
 
-                
-
                  <div class="scene0_blur"  style="position: absolute; z-index:0; width: 50rem;   background: none; z-index: 0; border:0px red solid">
 
-                    <img src="white_blur.png" width="100%">
+                    <img src="white_blur_big.png" width="100%">
                    
                 </div>
 
