@@ -13728,7 +13728,7 @@ h5 {
     overflow: scroll;
   }
   .mapImage, .houses, .carHolder,  .menu-desktop-section, .keycolour-section, .houseInfo-section, .dander-desktop, .arrow-section{
-    width: 992px;
+    width: 1110px;
   }
 }
 
@@ -13745,6 +13745,7 @@ h5 {
 .carHolder{
 
   opacity: 0;
+  
 }
 
 .carpathsvg {
