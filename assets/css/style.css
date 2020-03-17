@@ -13704,6 +13704,8 @@ h5 {
 /* map object */
 .map-section {
 
+  margin-top: 15px;
+   
 }
 
 .map {
@@ -13717,6 +13719,7 @@ h5 {
   width: 1110px;
   position: absolute;
   display: block;
+
 }
 
 @media (max-width: 992px) {
@@ -13725,8 +13728,12 @@ h5 {
     overflow: scroll;
   }
   .mapImage, .houses, .carHolder,  .menu-desktop-section, .keycolour-section, .houseInfo-section, .dander-desktop, .arrow-section{
-    width: 1110px;
+    width: 992px;
   }
+}
+
+.houses {
+  z-index: 3;
 }
 
 .houseInfo-section {
@@ -13738,6 +13745,11 @@ h5 {
 .carHolder{
 
   opacity: 0;
+}
+
+.carpathsvg {
+  position: absolute;
+  visibility: hidden;
 }
 
 /* menu object */
@@ -13871,13 +13883,17 @@ h5 {
   width: 90%;
 }
 
+.dropdown-section .dropdown-menu{
+  width: 90vw;
+}
+
 .dropdownKeyButton {
 
   border-radius: 0 !important;
   width:90vw;
   font-family: 'Montserrat Regular';
   font-size: 0.7rem;
-
+  text-align: left; background: #dcb18e;
 }
 
 .keydropdown .dropdown-toggle::after {
@@ -13931,6 +13947,8 @@ h5 {
   margin-right: 1%;
   margin-left: 1%;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .danderRow1{
@@ -14026,4 +14044,55 @@ h5 {
   display:flex; align-items:center; justify-content:center;
  border-left: 1px #000 solid;
 }
+
+.keycolour1{
+  background: #b2d1e3;
+}
+
+.keycolour2{
+ background: #d9b38a;
+}
+
+.keycolour3{
+  background: #7e9775; color:#fff;
+}
+
+.keycolour4{
+  background: #004a53;color:#fff;
+}
+
+.keycolour5{
+  background: #ed7748;
+}
+
+.keycolour6{
+  background: #daa732;
+}
+
+.keycolour7{
+  background: #d11a3c;color:#fff;
+}
+
+.keycolour8{
+  background: #70838f;color:#fff;
+}
+
+.keycolour9{
+  background: #4281a0; color:#fff;
+}
+
+.keycolour10{
+  background: #c2b4cd;
+}
+
+.keycolour3bed{
+  background: #d5c391;
+}
+
+.keycolour4bed{
+  background: #b49052;
+}
+
+
+
 
