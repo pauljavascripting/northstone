@@ -36,9 +36,18 @@
         function init(){
 
 
-             let tl = gsap.timeline({ease:Linear.none, delay:0 });
-             tl.set(['.scene0_blur'], {scale:1, y:-100, rotation:30, x:-50, scale:1.4})
-             tl.to('.scene0_blur', 5, {opacity:1, y:-650, x:400, scale:1.5})
+             // let tl = gsap.timeline({ease:Linear.none, delay:0 });
+             // tl.set(['.scene0_blur'], {scale:1, y:-100, rotation:30, x:-50, scale:1.4})
+             // tl.to('.scene0_blur', 5, {opacity:1, y:-650, x:400, scale:1.5})
+
+
+             // let tl = gsap.timeline({ease:Linear.none, delay:0 });
+             // tl.set(['.scene0_blur'], {scale:1, y:-400, rotation:-240, x:-750, scale:1.4})
+             // tl.to('.scene0_blur', 5, {opacity:1, y:350, x:550, scale:1.5})
+
+              let tl = gsap.timeline({ease:Linear.none, delay:0 });
+             tl.set(['.scene0_blur'], {scale:1, y:-10, rotation:-240, x:-75, scale:1.8})
+             tl.to('.scene0_blur', 5, {opacity:1, y:350, x:550, scale:1.5})
             
         }
 
