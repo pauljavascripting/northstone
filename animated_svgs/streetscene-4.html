@@ -45,6 +45,7 @@
             width: 100%;
             height:530px;
             overflow:hidden;
+            opacity: 0;
         } 
 
         @media (max-width: 576px) {
@@ -114,6 +115,7 @@
 
 
              let tl = gsap.timeline({ease:Linear.none, delay:0 });
+             tl.set('.streetscene_animation', {css:{opacity:1}})
              tl.set(['.mask'], {y:'-20%', rotation:25, x:'-30%', scale:2})
              tl.to('.mask', 10, {y:'150%', x:'200%'})
 
