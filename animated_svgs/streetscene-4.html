@@ -92,6 +92,7 @@
            width: 100%;
            height: 100%;
            position: absolute;
+           /*border:1px red solid;*/
 
         }
 
@@ -117,8 +118,8 @@
 
              let tl = gsap.timeline({ease:Linear.none, delay:0 });
              tl.set('.streetscene_animation', {css:{opacity:1}})
-             tl.set(['.mask'], {y:'-20%', rotation:25, x:'-30%', scale:2})
-             tl.to('.mask', 10, {y:'150%', x:'200%'})
+             tl.set(['.mask'], {y:'-30%', rotation:25, x:'-25%', scale:2.5})
+             tl.to('.mask', 10, {y:'180%', x:'200%'})
 
         }
 
